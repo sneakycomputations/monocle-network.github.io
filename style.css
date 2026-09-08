@@ -65,7 +65,7 @@ a {
 }
 
 .brand img {
-  width: 50px;
+  width: 29px;
   height: auto;
 }
 
@@ -223,7 +223,7 @@ a {
 }
 
 .value p {
-  font: 400 12px/1.65 'IBM Plex Serif', sans-serif;
+  font: 400 15px 'IBM Plex Serif', sans-serif;
   color: #666;
   margin: 12px 0 0;
   max-width: 800px;
@@ -286,7 +286,7 @@ a {
 }
 
 .feature-grid p {
-  font: 400 12px/1.65 'IBM Plex Sans', sans-serif;
+  font: 400 15px 'IBM Plex Sans', sans-serif;
   color: var(--orange);
   margin: 0;
 }
@@ -368,7 +368,7 @@ a {
 }
 
 .reserve-grid p {
-  font: 400 12px/1.6 'IBM Plex Sans', sans-serif;
+  font: 400 15px 'IBM Plex Sans', sans-serif;
   color: #666;
 }
 
@@ -422,7 +422,7 @@ a {
 }
 
 .involved-card p {
-  font: 400 12px/1.65 'IBM Plex Sans', sans-serif;
+  font: 400 15px 'IBM Plex Sans', sans-serif;
   color: #666;
   max-width: 650px;
 }
@@ -730,7 +730,7 @@ body.dark .buttons a:first-child {
   }
 
   .value p {
-    font-size: 10px;
+    font-size: 15px;
     line-height: 1.6;
   }
 
@@ -753,7 +753,7 @@ body.dark .buttons a:first-child {
   }
 
   .feature-grid p {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .reserve-grid {
@@ -761,7 +761,7 @@ body.dark .buttons a:first-child {
   }
 
   .reserve-grid p {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .involved {
@@ -790,7 +790,7 @@ body.dark .buttons a:first-child {
   }
 
   .involved-card p {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .footer-main {
@@ -846,7 +846,7 @@ body.dark .buttons a:first-child {
   }
 
   .value p {
-    font-size: 9.5px;
+    font-size: 15px;
   }
 
   .feature-grid {
