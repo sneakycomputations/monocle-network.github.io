@@ -261,6 +261,7 @@ a {
 
 .feature-grid article {
   grid-column: span 2;
+  box-shadow: 4px 4px 0 #bcbcbc;
 }
 
 .feature-grid article:nth-child(4) {
@@ -621,7 +622,6 @@ body.dark .buttons a:first-child {
     min-height: 225px;
     padding-left: 12px;
     padding-right: 12px;
-    box-shadow: 4px 4px 0 #bcbcbc;
   }
 
   .feature-grid article:nth-child(4) {
@@ -747,7 +747,6 @@ body.dark .buttons a:first-child {
     padding-left: 9px;
     padding-right: 9px;
     min-height: 230px;
-    box-shadow: 4px 4px 0 #bcbcbc;
   }
 
   .feature-grid img {
