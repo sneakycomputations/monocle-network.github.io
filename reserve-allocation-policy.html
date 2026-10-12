@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Reserve Allocation Policy This policy defines how Monocle Network distributes the 33% of collected network fees allocated to community reserves, how alloc">
+  <title>Reserve Allocation Policy | Monocle Network</title>
+  <link rel="icon" href="favicon/f1.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="article-page">
+  <div id="site-header"></div>
+  <main class="article-main container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="policies.html">Policies</a><span aria-hidden="true">/</span><span aria-current="page">Reserve Allocation Policy</span></nav>
+    <header class="article-heading"><p class="micro-label">Policies</p><h1>Reserve Allocation Policy</h1></header>
+    <article class="article-content"><p>This policy defines how Monocle Network distributes the 33% of collected network fees allocated to community reserves, how allocation decisions are made, and how adjustments are proposed and implemented.</p>
+<hr />
+<h2>1. Overview</h2>
+<p>Monocle distributes 33% of all collected network fees to three community reserves before any other distributions:</p>
+<table>
+<thead>
+<tr>
+  <th>Reserve</th>
+  <th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Peer Security Reserve</td>
+  <td>Peer reimbursement in the event of an exploit</td>
+</tr>
+<tr>
+  <td>Haveno Network Development Grant</td>
+  <td>Bug bounties and developer grants for the Haveno project</td>
+</tr>
+<tr>
+  <td>Open-Source Sustainability Grant</td>
+  <td>Grants to open-source projects vital to the ecosystem</td>
+</tr>
+</tbody>
+</table>
+<p>The remaining 67% of network fees funds contributor compensation and network maintainer allocations, as described in the <a href="bootstrapped-operations-policy.html">Bootstrapped Operations Policy</a>.</p>
+<hr />
+<h2>2. Starting Allocation</h2>
+<p>The 33% reserved for community reserves is initially split as follows:</p>
+<table>
+<thead>
+<tr>
+  <th>Reserve</th>
+  <th>Share of Reserve Allocation</th>
+  <th>Effective Share of Total Network Fees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Peer Security Reserve</td>
+  <td>50%</td>
+  <td>16.5%</td>
+</tr>
+<tr>
+  <td>Haveno Network Development Grant</td>
+  <td>35%</td>
+  <td>11.55%</td>
+</tr>
+<tr>
+  <td>Open-Source Sustainability Grant</td>
+  <td>15%</td>
+  <td>4.95%</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td><strong>100%</strong></td>
+  <td><strong>33%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>2.1 Rationale</h3>
+<ul>
+<li><strong>Peer Security Reserve receives the largest share</strong> — Peer protection is Monocle's top priority. A meaningful reserve must be built before significant trade volume occurs, as an exploit early in the network's life could be devastating to peer trust</li>
+<li><strong>Haveno Network Development Grant receive the second largest share</strong> — Monocle depends on Haveno's continued development. Funding bounties ensures the software improves and vulnerabilities are addressed proactively</li>
+<li><strong>Open-Source Sustainability Grants receive the third share</strong> — Giving back to the ecosystem is important but carries less urgency than peer protection and core development</li>
+</ul>
+<hr />
+<h2>3. Allocation Frequency</h2>
+<p>Network fees are distributed to the three reserves on a <strong>monthly cycle</strong>, aligned with Monocle's compensation cycle:</p>
+<ol>
+<li>Network fees collected during a given month are totalled</li>
+<li>33% of the total is calculated</li>
+<li>The 33% is split according to the current allocation ratios</li>
+<li>Transfers are made to each reserve wallet</li>
+<li>Transaction IDs and secret transaction keys are published for community verification</li>
+</ol>
+<p>During the initial bootstrapping phase, if the total 33% allocation for a month is less than 1 XMR, the distribution may be deferred to the following month.</p>
+<hr />
+<h2>4. Peer Security Reserve Priority</h2>
+<p>The Peer Security Reserve takes <strong>absolute priority</strong> over the other two reserves in the event of an exploit:</p>
+<h3>4.1 Exploit Event</h3>
+<p>If an exploit occurs:</p>
+<ol>
+<li>All remaining balance in the Haveno Network Development Grant and Open-Source Sustainability Grant wallets will be redirected to the Peer Security Reserve</li>
+<li>Future monthly allocations are temporarily redirected — 100% of the 33% reserve allocation goes to the Peer Security Reserve until peer reimbursement is complete or the situation is resolved</li>
+<li>The community is notified through all public channels</li>
+<li>A post-incident review is published on GitHub</li>
+</ol>
+<h3>4.2 Insufficient Reserves</h3>
+<p>If the Peer Security Reserve balance is insufficient to fully reimburse affected peers:</p>
+<ul>
+<li>Peers are reimbursed on a <strong>pro-rata basis</strong> — each affected peer receives an equal proportion of the available funds relative to their loss</li>
+<li>Monocle does not guarantee full reimbursement — the Peer Security Reserve is limited to the accumulated funds at the time of exploit</li>
+</ul>
+<hr />
+<h2>5. Adjusting the Allocation</h2>
+<p>The starting allocation may be adjusted to respond to emerging needs. Adjustments are not made lightly. Consistency and predictability are important for community trust.</p>
+<h3>5.1 What Triggers an Adjustment Review</h3>
+<p>An allocation review may be initiated by:</p>
+<ul>
+<li>A contributor request</li>
+<li>A community request supported by meaningful discussion in Monocle's community spaces</li>
+<li>A significant change in network circumstances, such as:<ul>
+<li>The Peer Security Reserve reaching a sufficient balance relative to typical trade volume</li>
+<li>A critical Haveno vulnerability requiring urgent bounty funding</li>
+<li>Sustained low trade volume making the current split impractical</li>
+<li>The network reaching a mature operational state where security reserves are well-funded</li>
+</ul>
+</li>
+</ul>
+<h3>5.2 Adjustment Constraints</h3>
+<p>Any proposed allocation must satisfy the following constraints:</p>
+<table>
+<thead>
+<tr>
+  <th>Constraint</th>
+  <th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Minimum Peer Security Reserve share</td>
+  <td><strong>No less than 30%</strong> of the reserve allocation (9.9% of total network fees)</td>
+</tr>
+<tr>
+  <td>Minimum Haveno Development share</td>
+  <td><strong>No less than 15%</strong> of the reserve allocation (4.95% of total network fees)</td>
+</tr>
+<tr>
+  <td>Minimum Open-Source Sustainability share</td>
+  <td><strong>No less than 10%</strong> of the reserve allocation (3.3% of total network fees)</td>
+</tr>
+<tr>
+  <td>Total allocation</td>
+  <td><strong>Must always equal 100%</strong> of the 33% reserve share</td>
+</tr>
+<tr>
+  <td>Maximum single reserve share</td>
+  <td><strong>No more than 70%</strong> of the reserve allocation (23.1% of total network fees)</td>
+</tr>
+</tbody>
+</table>
+<h3>5.3 Adjustment Process</h3>
+<ol>
+<li><strong>Proposal</strong> — A contributor or community member publishes a proposal on the Monocle community forum or GitHub, including:<ul>
+<li>The proposed new allocation ratios</li>
+<li>The justification for the change</li>
+<li>An analysis of the impact on each reserve</li>
+</ul>
+</li>
+<li><strong>Community discussion</strong> — The proposal is discussed publicly for a minimum of <strong>30 days</strong></li>
+<li><strong>Contributor decision</strong> — Following community discussion, contributors decide whether to implement the change. Changes require rough consensus among contributors</li>
+<li><strong>Announcement</strong> — If approved, the change is announced through all community channels. Changes will be implemented immediately</li>
+<li><strong>Documentation</strong> — The change is recorded in the allocation history table (Section 7) and this policy is updated</li>
+</ol>
+<hr />
+<h2>6. Transparency and Verification</h2>
+<p>All reserve allocations are transparent and independently verifiable. Published information includes:</p>
+<ul>
+<li>Current allocation ratios</li>
+<li>Monthly distribution amounts</li>
+<li>Reserve wallet addresses and view keys</li>
+<li>Transaction IDs and secret transaction keys</li>
+<li>Allocation changes and history</li>
+</ul>
+<hr />
+<h2>7. Allocation History</h2>
+<table>
+<thead>
+<tr>
+  <th>Date</th>
+  <th>Peer Security Reserve</th>
+  <th>Haveno Development Grants</th>
+  <th>Open-Source Sustainability Grants</th>
+  <th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>[Date]</td>
+  <td>50%</td>
+  <td>35%</td>
+  <td>15%</td>
+  <td>Initial allocation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Relationship to Other Policies</h2>
+<table>
+<thead>
+<tr>
+  <th>Policy</th>
+  <th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="bootstrapped-operations-policy.html">Bootstrapped Operations Policy</a></td>
+  <td>Defines the 33% reserve allocation as a fixed priority before contributor compensation</td>
+</tr>
+<tr>
+  <td><a href="community-reserves.html">Community Reserves</a></td>
+  <td>Describes the purpose and transparency commitments for each reserve</td>
+</tr>
+</tbody>
+</table>
+<p>| <a href="network-fees.html">Network Fees</a> | Defines how network fees are collected
+| <a href="responsible-disclosure-policy.html">Responsible Disclosure Policy</a> | May trigger bounty payments from Haveno Network Development Grant |</p>
+<hr />
+<h2>9. Changes to This Policy</h2>
+<p>This policy may be updated periodically. Changes to the allocation ratios will follow the process described in Section 5. All changes will be published here and announced through public community channels.</p>
+<hr />
+<blockquote>
+<p><strong>Every reserve has a view key attached. Don't trust, verify.</strong></p>
+</blockquote>
+<hr />
+<ul>
+<li>Last updated: November 2026</li>
+<li>Version: 1.0</li>
+</ul>
+<hr />
+</article>
+    <nav class="article-bottom-nav" aria-label="Page navigation"><a href="policies.html">‹ Back to Policies</a><a href="sitemap.html">Browse sitemap ›</a></nav>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>

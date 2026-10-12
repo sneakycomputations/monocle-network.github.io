@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Responsible Disclosure Policy Monocle Network takes security seriously. This policy describes how security vulnerabilities can be responsibly reported to">
+  <title>Responsible Disclosure Policy | Monocle Network</title>
+  <link rel="icon" href="favicon/f1.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="article-page">
+  <div id="site-header"></div>
+  <main class="article-main container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="policies.html">Policies</a><span aria-hidden="true">/</span><span aria-current="page">Responsible Disclosure Policy</span></nav>
+    <header class="article-heading"><p class="micro-label">Policies</p><h1>Responsible Disclosure Policy</h1></header>
+    <article class="article-content"><p>Monocle Network takes security seriously. This policy describes how security vulnerabilities can be responsibly reported to Monocle, what reporters can expect in return, and how Monocle will respond.</p>
+<p>Monocle operates on the Haveno protocol, which is free and open-source software not developed by Monocle. Vulnerabilities may exist in the Haveno software itself, in Monocle's operational infrastructure, or in the interaction between the two. All are welcome to be reported.</p>
+<hr />
+<h2>1. Scope</h2>
+<h3>1.1 In Scope</h3>
+<p>The following are considered within scope for responsible disclosure:</p>
+<ul>
+<li><strong>Haveno protocol vulnerabilities</strong> - Bugs, logic flaws, or exploits in the Haveno software that could compromise peer funds, privacy, or network integrity</li>
+<li><strong>Monocle infrastructure</strong> - Vulnerabilities in Monocle-operated nodes (Monero nodes, price nodes, seed nodes), the Monocle Markets website, or any Monocle-controlled service</li>
+<li><strong>Dispute resolution process weaknesses</strong> - Flaws that could be exploited to manipulate dispute resolution outcomes</li>
+<li><strong>Data exposure</strong> - Any unintended exposure of peer data, network operational data, or wallet information</li>
+</ul>
+<h3>1.2 Out of Scope</h3>
+<p>The following are not eligible for bounties under this policy:</p>
+<ul>
+<li><strong>Monero protocol vulnerabilities</strong> — These should be reported to the Monero project directly</li>
+<li><strong>Tor network vulnerabilities</strong> — These should be reported to the Tor Project</li>
+<li><strong>Third-party platform vulnerabilities</strong> — Issues with SimpleX, Matrix, GitHub, or other platforms should be reported to those services</li>
+<li><strong>Social engineering</strong> — Phishing or impersonation attempts against Monocle contributors or peers</li>
+<li><strong>Denial of service</strong> — General DDoS or availability attacks (though sustained or novel attacks may be considered)</li>
+<li><strong>Already known issues</strong> — Vulnerabilities that have already been reported, disclosed, or are being addressed</li>
+</ul>
+<hr />
+<h2>2. Reporting a Vulnerability</h2>
+<h3>2.1 How to Report</h3>
+<p>Security vulnerabilities should be reported through the following channel:</p>
+<p><strong>SimpleX</strong> — Send a message to the admins in the Monocle Network Arbitrators SimpleX group, marking it clearly as a security report</p>
+<p><strong>Do not publicly disclose vulnerabilities</strong> before Monocle has had a reasonable opportunity to respond and remediate.</p>
+<h3>2.2 What to Include</h3>
+<p>Reports should include:</p>
+<ul>
+<li>Description of the vulnerability and its potential impact</li>
+<li>Steps to reproduce the issue</li>
+<li>Any proof-of-concept code or evidence</li>
+<li>The reporter's preferred contact method</li>
+<li>Whether the reporter intends to claim a bounty</li>
+</ul>
+<p>Reports that are clear, detailed, and reproducible will be prioritized and may receive higher compensation.</p>
+<h3>2.3 Anonymity</h3>
+<p>Monocle values privacy. Reporters may:</p>
+<ul>
+<li>Use a pseudonym or nym</li>
+<li>Communicate through Tor</li>
+</ul>
+<p>No personal information is required to submit a report or receive a bounty.</p>
+<hr />
+<h2>3. Monocle's Commitment</h2>
+<p>When a vulnerability is responsibly reported, Monocle commits to the following:</p>
+<h3>3.1 Acknowledgement</h3>
+<ul>
+<li>Monocle will acknowledge receipt of the report within <strong>48 hours</strong></li>
+<li>Monocle will provide an initial assessment of severity within <strong>7 days</strong></li>
+</ul>
+<h3>3.2 Remediation</h3>
+<ul>
+<li>Monocle will work to understand and validate the vulnerability promptly</li>
+<li>If the vulnerability is in Haveno software, Monocle will coordinate with Haveno contributors and may fund a bug bounty through Haveno Network Development Grants to expedite a fix</li>
+<li>If the vulnerability is in Monocle's infrastructure, Monocle will remediate it directly</li>
+<li>Monocle will keep the reporter informed of progress at reasonable intervals</li>
+</ul>
+<h3>3.3 Confidentiality</h3>
+<ul>
+<li>Monocle will not disclose the reporter's identity without their consent</li>
+<li>Monocle will not take legal action against reporters who adhere to this responsible disclosure policy</li>
+</ul>
+<h3>3.4 Public Disclosure</h3>
+<ul>
+<li>Monocle and the reporter should agree on a timeline for public disclosure</li>
+<li>Monocle aims to allow public disclosure after the vulnerability has been remediated, or within <strong>90 days</strong> of the initial report, whichever comes first</li>
+<li>If Monocle is unable to remediate within 90 days, Monocle will provide the reporter with an explanation and a revised timeline</li>
+</ul>
+<hr />
+<h2>4. Bounty Framework</h2>
+<p>Monocle may compensate reporters for responsibly disclosed vulnerabilities. Bounties are funded from Peer Security Reserve or the Haveno Network Development Grants.</p>
+<h3>4.1 Compensation is Proportional to Severity and Trade Volume</h3>
+<p>Bounty amounts depend on two factors:</p>
+<p><strong>Severity</strong> — The potential impact of the vulnerability on peers and the network:</p>
+<table>
+<thead>
+<tr>
+  <th>Severity</th>
+  <th>Description</th>
+  <th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Critical</td>
+  <td>Funds at risk, privacy compromised at scale</td>
+  <td>Exploit allowing theft of peer funds, protocol flaw breaking trade security</td>
+</tr>
+<tr>
+  <td>High</td>
+  <td>Significant risk to peers or network integrity</td>
+  <td>Exploit enabling individual trade manipulation, arbitrator compromise</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Limited impact, requires specific conditions</td>
+  <td>Non-critical protocol bug, infrastructure misconfiguration with limited exposure</td>
+</tr>
+<tr>
+  <td>Low</td>
+  <td>Minimal risk, informational</td>
+  <td>Best practice improvements, minor information leaks</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trade volume</strong> - The network fee wallet is funded by network fees, which are directly tied to trade volume. Available bounty funds are therefore proportional to network activity:</p>
+<ul>
+<li>During periods of <strong>high trade volume</strong>, more network fees are collected, and larger bounties may be available</li>
+<li>During periods of <strong>low trade volume</strong>, bounty funds are more constrained</li>
+<li>Monocle is a bootstrapped network — bounty availability depends entirely on collected network fees</li>
+</ul>
+<h3>4.2 Bounty Ranges</h3>
+<p>The following ranges are indicative and subject to available funds. Bounties are denominated in USD equivalent and paid in Monero.</p>
+<table>
+<thead>
+<tr>
+  <th>Severity</th>
+  <th>Indicative Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Critical</td>
+  <td>Up to 100% of one month's network fees</td>
+</tr>
+<tr>
+  <td>High</td>
+  <td>Up to 50% of one month's network fees</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Up to 25% of one month's network fees</td>
+</tr>
+<tr>
+  <td>Low</td>
+  <td>Up to 10% of one month's network fees</td>
+</tr>
+</tbody>
+</table>
+<p>The network fee is visible by anyone. It includes all transactions.</p>
+<p><strong>These are maximum ranges, not guaranteed amounts.</strong> Actual bounties may be lower depending on:</p>
+<ul>
+<li>Whether the vulnerability has already been reported by another party</li>
+<li>The quality and completeness of the report</li>
+</ul>
+<p>Monocle will communicate the proposed bounty amount to the reporter before payment.</p>
+<h3>4.3 Bounty Process</h3>
+<ol>
+<li>Reporter discloses the vulnerability responsibly</li>
+<li>Monocle validates the vulnerability and assesses severity</li>
+<li>Monocle proposes a bounty amount based on severity, available funds, and current trade volume</li>
+<li>Reporter accepts or declines the proposed amount</li>
+<li>Bounty is paid in Monero to the reporter's provided XMR address</li>
+<li>Transaction ID and secret transaction key are published for transparency, consistent with Monocle's commitment to radical transparency</li>
+</ol>
+<hr />
+<h2>5. Reporter Guidelines</h2>
+<p>To qualify for a bounty and safe harbour under this policy, reporters must:</p>
+<ul>
+<li><strong>Report responsibly</strong> — Do not exploit the vulnerability beyond what is necessary to demonstrate it</li>
+<li><strong>Do not access peer data</strong> — Do not attempt to access, extract, or view other peers' data, wallets, or transactions</li>
+<li><strong>Do not cause harm</strong> — Avoid any action that could negatively impact peers, the network, or Monocle's infrastructure</li>
+<li><strong>Allow time for remediation</strong> — Do not publicly disclose the vulnerability before the agreed timeline</li>
+<li><strong>Do not demand payment</strong> — Bounties are offered at Monocle's discretion and are subject to available funds</li>
+<li><strong>Act in good faith</strong> — Reports should be genuine attempts to improve security, not attempts to extort or manipulate</li>
+</ul>
+<hr />
+<h2>6. Monocle's Response to Exploits</h2>
+<p>If a vulnerability is exploited before or during the disclosure process, Monocle will:</p>
+<ol>
+<li><strong>Pause affected operations</strong> if necessary to protect peers</li>
+<li><strong>Notify the community</strong> through public community channels</li>
+<li><strong>Assess losses</strong> and determine the scope of affected peers</li>
+<li><strong>Coordinate remediation</strong> of the vulnerability</li>
+<li><strong>Distribute compensation</strong> from the Peer Security Reserve to affected peers, where funds are available, within 50 days public disclosure</li>
+</ol>
+<p>In the event of an exploit, peer reimbursement takes priority over all other distributions from community reserves.</p>
+<hr />
+<h2>7. Safe Harbour</h2>
+<p>Monocle will not pursue legal action against individuals who:</p>
+<ul>
+<li>Discover and report vulnerabilities in good faith</li>
+<li>Make a reasonable effort to avoid privacy violations, damage, and disruption</li>
+<li>Adhere to this responsible disclosure policy</li>
+</ul>
+<p>Monocle cannot guarantee that third parties (including law enforcement) will not take independent action. Reporters should be aware of the laws in their jurisdiction.</p>
+<hr />
+<h2>8. Changes to This Policy</h2>
+<p>This policy may be updated periodically. Changes will be announced through public community channels and documented in version history.</p>
+<hr />
+<h2>9. Contact</h2>
+<p>Security reports and questions about this policy can be directed to:</p>
+<ul>
+<li><strong>SimpleX</strong> — Link</li>
+<li><strong>GitHub</strong> — Link</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Security through transparency, rewards through disclosure.</strong></p>
+</blockquote>
+<hr />
+<ul>
+<li>Last updated: November 2026</li>
+<li>Version: 1.0</li>
+</ul>
+<hr />
+</article>
+    <nav class="article-bottom-nav" aria-label="Page navigation"><a href="policies.html">‹ Back to Policies</a><a href="sitemap.html">Browse sitemap ›</a></nav>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>

@@ -48,3 +48,12 @@ Phase 4: first page batch implemented (homepage and Download), building on the s
 - Several internal destinations and page links are not yet implemented because only the first page batch is complete.
 - Official release URLs are not present in the supplied copy, so download controls remain disabled.
 - Partial-loading failure currently leaves the header/footer containers empty; add a useful fallback or choose duplicated static markup before final release if robust no-JavaScript rendering is required.
+
+
+## Phase 5 update
+- Corrected the homepage currency orbit using six mathematically spaced points around the central Monero coin. The pound is at the bottom vertex, no longer underneath the center coin.
+- Restored the orange tag backplates behind icons in the “What Makes Monocle Network Different” feature cards, using the supplied tag SVG asset.
+- Added a reusable long-form article template and generated flat `.html` pages for the remaining supplied Markdown content, including policies, dispute-resolution pages, reserve pages, FAQ, support, and directories.
+- Kept the bespoke homepage and Download page layouts intact; the Markdown copies remain in `copy/` for editing.
+- Internal placeholder links were mapped to matching local pages where a matching page exists. Unspecified external URLs remain unlinked rather than being invented.
+- Pages use shared header/footer partials, so preview them over HTTP (for example `python3 -m http.server 8000 --bind 127.0.0.1`), not via `file://`.
