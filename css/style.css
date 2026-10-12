@@ -78,3 +78,27 @@
 .article-page .site-header .primary-navigation a[href$=".html"]{white-space:nowrap}
 @media(max-width:860px){.coin-orbit{min-height:300px;max-height:370px}.article-main{width:calc(100% - 40px)}.directory-page .article-content>ul{grid-template-columns:1fr}}
 @media(max-width:560px){.coin-orbit{aspect-ratio:1.28;min-height:240px;max-height:270px}coin-orbit .coin-xmr{width:clamp(100px,29vw,130px)}.feature-icon-tag{width:46px;height:46px}.article-main{width:calc(100% - 36px);padding-top:.8rem}.breadcrumbs{margin-bottom:1.5rem}.article-heading{padding-bottom:1.1rem;margin-bottom:1.4rem}.article-content{font-size:.92rem}.article-content h2{margin-top:2.2rem}.article-bottom-nav{font-size:.75rem}}
+
+
+/* Refinements: consistent site width, logo-only brand, orbit spacing, tag placement and footer socials */
+:root{--content:1080px;--header-height:76px}
+.site-header{width:min(var(--content),calc(100% - 48px));margin-inline:auto;padding:.5rem 0;gap:1.15rem}
+.brand{height:calc(var(--header-height) - 1rem);gap:0;font-size:0;flex:none}
+.brand-logo{display:block;width:auto;height:100%;max-width:180px;object-fit:contain}
+.site-footer{padding-inline: max(24px,calc((100% - var(--content))/2))}
+.footer-socials{display:flex;justify-content:flex-end;align-items:center;gap:.85rem;padding:.5rem 0 1.1rem;border-top:1px solid var(--border)}
+.footer-socials a{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid var(--border);border-radius:50%;opacity:.82}
+.footer-socials a:hover{opacity:1;border-color:var(--accent)}
+.footer-socials img{width:18px;height:18px;object-fit:contain;filter:var(--social-icon-filter,none)}
+.coin-orbit .coin-btc{left:27%;top:35.4%}
+.coin-orbit .coin-usd{left:50%;top:14.5%}
+.coin-orbit .coin-eth{left:73%;top:35.4%}
+.coin-orbit .coin-brl{left:73%;top:64.6%}
+.coin-orbit .coin-gbp{left:50%;top:85.5%}
+.coin-orbit .coin-eur{left:27%;top:64.6%}
+.feature-card{position:relative}
+.feature-icon-tag{position:absolute;top:-20px;left:1.15rem;margin:0;width:54px;height:54px;justify-content:flex-start;padding-left:7px;background-size:100% 100%}
+.feature-icon-tag img{width:27px;height:27px;transform:translateX(-1px)}
+.feature-card{padding-top:2.5rem}
+@media(max-width:860px){.site-header{width:calc(100% - 40px);padding:.5rem 0}.brand{height:calc(var(--header-height) - 1rem)}.coin-orbit .coin-btc{left:25%}.coin-orbit .coin-eth{left:75%}.coin-orbit .coin-eur{left:25%}.coin-orbit .coin-brl{left:75%}.coin-orbit .coin-usd{top:14%}.coin-orbit .coin-gbp{top:86%}}
+@media(max-width:560px){.site-header{width:calc(100% - 36px)}.coin-orbit .coin-btc{left:22%}.coin-orbit .coin-eth{left:78%}.coin-orbit .coin-eur{left:22%}.coin-orbit .coin-brl{left:78%}.coin-orbit .coin-usd{top:14%}.coin-orbit .coin-gbp{top:86%}.footer-socials{justify-content:flex-start}}
