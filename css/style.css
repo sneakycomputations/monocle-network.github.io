@@ -342,7 +342,7 @@ p {
   justify-content:center;
   padding:.7rem 1.2rem;
   background:var(--accent);
-  color:#17120c;
+  color:#fff;
   font-weight:600;
   text-decoration:none;
   border-radius:3px;
@@ -1948,7 +1948,7 @@ p {
 .footer-directory h2,
 .footer-column h2 {
   font:600 .78rem/1.4 "IBM Plex Mono",monospace;
-  text-transform:uppercase;
+  /*! text-transform:uppercase; */
   color:var(--accent);
   margin:0 0 .55rem
 }
@@ -2041,9 +2041,6 @@ p {
 .footer-bottom a {
   font-size:.8rem;
   color:var(--muted)
-}
-.footer-bottom a:first-child {
-  color:var(--text)
 }
 @media(max-width:1100px) and (min-width:861px) {
   .header-inner {
@@ -2506,16 +2503,15 @@ p {
   justify-content:flex-start;
   gap:3rem;
   border-top:4px solid var(--accent);
-  padding-top:1.5rem;
+  padding:1.5rem;
   margin-top:0;
-  font-size:14px
+  font-size:14px;
+  background-color: #222;
+  /*! padding-bottom: 1em; */
 }
 .footer-bottom a {
   font-size:14px;
   color:var(--muted)
-}
-.footer-bottom a:first-child {
-  color:var(--text)
 }
 @media(max-width:1250px) and (min-width:861px) {
   .header-inner {
