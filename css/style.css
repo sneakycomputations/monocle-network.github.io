@@ -353,6 +353,22 @@ p {
   background:var(--accent-strong);
   color:#17120c
 }
+
+.button span[aria-hidden="true"] {
+  display: inline-block;
+  transition: transform 220ms ease;
+}
+
+.button:hover span[aria-hidden="true"],
+.button:focus-visible span[aria-hidden="true"] {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button span[aria-hidden="true"] {
+    transition: none;
+  }
+}
 .placeholder-note {
   padding:1.25rem;
   border:1px solid var(--border);
