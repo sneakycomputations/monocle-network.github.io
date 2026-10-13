@@ -18,6 +18,7 @@
     let activeAnimations = [];
     let timer;
     let previousCoin = null;
+    let eventCoin = null;
 
     function wait(ms) {
         return new Promise(resolve => {
@@ -40,8 +41,82 @@
             height: rect.height
         };
     }
+    
+    function waitForCoinOverlap(coin, animations) {
+        return new Promise(resolve => {
+            let finished = false;
 
+            function check() {
+                if (finished) return;
+
+                const a = monero.getBoundingClientRect();
+                const b = coin.getBoundingClientRect();
+
+                const overlaps =
+                    a.left < b.right &&
+                    a.right > b.left &&
+                    a.top < b.bottom &&
+                    a.bottom > b.top;
+
+                if (overlaps) {
+                    finished = true;
+                    spawnStarBurst();
+                    resolve();
+                    return;
+                }
+
+                if (animations.every(animation =>
+                    animation.playState === "finished"
+                )) {
+                    finished = true;
+                    resolve();
+                    return;
+                }
+
+                requestAnimationFrame(check);
+            }
+
+            check();
+        });
+    }
+    
+    function spawnStarBurst() {
+        const a = monero.getBoundingClientRect();
+        const b = eventCoin.getBoundingClientRect();
+
+        const x = (a.left + a.width / 2 + b.left + b.width / 2) / 2;
+        const y = (a.top + a.height / 2 + b.top + b.height / 2) / 2;
+
+        const particleCount = 22;
+        const radius = 34;
+
+        for (let i = 0; i < particleCount; i++) {
+            const angle =
+                (i / particleCount) * Math.PI * 2 +
+                (Math.random() - 0.5) * 0.22;
+
+            const distance = radius * (0.55 + Math.random() * 0.8);
+            const particle = document.createElement("span");
+            const size = 4 + Math.random() * 8;
+
+            particle.className = "coin-trade-star";
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+
+            particle.style.setProperty("--dx", `${Math.cos(angle) * distance}px`);
+            particle.style.setProperty("--dy", `${Math.sin(angle) * distance}px`);
+            particle.style.setProperty("--particle-size", `${size}px`);
+
+            document.body.appendChild(particle);
+
+            particle.addEventListener("animationend", () => particle.remove(), {
+                once: true
+            });
+        }
+    }    
+    
     async function exchange(coin) {
+        eventCoin = coin;
         const a = getCenter(monero);
         const b = getCenter(coin);
 
@@ -83,15 +158,18 @@
                 { translate: `${cx}px ${cy}px`, offset: 1 }
             ], options)
         ];
+        
+        await waitForCoinOverlap(coin, activeAnimations);
 
         await Promise.all(activeAnimations.map(animation => animation.finished));
-
+        
         if (reducedMotion.matches) {
             activeAnimations.forEach(animation => animation.cancel());
             monero.style.zIndex = "";
             coin.style.zIndex = "";
             return;
         }
+        
 
         // Brief, gentle pause while Monero partially covers the other coin.
         //await wait(50);
