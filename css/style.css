@@ -219,11 +219,11 @@
 
 /* Phase 10: mockup-led shared header and footer reconstruction */
 .site-header{position:relative;z-index:5;width:100%;margin:0;padding:0 0 64px;background:var(--page);border:0;margin-top: 2em;/*! margin-top: 2em; */}
-.header-inner{position:relative;display:flex;align-items:stretch;max-width:1080px;height:70px;margin:0 auto;padding:0;border:1px solid var(--border);border-bottom:4px solid var(--accent);background:linear-gradient(180deg,var(--surface) 0%,var(--page) 100%);}
+.header-inner{position:relative;display:flex;align-items:stretch;max-width:1080px;height:60px;margin:0 auto;padding:0;border:1px solid var(--border);border-bottom:4px solid var(--accent);background:linear-gradient(180deg,#454545 0%,#000 100%);}
 .brand{display:flex;flex:0 0 25%;align-items:center;justify-content:flex-start;min-width:0;/*! height:156px; */padding:0 24px;color:var(--text);text-decoration:none;overflow:hidden;margin-top: -10px;}
 .brand-logo{display:block;width:min(100%,220px);height:78px;object-fit:contain;object-position:left center;}
 .primary-navigation{display:flex;flex:1;align-items:stretch;justify-content:stretch;min-width:0;gap:0;}
-.primary-navigation a{display:flex;flex:1 1 auto;align-items:center;justify-content:center;min-width:0;padding:0 clamp(8px,.8vw,18px);border-left:1px solid var(--border);font:400 clamp(11px,.62vw,13px)/1.25 "IBM Plex Mono",monospace;letter-spacing:-.035em;text-align:center;text-transform:none;color:var(--text);white-space:nowrap;text-decoration:none;}
+.primary-navigation a{display:flex;flex:1 1 auto;align-items:center;justify-content:center;min-width:0;padding:0 clamp(8px,.8vw,18px);border-left:1px solid var(--border);font:400 clamp(14px,.62vw,13px)/1.25 "IBM Plex Mono",monospace;letter-spacing:-.035em;text-align:center;text-transform:none;color:var(--text);white-space:nowrap;text-decoration:none;}
 .primary-navigation a:first-child{display:none;}
 .primary-navigation a:last-child{border-right:0;color:var(--accent);font-weight:600;}
 .primary-navigation a:hover,.primary-navigation a[aria-current="page"]{color:var(--accent-strong);}
