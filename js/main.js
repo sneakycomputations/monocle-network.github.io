@@ -39,6 +39,11 @@
     });
   }
 
-  Promise.all([include('#site-header', 'partials/header.html'), include('#site-footer', 'partials/footer.html')])
-    .then(wireControls);
+  Promise.all([
+    include('#site-header', 'partials/header.html'),
+    include('#site-footer', 'partials/footer.html'),
+    include('#banner-get-involved', 'partials/get-involved.html'),
+    include('#banner-download', 'partials/download.html'),
+    include('#banner-transparency', 'partials/transparency.html')
+  ]).then(wireControls);
 })();
