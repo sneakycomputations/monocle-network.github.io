@@ -1,233 +1,173 @@
 (() => {
-    const orbit = document.querySelector(".coin-orbit");
-    if (!orbit || orbit.dataset.exchangeInitialized) return;
+  function initCoinExchanges() {
+    const orbit = document.querySelector('.coin-orbit');
+    if (!orbit || orbit.dataset.exchangeAnimation === 'running') return;
 
-    const monero = orbit.querySelector(".coin-xmr");
-    const coins = ["btc", "usd", "eth", "brl", "gbp", "eur"]
-        .map(name => orbit.querySelector(`.coin-${name}`))
-        .filter(Boolean);
+    const monero = orbit.querySelector('.coin-xmr');
+    const partners = [...orbit.querySelectorAll('.coin:not(.coin-xmr)')];
 
-    if (!monero || !coins.length) return;
+    if (!monero || partners.length === 0) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    orbit.dataset.exchangeInitialized = "true";
+    orbit.dataset.exchangeAnimation = 'running';
 
-    const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    );
+    const wait = ms => new Promise(resolve => window.setTimeout(resolve, ms));
 
-    let activeAnimations = [];
-    let timer;
-    let previousCoin = null;
-    let eventCoin = null;
+    const shuffle = items => {
+      const result = [...items];
 
-    function wait(ms) {
-        return new Promise(resolve => {
-            timer = setTimeout(resolve, ms);
-        });
+      for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
+      }
+
+      return result;
+    };
+
+    function pulseCoin(coin) {
+      coin.classList.remove('coin-exchange-pulse');
+      void coin.offsetWidth;
+      coin.classList.add('coin-exchange-pulse');
     }
 
-    function pickCoin() {
-        const choices = coins.filter(coin => coin !== previousCoin);
-        const pool = choices.length ? choices : coins;
-        return pool[Math.floor(Math.random() * pool.length)];
-    }
+    let bag = shuffle(partners);
+    let previousPartner = null;
 
-    function getCenter(element) {
+    async function runExchange(partner) {
+      // Measure rendered positions so movement adapts to the viewport.
+      const centerOf = element => {
         const rect = element.getBoundingClientRect();
+
         return {
-            x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2,
-            width: rect.width,
-            height: rect.height
+          x: rect.left + rect.width / 2,
+          y: rect.top + rect.height / 2,
+          width: rect.width,
+          height: rect.height
         };
-    }
-    
-    function waitForCoinOverlap(coin, animations) {
-        return new Promise(resolve => {
-            let finished = false;
+      };
 
-            function check() {
-                if (finished) return;
+      const m = centerOf(monero);
+      const c = centerOf(partner);
 
-                const a = monero.getBoundingClientRect();
-                const b = coin.getBoundingClientRect();
+      const dx = c.x - m.x;
+      const dy = c.y - m.y;
+      const distance = Math.hypot(dx, dy);
 
-                const overlaps =
-                    a.left < b.right &&
-                    a.right > b.left &&
-                    a.top < b.bottom &&
-                    a.bottom > b.top;
+      if (!distance) return;
 
-                if (overlaps) {
-                    finished = true;
-                    spawnStarBurst();
-                    resolve();
-                    return;
-                }
+      // Bring the coins into a slight overlap.
+      const targetDistance = (m.width + c.width) * 0.34;
+      const closure = Math.max(0, distance - targetDistance);
 
-                if (animations.every(animation =>
-                    animation.playState === "finished"
-                )) {
-                    finished = true;
-                    resolve();
-                    return;
-                }
+      const ux = dx / distance;
+      const uy = dy / distance;
 
-                requestAnimationFrame(check);
-            }
+      const moneroX = ux * closure * 0.22;
+      const moneroY = uy * closure * 0.22;
+      const partnerX = -ux * closure * 0.78;
+      const partnerY = -uy * closure * 0.78;
 
-            check();
-        });
-    }
-    
-    function spawnStarBurst() {
-        const a = monero.getBoundingClientRect();
-        const b = eventCoin.getBoundingClientRect();
+      const transform = (x, y) =>
+        `translate(-50%, -50%) translate(${x.toFixed(2)}px, ${y.toFixed(2)}px)`;
 
-        const x = (a.left + a.width / 2 + b.left + b.width / 2) / 2;
-        const y = (a.top + a.height / 2 + b.top + b.height / 2) / 2;
-
-        const particleCount = 22;
-        const radius = 34;
-
-        for (let i = 0; i < particleCount; i++) {
-            const angle =
-                (i / particleCount) * Math.PI * 2 +
-                (Math.random() - 0.5) * 0.22;
-
-            const distance = radius * (0.55 + Math.random() * 0.8);
-            const particle = document.createElement("span");
-            const size = 4 + Math.random() * 8;
-
-            particle.className = "coin-trade-star";
-            particle.style.left = `${x}px`;
-            particle.style.top = `${y}px`;
-
-            particle.style.setProperty("--dx", `${Math.cos(angle) * distance}px`);
-            particle.style.setProperty("--dy", `${Math.sin(angle) * distance}px`);
-            particle.style.setProperty("--particle-size", `${size}px`);
-
-            document.body.appendChild(particle);
-
-            particle.addEventListener("animationend", () => particle.remove(), {
-                once: true
-            });
+      const frames = (x, y) => [
+        {
+          offset: 0,
+          transform: transform(0, 0),
+          easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)'
+        },
+        {
+          offset: 0.43,
+          transform: transform(x, y),
+          easing: 'linear'
+        },
+        {
+          offset: 0.56,
+          transform: transform(x, y),
+          easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+        },
+        {
+          offset: 1,
+          transform: transform(0, 0)
         }
-    }    
-    
-    async function exchange(coin) {
-        eventCoin = coin;
-        const a = getCenter(monero);
-        const b = getCenter(coin);
+      ];
 
-        // Move both coins toward a shared meeting point.
-        const dx = b.x - a.x;
-        const dy = b.y - a.y;
+      const duration = 2700;
+      const options = { duration, fill: 'none' };
 
-        const overlap = Math.min(a.width, b.width) * 0.32;
-        const distance = Math.hypot(dx, dy);
+      const moneroAnimation = monero.animate(
+        frames(moneroX, moneroY),
+        options
+      );
 
-        if (distance < 1) return;
+      const partnerAnimation = partner.animate(
+        frames(partnerX, partnerY),
+        options
+      );
 
-        const ux = dx / distance;
-        const uy = dy / distance;
+      // Randomly simulate the direction of the exchange.
+      const moneroSends = Math.random() < 0.5;
+      const source = moneroSends ? monero : partner;
+      const destination = moneroSends ? partner : monero;
 
-        const travel = Math.max(0, distance - overlap * 2);
+      // Pulse the source, then pass the pulse to the destination.
+      await wait(1200);
+      pulseCoin(source);
 
-        const mx = ux * travel * 0.30;
-        const my = uy * travel * 0.30;
-        const cx = -ux * travel * 0.70;
-        const cy = -uy * travel * 0.70;
+      await wait(180);
+      pulseCoin(destination);
 
-        monero.style.zIndex = "20";
-        coin.style.zIndex = "10";
-
-        const options = {
-            duration: 1500,
-            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-            fill: "forwards"
-        };
-
-        activeAnimations = [
-            monero.animate([
-                { translate: "0px 0px" },
-                { translate: `${mx}px ${my}px`, offset: 1 }
-            ], options),
-            coin.animate([
-                { translate: "0px 0px" },
-                { translate: `${cx}px ${cy}px`, offset: 1 }
-            ], options)
-        ];
-        
-        await waitForCoinOverlap(coin, activeAnimations);
-
-        await Promise.all(activeAnimations.map(animation => animation.finished));
-        
-        if (reducedMotion.matches) {
-            activeAnimations.forEach(animation => animation.cancel());
-            monero.style.zIndex = "";
-            coin.style.zIndex = "";
-            return;
-        }
-        
-
-        // Brief, gentle pause while Monero partially covers the other coin.
-        //await wait(50);
-
-        activeAnimations = [
-            monero.animate([
-                { translate: `${mx}px ${my}px` },
-                { translate: "0px 0px" }
-            ], {
-                duration: 1700,
-                easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-                fill: "forwards"
-            }),
-            coin.animate([
-                { translate: `${cx}px ${cy}px` },
-                { translate: "0px 0px" }
-            ], {
-                duration: 1700,
-                easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-                fill: "forwards"
-            })
-        ];
-
-        await Promise.all(activeAnimations.map(animation => animation.finished));
-
-        // Remove the temporary animations so the original positions return.
-        activeAnimations.forEach(animation => animation.cancel());
-        activeAnimations = [];
-
-        monero.style.zIndex = "";
-        coin.style.zIndex = "";
+      await Promise.all([
+        moneroAnimation.finished.catch(() => {}),
+        partnerAnimation.finished.catch(() => {})
+      ]);
     }
 
-    async function run() {
-        while (orbit.isConnected) {
-            if (reducedMotion.matches) {
-                await wait(1000);
-                continue;
-            }
-
-            const coin = pickCoin();
-            previousCoin = coin;
-
-            await exchange(coin);
-            await wait(Math.random() * 300);
+    async function loop() {
+      while (orbit.isConnected) {
+        if (document.hidden) {
+          await wait(500);
+          continue;
         }
+
+        if (bag.length === 0) {
+          bag = shuffle(partners);
+
+          // Avoid repeating the previous coin when possible.
+          if (bag.length > 1 && bag[0] === previousPartner) {
+            [bag[0], bag[1]] = [bag[1], bag[0]];
+          }
+        }
+
+        const partner = bag.shift();
+        previousPartner = partner;
+
+        await runExchange(partner);
+        await wait(500 + Math.random() * 700);
+      }
     }
 
-    reducedMotion.addEventListener("change", () => {
-        if (reducedMotion.matches) {
-            activeAnimations.forEach(animation => animation.cancel());
-            activeAnimations = [];
-            monero.style.zIndex = "";
-            coins.forEach(coin => {
-                coin.style.zIndex = "";
-            });
+    // Wait for coin images to load before measuring positions.
+    Promise.all(
+      partners.concat(monero).map(coin => {
+        if (coin.complete || !('decode' in coin)) {
+          return Promise.resolve();
         }
+
+        return coin.decode().catch(() => {});
+      })
+    ).then(() => {
+      requestAnimationFrame(() => requestAnimationFrame(loop));
     });
+  }
 
-    run();
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      initCoinExchanges,
+      { once: true }
+    );
+  } else {
+    initCoinExchanges();
+  }
 })();

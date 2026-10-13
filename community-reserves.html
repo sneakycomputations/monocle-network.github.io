@@ -1,5 +1,10 @@
 <!doctype html>
 <html lang="en">
+<style>
+  ::before {
+    content: none;
+  }
+</style>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +21,29 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="community-reserves.html">Community Reserves</a><span aria-hidden="true">/</span><span aria-current="page">Community Reserves</span></nav>
     <header class="article-heading"><p class="micro-label">Community Reserves</p><h1>Community Reserves</h1></header>
     <article class="article-content"><p>Monocle allocates 33% of collected network fees to three community reserves:</p>
-<ul>
-<li><a href="peer-security-reserve.html">Peer Security Reserve</a></li>
-<li><a href="haveno-network-development-grant.html">Haveno Network Development Grant</a></li>
-<li><a href="open-source-sustainability-grant.html">Open Source Sustainability Grant</a></li>
-</ul>
+<div class="reserve-cards">
+  <article class="reserve-card">
+    <img src="assets/icons/icon-reserves-peer-security.svg"
+         alt=""
+         aria-hidden="true">
+    <h3><a href="peer-security-reserve.html">Peer Security Reserve</a></h3>
+  </article>
+
+  <article class="reserve-card">
+    <img src="assets/icons/icon-reserves-haveno.svg"
+         alt=""
+         aria-hidden="true">
+    <h3><a href="haveno-network-development-grant.html">Haveno Network Development Grant</a></h3>
+  </article>
+
+  <article class="reserve-card">
+    <img src="assets/icons/icon-reserves-open-source.svg"
+         alt=""
+         aria-hidden="true">
+    <h3><a href="open-source-sustainability-grant.html">Open Source Sustainability Grant</a></h3>
+  </article>
+</div>
+
 <p>These reserves are designed to protect network peers in the event of exploits and support development of Haveno and other open-source projects useful to Monocle.</p>
 <p>For more information read the <a href="reserve-allocation-policy.html">Reserve Allocation Policy</a>.</p>
 <p><strong>Exploit response:</strong> peer safety is Monocle's top priority, so in case of security exploits targeting peers' balances, all the XMR in reserves will be directed toward reimbursing affected peers.</p>

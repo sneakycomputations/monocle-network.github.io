@@ -265,8 +265,10 @@ p {
   color:var(--muted);
   padding:.2rem 0
 }
-.article-content strong {
-  color:var(--text)
+.article-content .accent {
+  color:var(--accent);
+  font-size: 1.2em;
+  font-family: "IBM Plex Serif", serif;
 }
 .article-content table {
   display:block;
@@ -1306,7 +1308,10 @@ p {
   font-size:1.4rem;
   line-height:1.4;
   font-weight:600;
-  margin:2rem 0 .5rem
+  margin:2rem 0 .5rem;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: normal;
+  color: var(--accent);
 }
 .article-content h4 {
   font-size:1rem;
@@ -1724,7 +1729,8 @@ p {
   background:#3b3a39;
   border:1px solid #57534d;
   box-shadow:0 3px 0 #222;
-  min-width:0
+  min-width:0;
+  position: relative;
 }
 .reserve-card h3 {
   font-family:"IBM Plex Serif",serif;
@@ -1750,6 +1756,8 @@ p {
   font-weight:600;
   border:1px solid #615b52;
   font-family: "IBM Plex Mono", mono;
+  position: absolute;
+  bottom: 1em;
 }
 .reserve-card>a span {
   display:inline-flex;
@@ -2882,60 +2890,173 @@ p {
   border:2px solid #000
 }
 
-/* Soft golden particles at the moment of exchange */
-.coin-trade-star {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 99999;
-    width: var(--particle-size, 9px);
-    height: var(--particle-size, 9px);
-    border-radius: 50%;
-    pointer-events: none;
-    background: radial-gradient(
-        circle at 35% 30%,
-        #fffbe8 0%,
-        #ffedb0 18%,
-        #f7ca61 48%,
-        rgba(222, 151, 35, 0.35) 75%,
-        rgba(222, 151, 35, 0) 100%
-    );
-    box-shadow:
-        0 0 8px rgba(255, 213, 105, 0.7),
-        0 0 16px rgba(245, 185, 65, 0.35);
-    transform: translate(-50%, -50%);
-    animation: golden-particle-burst 650ms cubic-bezier(0.18, 0.65, 0.3, 1) forwards;
-    will-change: transform, opacity;
+/* Bootstrapped Network section with side icon */
+.bootstrapped-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 13rem;
+  grid-template-areas: "content icon";
+  align-items: center;
+  gap: 2rem;
 }
 
-@keyframes golden-particle-burst {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.3);
-    }
-
-    12% {
-        opacity: 0.95;
-    }
-
-    70% {
-        opacity: 0.75;
-    }
-
-    100% {
-        opacity: 0;
-        transform:
-            translate(
-                calc(-50% + var(--dx)),
-                calc(-50% + var(--dy))
-            )
-            scale(0.45);
-    }
+.bootstrapped-content {
+  grid-area: content;
+  min-width: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .coin-trade-star {
-        animation: none;
-        opacity: 0;
-    }
+.bootstrapped-icon {
+  grid-area: icon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bootstrapped-icon img {
+  display: block;
+  width: 13rem;
+  height: 13rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .bootstrapped-section {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "content"
+      "icon";
+    gap: 1.5rem;
+  }
+
+  .bootstrapped-icon img {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+/* Aims: hollow orange diamond bullets */
+.article-content ul.aims-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-content ul.aims-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2em;
+}
+
+.article-content ul.aims-list li::before {
+  content: "◇";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f26822;
+  font-size: 1.1em;
+  line-height: inherit;
+}
+
+/* What Monocle Brings: two-column paragraph grid */
+.brings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 2.5rem;
+  align-items: stretch;
+}
+
+.brings-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.brings-item h3 {
+  margin-top: 0;
+}
+
+.brings-item p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .brings-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+
+/* Community reserve cards */
+.article-content .reserve-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7rem;
+  margin: 2rem 0;
+}
+
+.reserve-cards:not(.reserves-band *)::before,
+.reserve-cards *:not(.reserves-band *)::before {
+  content: none;
+}
+
+.article-content .reserve-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  min-width: 0;
+}
+
+.article-content .reserve-card img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.article-content .reserve-card h3 {
+  margin-top: 0;
+}
+
+.article-content .reserve-card h3 a {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+.article-content .reserve-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.article-content .reserve-card p {
+  flex-grow: 1;
+}
+
+@media (max-width: 700px) {
+  .article-content .reserve-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Directional currency-exchange pulse */
+@keyframes coin-exchange-pulse {
+  0%, 100% {
+    scale: 1;
+    filter: drop-shadow(0 6px 12px #0004) brightness(1);
+  }
+
+  50% {
+    scale: 1.06;
+    filter: drop-shadow(0 6px 12px #0004) brightness(1.12);
+  }
+}
+
+.coin-exchange-pulse {
+  animation: coin-exchange-pulse 420ms ease-in-out;
 }
