@@ -559,14 +559,14 @@ p {
 }
 .values-list {
   border-left:1px solid var(--border);
-  padding-left:clamp(1rem,3vw,2.5rem);
+  /*! padding-left:clamp(1rem,3vw,2.5rem); */
   max-width:1020px
 }
 .value-row {
   display:grid;
   grid-template-columns:100px minmax(0,1fr);
   gap:1.5rem;
-  padding:1.7rem 0;
+  padding:1.7rem 1em;
   border-bottom:1px solid var(--border);
   align-items:center
 }
@@ -579,12 +579,13 @@ p {
   object-fit:contain
 }
 .micro-label {
-  font-family:"IBM Plex Sans",monospace;
+  font-family:"IBM Plex Sans",sans-serif;
   text-transform:uppercase;
   letter-spacing:.08em;
-  font-size:.65rem;
+  font-size:0.81rem;
   color:var(--text);
-  margin:0 0 .4rem
+  margin:0 0 .4rem;
+  font-weight: bold;
 }
 .value-row h3 {
   font-family:"IBM Plex Serif",serif;
@@ -1712,8 +1713,9 @@ p {
   line-height:1.35
 }
 .feature-card p {
-  font-size:.8rem;
-  line-height:1.55
+  font-size:0.9rem;
+  line-height:1.55;
+  color: orange;
 }
 .reserves-band {
   max-width:1080px
@@ -2333,7 +2335,7 @@ p {
 }
 .theme-toggle {
   position:absolute;
-  right:max(calc((100% - 1648px)/2),72px);
+  right:0;
   top:112px;
   z-index:2;
   display:flex;
