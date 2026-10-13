@@ -3060,3 +3060,7 @@ p {
 .coin-exchange-pulse {
   animation: coin-exchange-pulse 420ms ease-in-out;
 }
+
+.coin-exchange-foreground {
+  z-index: 10 !important;
+}

@@ -29,7 +29,7 @@
       void coin.offsetWidth;
       coin.classList.add('coin-exchange-pulse');
     }
-
+    
     let bag = shuffle(partners);
     let previousPartner = null;
 
@@ -92,7 +92,7 @@
         }
       ];
 
-      const duration = 2700;
+      const duration = 2000;
       const options = { duration, fill: 'none' };
 
       const moneroAnimation = monero.animate(
@@ -105,22 +105,29 @@
         options
       );
 
+
       // Randomly simulate the direction of the exchange.
       const moneroSends = Math.random() < 0.5;
       const source = moneroSends ? monero : partner;
       const destination = moneroSends ? partner : monero;
 
-      // Pulse the source, then pass the pulse to the destination.
-      await wait(1200);
+      // Set the stacking order once for the entire exchange.
+      source.classList.add('coin-exchange-foreground');
+      destination.classList.remove('coin-exchange-foreground');
+
+      await wait(850);
       pulseCoin(source);
 
-      await wait(180);
+      await wait(150);
       pulseCoin(destination);
 
       await Promise.all([
         moneroAnimation.finished.catch(() => {}),
         partnerAnimation.finished.catch(() => {})
       ]);
+
+      // Restore the default stacking order after the exchange.
+      source.classList.remove('coin-exchange-foreground');
     }
 
     async function loop() {
@@ -143,7 +150,7 @@
         previousPartner = partner;
 
         await runExchange(partner);
-        await wait(500 + Math.random() * 700);
+        await wait(200 + Math.random() * 300);
       }
     }
 
