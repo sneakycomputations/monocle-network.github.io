@@ -20,6 +20,13 @@
   font-display:swap
 }
 @font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
   font-family:"IBM Plex Serif";
   src:url(../fonts/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf) format("truetype");
   font-style:normal;
@@ -336,7 +343,9 @@ p {
   color:#17120c;
   font-weight:600;
   text-decoration:none;
-  border-radius:3px
+  border-radius:3px;
+  font-family: "IBM Plex Mono", mono;
+  font-weight: bold;
 }
 .button:hover {
   background:var(--accent-strong);
@@ -534,9 +543,10 @@ p {
   width:clamp(70px,8vw,110px)
 }
 .section-title-left {
-  font-size:1.35rem;
+  font-size:2rem;
   font-weight:400;
-  margin-bottom:1.4rem
+  margin-bottom:1.4rem;
+  font-family: "IBM Plex Serif",serif;
 }
 .section-title-centered {
   text-align:center;
@@ -567,7 +577,7 @@ p {
   object-fit:contain
 }
 .micro-label {
-  font-family:"IBM Plex Mono",monospace;
+  font-family:"IBM Plex Sans",monospace;
   text-transform:uppercase;
   letter-spacing:.08em;
   font-size:.65rem;
@@ -691,7 +701,8 @@ p {
   text-decoration:none
 }
 .reserves-lead {
-  position:relative
+  position:relative;
+  font-weight: bold;
 }
 .reserves-lead::after {
   content:"";
@@ -1737,7 +1748,8 @@ p {
   text-decoration:none;
   font-size:.75rem;
   font-weight:600;
-  border:1px solid #615b52
+  border:1px solid #615b52;
+  font-family: "IBM Plex Mono", mono;
 }
 .reserve-card>a span {
   display:inline-flex;
