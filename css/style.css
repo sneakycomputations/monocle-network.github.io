@@ -1175,32 +1175,32 @@ p {
 .coin-orbit .coin-btc {
     left: 31.4%;
     top: 35.4%;
-    width: clamp(68px,8vw,112px);
+    width: 110px;
 }
 .coin-orbit .coin-usd {
     left: 50%;
     top: 20.7%;
-    width: clamp(76px,9vw,124px);
+    width: 110px;
 }
 .coin-orbit .coin-eth {
     left: 68.6%;
     top: 35.4%;
-    width: clamp(72px,8vw,114px);
+    width: 110px;
 }
 .coin-orbit .coin-brl {
     left: 68.6%;
     top: 64.6%;
-    width: clamp(70px,8vw,110px);
+    width: 110px;
 }
 .coin-orbit .coin-gbp {
     left: 50%;
     top: 79.3%;
-    width: clamp(70px,8vw,110px);
+    width: 110px;
 }
 .coin-orbit .coin-eur {
     left: 31.4%;
     top: 64.6%;
-    width: clamp(70px,8vw,110px);
+    width: 110px;
 }
 .coin-orbit .coin-xmr {
     left: 50%;
@@ -1512,7 +1512,7 @@ p {
 }
 .coin-orbit .coin-btc {
     left: 27%;
-    top: 35.4%;
+    top: 30%;
 }
 .coin-orbit .coin-usd {
     left: 50%;
@@ -1520,11 +1520,11 @@ p {
 }
 .coin-orbit .coin-eth {
     left: 73%;
-    top: 35.4%;
+    top: 30%;
 }
 .coin-orbit .coin-brl {
     left: 73%;
-    top: 64.6%;
+    top: 70%;
 }
 .coin-orbit .coin-gbp {
     left: 50%;
@@ -1532,7 +1532,7 @@ p {
 }
 .coin-orbit .coin-eur {
     left: 27%;
-    top: 64.6%;
+    top: 70%;
 }
 .feature-card {
     position: relative;
