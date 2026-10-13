@@ -57,3 +57,17 @@ Phase 4: first page batch implemented (homepage and Download), building on the s
 - Kept the bespoke homepage and Download page layouts intact; the Markdown copies remain in `copy/` for editing.
 - Internal placeholder links were mapped to matching local pages where a matching page exists. Unspecified external URLs remain unlinked rather than being invented.
 - Pages use shared header/footer partials, so preview them over HTTP (for example `python3 -m http.server 8000 --bind 127.0.0.1`), not via `file://`.
+
+## Phase 8 update — shared header and footer reconstruction
+Updated: 2026-10-12
+
+- Re-reviewed the supplied desktop homepage and mobile light/dark and open-menu mockups, treating the header and footer as shared site-wide components rather than page-specific sections.
+- Rebuilt `partials/header.html` and its CSS around a full-width top bar: logo at left, vertically divided desktop navigation, theme control at the right, and a thick orange lower rule. On mobile, the logo/theme row is followed by the full-width orange Menu strip and a collapsible navigation list.
+- Rebuilt `partials/footer.html` to use the mockup's lighter charcoal/light-theme surface, large Monocle Network wordmark, four link areas (including the bordered Explore list), “Follow us on...” heading, ten square social-icon tiles, and the orange rule above the bottom links.
+- Added responsive styles for desktop columns and the five-column mobile social grid. Existing homepage feature-tag/orbit/reserve styles were left intact.
+- Kept shared partial loading through the existing vanilla-JavaScript include mechanism; all pages with `#site-header` and `#site-footer` receive the same components.
+
+### Validation and remaining review
+- Checked that the referenced local logo, theme and social icon assets exist in the package.
+- Visual review used the supplied static mockups as references. A fresh browser screenshot comparison has not yet been completed; compare desktop and mobile renders before treating the header/footer as pixel-perfect.
+- Social icons are populated from the supplied artwork. Only destinations known from the project context should be considered final; confirm official external profile URLs before launch.
