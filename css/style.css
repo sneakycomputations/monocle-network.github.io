@@ -2877,16 +2877,25 @@ p {
   background:var(--accent);
   color:#17120c
 }
-:root:not([data-theme="light"]) .button-outline,
-:root:not([data-theme="light"]) .button-outline:hover {
+:root:not([data-theme="light"]) .button-outline {
   background:transparent;
   color:#fff;
   border:2px solid #fff
 }
-:root[data-theme="light"] .button-outline,
-:root[data-theme="light"] .button-outline:hover {
+:root:not([data-theme="light"]) .button-outline:hover {
+  background:#fff;
+  color:#000;
+  border:2px solid #fff
+}
+:root[data-theme="light"] .button-outline {
   background:transparent;
   color:#000;
+  border:2px solid #000
+}
+
+:root[data-theme="light"] .button-outline:hover {
+  background:#000;
+  color:#fff;
   border:2px solid #000
 }
 
