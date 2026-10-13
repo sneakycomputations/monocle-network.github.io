@@ -3064,3 +3064,40 @@ p {
 }
 
 
+
+.banner-icon-tag {
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:150px;
+  height:150px;
+  margin-bottom:.75rem;
+  background:url(../assets/icons/tag.svg) center/100% 100% no-repeat;
+  flex:none;
+  top: -17px;
+}
+.banner-icon-tag img {
+  width:85px;
+  height:85px;
+  object-fit:contain;
+  margin:0;
+  filter:brightness(0) invert(1);
+  left: 20px;
+  position: absolute;
+  top: 24px;
+}
+.transparency-banner {
+  background-color: black;
+  padding: 2em;
+  position: relative;
+}
+.transparency-banner-text {
+  margin-left:200px;
+}
+.transparency-banner h2 {
+  margin-top:0px;
+}
+.transparency-banner .button {
+  align:right;
+}
