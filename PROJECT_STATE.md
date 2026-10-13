@@ -4,7 +4,7 @@ Updated: 2026-10-11
 
 ## Current phase
 
-Phase 4: first page batch implemented (homepage and Download), building on the shared foundation. The supplied archive has been inspected and extracted into this working project.
+Phase 10: shared header and footer reconstructed from the supplied desktop and mobile mockups. Awaiting user approval before proceeding. The supplied archive has been inspected and extracted into this working project.
 
 ## Source archive inventory
 
@@ -89,3 +89,26 @@ Updated: 2026-10-12
 - Confirmed all referenced local logo and social icon files exist.
 - Confirmed all seven requested header links are present in the requested order and the footer has the requested column and social order.
 - ZIP integrity and automated local-reference checks are run for this package. Browser screenshot comparison is still needed to confirm visual fidelity across desktop, mobile, light and dark themes. External destinations such as Wiki and social profiles should be verified before launch.
+
+
+## Phase 10 update — mockup-led header and footer reconstruction
+Updated: 2026-10-13
+
+### Layout specification used
+- Desktop header: centered, inset bar with a dark gradient matching the page palette, thin neutral perimeter, orange bottom rule, contained logo at left, divided navigation links at right, and no logo artwork protruding above the bar. The desktop navigation hides Home and presents About, Community Reserves, Network Fees, Support, Wiki, FAQ, and Download in that order.
+- Desktop theme control: separate visual row below the orange header rule, aligned to the right edge of the header container. Both theme icons remain visible; the current theme icon is highlighted.
+- Mobile header: inset top bar with the logo on the left and the two-icon theme switch on the right; the full-width orange Menu strip sits immediately below within the same inset container. The expanded navigation includes Home followed by the remaining pages and orange chevrons.
+- Footer: full-width footer surface with a centered wide inner container, large Monocle Network wordmark, then a four-column directory. The bordered site-links list starts level with the other column headings. Desktop column order is Policies, Community Reserves, Dispute Resolution. On mobile, the order follows the supplied mockup: site links, Community Reserves, Dispute Resolution, Policies.
+- Social row: “Follow us on...” in the supplied italic serif/orange treatment at desktop, followed by ten supplied square icon tiles in the order SimpleX, Matrix, Discussions, GitHub, X, Telegram, Reddit, Nostr, YouTube, Stasher. The orange bottom rule and MonocleNetwork.org/Sitemap links remain below.
+- Responsive measurements are based on the 1920 px desktop mockups and 600 px mobile mockups, with separate tablet and phone adjustments. These are practical CSS targets, not claims of pixel-perfect validation.
+
+### Files changed
+- `partials/header.html`: consolidated the theme switch into the shared header markup, added the Home link for the expanded mobile menu, and kept desktop nav order as shown in the mockup.
+- `partials/footer.html`: retained the shared footer content and removed the inaccurate “Explore” aria label.
+- `css/style.css`: replaced the accumulated Phase 9 overrides with one Phase 10 header/footer block; unrelated homepage, article, and download styles above it were left intact.
+
+### Validation and remaining review
+- Confirmed all referenced local logo, theme and social artwork files exist.
+- Checked the desktop and mobile mockups, including light theme and expanded mobile navigation, before writing the layout rules.
+- The current execution environment has not provided a successful browser screenshot comparison, so exact rendered pixel matching remains unverified. User review is required before any further changes.
+- Social and Wiki destinations remain placeholders unless independently confirmed as official Monocle endpoints.
