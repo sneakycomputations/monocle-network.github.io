@@ -71,3 +71,21 @@ Updated: 2026-10-12
 - Checked that the referenced local logo, theme and social icon assets exist in the package.
 - Visual review used the supplied static mockups as references. A fresh browser screenshot comparison has not yet been completed; compare desktop and mobile renders before treating the header/footer as pixel-perfect.
 - Social icons are populated from the supplied artwork. Only destinations known from the project context should be considered final; confirm official external profile URLs before launch.
+
+
+## Phase 9 update — header and footer review corrections
+Updated: 2026-10-12
+
+- Removed the top margin from the shared header and made its background match the page background, with the orange rule directly under the navigation bar.
+- Adjusted logo sizing so the mascot artwork fits within the header instead of appearing clipped at the top.
+- Replaced the header navigation with the requested order: About, Community Reserves, Network Fees, Support, Wiki, FAQ, Download. Desktop labels are uppercase; mobile navigation retains uppercase labels.
+- Moved the light/dark controls to a separate row below the header bar. Both icons remain visible, with the active theme highlighted.
+- Removed the Explore heading from the first footer link list. The list now begins alongside the other footer columns' headings, beneath the Monocle Network logo.
+- Reordered footer columns to Policies, Community Reserves, Dispute Resolution.
+- Moved the social section directly below the footer link columns, changed its heading to “Follow Monocle on...”, and reordered icons to SimpleX, Matrix, Discussions, GitHub, X, Telegram, Reddit, Nostr, YouTube, Stasher.
+- Preserved the existing orange footer divider and bottom links.
+
+### Validation and remaining review
+- Confirmed all referenced local logo and social icon files exist.
+- Confirmed all seven requested header links are present in the requested order and the footer has the requested column and social order.
+- ZIP integrity and automated local-reference checks are run for this package. Browser screenshot comparison is still needed to confirm visual fidelity across desktop, mobile, light and dark themes. External destinations such as Wiki and social profiles should be verified before launch.
