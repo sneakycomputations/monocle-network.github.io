@@ -213,7 +213,7 @@ img {
 }
 .container {
   width:min(var(--content),calc(100% - 48px));
-  margin-inline:auto
+  margin-inline:auto;
 }
 .page-main {
   min-height:55vh
@@ -247,7 +247,7 @@ h3 {
   font-weight:500
 }
 p {
-  max-width:76ch;
+  /*! max-width:76ch; */
   color:var(--muted)
 }
 .article-content {
@@ -458,7 +458,7 @@ p {
   }
 }
 .section-space {
-  margin-top:clamp(4rem,8vw,7.5rem)
+  margin-top:clamp(4rem,8vw,7.5rem);
 }
 .home-hero {
   min-height:clamp(440px,48vw,680px);
@@ -760,18 +760,19 @@ p {
   align-items:center;
   gap:2rem;
   background:#080808;
-  padding:clamp(1.5rem,4vw,3rem);
+  padding:0.7em 2em;
   margin-bottom:5rem
 }
 .get-involved-band .mascot {
-  width:100%;
-  max-height:260px;
+  /*! width:100%; */
+  max-height:350px;
   object-fit:contain;
-  align-self:end
+  align-self:end;
+  /*! margin-left: 0; */
 }
 .get-involved-band>div {
   background:var(--surface);
-  padding:clamp(1.5rem,3vw,2.5rem);
+  padding:1em;
   padding-top: 0;
 }
 .get-involved-band .micro-label {
@@ -788,6 +789,9 @@ p {
 }
 .get-involved-band p:not(.micro-label) {
   font-size:.9rem
+}
+p.get-involved-button {
+  text-align: right;
 }
 :root[data-theme="light"] .download-promo {
   background:radial-gradient(ellipse at 50% 0%,#f6d5ad 0%,#f9e5ce 42%,#f7f0e6 78%,var(--surface) 100%)
@@ -3121,10 +3125,367 @@ p {
 }
 .transparency-banner-text {
   margin-left:200px;
+      grid-template-columns: 64px minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.3rem 1rem;
 }
 .transparency-banner h2 {
   margin-top:0px;
 }
 .transparency-banner .button {
   align:right;
+}
+
+/* Network Fees page */
+
+.network-fees-page .article-heading {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(244, 154, 37, 0.18);
+}
+
+.network-fees-intro > p,
+.network-fee-transparency > p {
+  margin-bottom: 1.15rem;
+}
+
+.network-fee-rates {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin: 2rem 0 2.1rem;
+}
+
+.network-fee-rate {
+  box-sizing: border-box;
+  width: 15em;
+  min-height: 15em;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.network-fee-rate--maker {
+  background: #f28c1b;
+}
+
+.network-fee-rate--taker {
+  background: #454545;
+}
+
+.network-fee-role {
+  margin-bottom: 0.3rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.network-fee-rate strong {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.network-fee-allocation {
+  /*! max-width: 760px; */
+  margin: 1.8rem auto 1.5rem;
+  color: var(--accent, #f49a25);
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 5em;
+}
+
+.network-fee-reserves-link {
+  margin-top: 1.6rem;
+  font-size: 0.9rem;
+}
+
+.network-fee-reserves-link a,
+.network-fee-transparency > p a {
+  color: var(--accent, #f49a25);
+}
+
+
+/* Community Reserves banner partial */
+
+.network-banner {
+  box-sizing: border-box;
+  margin: 2.5rem 0 3rem;
+  padding: 2.4rem 2rem;
+  text-align: center;
+}
+
+.community-reserves-banner {
+  background: #050505;
+  color: #f3f0eb;
+}
+
+.community-reserves-banner h2 {
+  margin: 0 0 1.3rem;
+  font-family: "IBM Plex Serif", serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 400;
+}
+
+.community-reserves-banner > p {
+  margin: 0 0 1.8rem;
+  font-size: 0.9rem;
+}
+
+.community-reserves-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.community-reserves-links a {
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid #45413b;
+  color: var(--accent, #f49a25);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.community-reserves-links a:hover,
+.community-reserves-links a:focus-visible {
+  border-color: var(--accent, #f49a25);
+  background: rgba(244, 154, 37, 0.08);
+}
+
+
+/* Network Fee Transparency section */
+
+.network-fee-transparency {
+  margin-top: 3rem;
+}
+
+.network-fee-transparency > h2 {
+  margin-bottom: 1.2rem;
+}
+
+.network-fee-commitments {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.network-fee-commitment {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 1.2rem 1.3rem;
+  background: var(--surface, #1b1a19);
+  border-bottom: 1px solid rgba(244, 154, 37, 0.18);
+}
+
+.network-fee-commitment h3 {
+  margin: 0 0 0.65rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.network-fee-commitment p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.network-fee-closing {
+  margin-top: 2rem;
+}
+
+
+/* Bootstrapped network banner partial */
+
+.network-promo-banner {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  background: var(--surface, #1b1a19);
+}
+
+.network-promo-icon {
+  display: block;
+  width: 200px;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.network-promo-copy h2 {
+  margin: 0 0 0.6rem;
+  font-family: "IBM Plex Serif", serif;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.network-promo-copy p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.network-promo-button {
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #343434;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: background-color 180ms ease;
+}
+
+.network-promo-button > span:first-child {
+  align-self: center;
+  padding: 0.65rem 0.8rem;
+}
+
+.network-promo-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0 0.45rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--accent, #f49a25);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.network-promo-button:hover,
+.network-promo-button:focus-visible {
+  background: #454545;
+}
+
+.network-promo-button:hover .network-promo-arrow,
+.network-promo-button:focus-visible .network-promo-arrow {
+  transform: translateX(2px);
+}
+
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+  .network-fee-rates {
+    gap: 0.75rem;
+  }
+
+  .network-fee-rate {
+    width: min(42vw, 144px);
+    min-height: 115px;
+  }
+
+  .network-banner {
+    padding: 2rem 1.1rem;
+  }
+
+  .network-fee-commitments {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .network-promo-banner {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.3rem 1rem;
+  }
+
+  .network-promo-icon {
+    width: 60px;
+  }
+
+  .network-promo-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .network-fee-rate {
+    min-height: 105px;
+    padding: 1rem 0.6rem;
+  }
+
+  .network-fee-role {
+    font-size: 0.8rem;
+  }
+
+  .network-fee-rate strong {
+    font-size: 1.9rem;
+  }
+
+  .community-reserves-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .community-reserves-links a {
+    text-align: center;
+  }
+}
+
+.transparency-banner-text {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.transparency-banner-content {
+  min-width: 0;
+}
+
+.transparency-banner-text .button {
+  justify-self: end;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .transparency-banner-text {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .transparency-banner-text .button {
+    justify-self: start;
+  }
+}
+
+.wiki-banner-monocle {
+  font-family: "IBM Plex Serif", serif;
+  color: orange;
+  /*! font-weight: bold; */
+  font-size: 2em;
+}
+
+.wiki-banner-wiki {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2em;
+  color: #aaa;
+}
+.wiki-banner {
+  padding:1em;
 }

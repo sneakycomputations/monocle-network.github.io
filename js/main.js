@@ -44,6 +44,9 @@
     include('#site-footer', 'partials/footer.html'),
     include('#banner-get-involved', 'partials/get-involved.html'),
     include('#banner-download', 'partials/download.html'),
+    include('#banner-reserves', 'partials/community-reserves.html'),
+    include('#banner-bootstrapped', 'partials/bootstrapped-network.html'),
+    include('#banner-wiki', 'partials/wiki.html'),
     include('#banner-transparency', 'partials/transparency.html')
   ]).then(wireControls);
 })();
