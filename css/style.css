@@ -3152,9 +3152,6 @@ p.get-involved-button {
 .transparency-banner h2 {
   margin-top:0px;
 }
-.transparency-banner .button {
-  align:right;
-}
 
 /* Network Fees page */
 
@@ -3508,4 +3505,251 @@ p.get-involved-button {
 }
 .wiki-banner {
   padding:1em;
+}
+
+/* Dispute Resolution directory */
+
+.dispute-directory {
+  padding-top: 38px;
+  padding-bottom: 98px;
+}
+
+.dispute-directory-heading {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--accent, #f49a25);
+}
+
+.dispute-directory-heading h1 {
+  margin: 0;
+  font-family: var(--font-serif, "IBM Plex Serif", serif);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.dispute-directory-intro {
+  margin: 34px 0 34px;
+  color: var(--muted, #999590);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.dispute-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4em;
+}
+
+.dispute-directory-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 360px;
+  padding: 35px 28px 30px;
+  background: var(--footer, #30302f);
+  border: 1px solid var(--border, #484745);
+  text-align: center;
+}
+
+.dispute-directory-icon {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 24px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: var(--surface, #1b1a19);
+  object-fit: contain;
+}
+
+.dispute-directory-card h2 {
+  margin: 0 0 20px;
+  font-family: var(--font-serif, "IBM Plex Serif", serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.dispute-directory-card h2 a {
+  color: var(--text, #f3f0eb);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.dispute-directory-card > p {
+  max-width: 390px;
+  margin: 0 0 16px;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.dispute-directory-card .dispute-directory-link {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 2px;
+  font-size: 0.8rem;
+}
+
+.dispute-directory-link a {
+  color: var(--accent, #f49a25);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dispute-directory-card a:hover,
+.dispute-directory-card a:focus-visible {
+  color: var(--accent-strong, #e8790c);
+}
+
+@media (max-width: 700px) {
+  .dispute-directory {
+    padding-top: 28px;
+    padding-bottom: 64px;
+  }
+
+  .dispute-directory-heading h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .dispute-directory-intro {
+    margin: 26px 0;
+  }
+
+  .dispute-directory-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .dispute-directory-card {
+    min-height: 0;
+    padding: 28px 22px;
+  }
+
+  .dispute-directory-icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .dispute-directory-card .dispute-directory-link {
+    margin-top: 4px;
+  }
+}
+
+.transparency-address-info {
+  display:flex;
+  gap: 2em;
+  background: #333;
+  padding: 1em;
+}
+
+/* Policies directory */
+
+.policies-directory {
+  padding-top: 38px;
+  padding-bottom: 94px;
+}
+
+.policies-directory-heading {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--accent, #f49a25);
+}
+
+.policies-directory-heading h1 {
+  margin: 0;
+  font-family: var(--font-serif, "IBM Plex Serif", serif);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.policies-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3em;
+  margin-top: 44px;
+}
+
+.policies-directory-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 248px;
+  padding: 18px 22px 20px;
+  background: var(--footer, #30302f);
+  border: 1px solid var(--border, #484745);
+  text-align: center;
+}
+
+.policies-directory-card h2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 48px;
+  margin: 0 0 16px;
+  font-family: var(--font-serif, "IBM Plex Serif", serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.policies-directory-card h2 a {
+  color: var(--text, #f3f0eb);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.policies-directory-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  margin-top: auto;
+  background: var(--accent, #f49a25);
+  padding: 1.5em;
+}
+
+.policies-directory-icon-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.policies-directory-card h2 a:hover,
+.policies-directory-card h2 a:focus-visible {
+  color: var(--accent, #f49a25);
+}
+
+@media (max-width: 800px) {
+  .policies-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 520px) {
+  .policies-directory {
+    padding-top: 28px;
+    padding-bottom: 64px;
+  }
+
+  .policies-directory-heading h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .policies-directory-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .policies-directory-card {
+    min-height: 248px;
+  }
 }
