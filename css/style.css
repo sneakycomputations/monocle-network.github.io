@@ -3125,7 +3125,7 @@ p.get-involved-button {
   margin-bottom:.75rem;
   background:url(../assets/icons/tag.svg) center/100% 100% no-repeat;
   flex:none;
-  top: -17px;
+  top: -24px;
 }
 .banner-icon-tag img {
   width:85px;
@@ -3141,6 +3141,7 @@ p.get-involved-button {
   background-color: black;
   padding: 2em;
   position: relative;
+  border: 1px solid grey;
 }
 .transparency-banner-text {
   margin-left:200px;
