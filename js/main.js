@@ -47,6 +47,8 @@
     include('#banner-reserves', 'partials/community-reserves.html'),
     include('#banner-bootstrapped', 'partials/bootstrapped-network.html'),
     include('#banner-wiki', 'partials/wiki.html'),
+    include('#banner-dispute-resolution', 'partials/dispute-resolution.html'),
+    include('#banner-discussions', 'partials/discussions.html'),
     include('#banner-transparency', 'partials/transparency.html')
   ]).then(wireControls);
 })();

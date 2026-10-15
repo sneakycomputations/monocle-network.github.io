@@ -1377,8 +1377,8 @@ p.get-involved-button {
 }
 .article-content blockquote {
   margin:1.5rem 0;
-  padding:.8rem 1.2rem;
-  border-left:3px solid var(--accent);
+  padding:3em;
+  /*! border-left:3px solid var(--accent); */
   background:var(--surface);
   color:var(--muted)
 }
@@ -2547,8 +2547,7 @@ p.get-involved-button {
   padding:1.5rem;
   margin-top:0;
   font-size:14px;
-  background-color: #222;
-  /*! padding-bottom: 1em; */
+  background: linear-gradient(180deg,var(--surface-raised) 0%,var(--page) 100%);
 }
 .footer-bottom a {
   font-size:14px;
@@ -3232,7 +3231,7 @@ p.get-involved-button {
 
 .network-banner {
   box-sizing: border-box;
-  margin: 2.5rem 0 3rem;
+  margin-top: 3.5rem;
   padding: 2.4rem 2rem;
   text-align: center;
 }
@@ -3336,6 +3335,7 @@ p.get-involved-button {
   padding: 3rem 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.035);
   background: var(--surface, #1b1a19);
+  border: 1px solid grey;
 }
 
 .network-promo-icon {
@@ -3637,12 +3637,28 @@ p.get-involved-button {
   }
 }
 
-.transparency-address-info {
-  display:flex;
-  gap: 2em;
-  background: #333;
-  padding: 1em;
+ul.transparency-address-info {
+    position: relative;
+    /*! list-style: none; */
+    margin: 1.5rem 0;
+    padding: 1.5rem 5rem 1.5rem 7em;
+    background-color: #292827;
+    border-radius: 8px;
 }
+ul.transparency-address-info::before {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.5em;
+    height: 3.5em;
+    background-image: url("/assets/icons/icon-magnifying-glass.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 /* Policies directory */
 
@@ -3751,5 +3767,81 @@ p.get-involved-button {
 
   .policies-directory-card {
     min-height: 248px;
+  }
+}
+
+/* Table of Penalties: trading reminder quote */
+
+.trade-reminder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 168px;
+  margin: 48px 0 32px;
+  padding: 28px 64px;
+  box-sizing: border-box;
+  background: #000;
+  border: 1px solid #191817;
+  text-align: center;
+}
+
+.trade-reminder p {
+  margin: 0;
+  color: var(--accent, #f49a25);
+  font-family: var(--font-serif, "IBM Plex Serif", serif);
+  font-size: 3em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.trade-reminder-divider {
+  display: block;
+  width: 11em;
+  height: 1px;
+  margin-top: 16px;
+  background: var(--accent, #f49a25);
+  opacity: 0.25;
+}
+
+.trade-reminder-quote {
+  position: absolute;
+  color: #393633;
+  font-family: var(--font-serif, "IBM Plex Serif", serif);
+  font-size: 9rem;
+  line-height: 1;
+}
+
+.trade-reminder-quote-open {
+  top: 0px;
+  left: 1px;
+}
+
+.trade-reminder-quote-close {
+  right: 1px;
+  bottom: -83px;
+}
+
+@media (max-width: 520px) {
+  .trade-reminder {
+    min-height: 150px;
+    margin: 36px 0 24px;
+    padding: 28px 36px;
+  }
+
+  .trade-reminder-quote {
+    font-size: 3rem;
+  }
+
+  .trade-reminder-quote-open {
+    top: 8px;
+    left: 10px;
+  }
+
+  .trade-reminder-quote-close {
+    right: 10px;
+    bottom: 2px;
   }
 }
