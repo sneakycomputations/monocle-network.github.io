@@ -4,44 +4,133 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#11100f">
-  <meta name="description" content="Download the Monocle desktop application for Linux, Windows, or macOS and trade Monero privately peer-to-peer.">
+  <meta name="description" content="Download Monocle for Linux, Windows, or macOS and trade Monero privately peer-to-peer.">
   <title>Download Monocle | Monocle Network</title>
   <link rel="icon" href="favicon/f1.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
+  <script src="js/download.js" defer></script>
 </head>
 <body class="download-page">
   <div id="site-header"></div>
+
   <main class="container download-main">
-    <header class="page-heading download-heading"><h1>Download</h1></header>
-    <section class="download-selector" aria-label="Choose a Monocle download">
-      <button class="button download-choice" type="button" aria-haspopup="true" aria-expanded="false" disabled>Download for Windows <span aria-hidden="true">⌄</span></button>
-      <p class="download-note">Downloads will be linked here when release URLs are confirmed. See the <a href="https://monocle.wiki/">Monocle Wiki</a> for installation instructions.</p>
+    <header class="page-heading download-heading">
+      <h1>Download</h1>
+    </header>
+
+    <section class="download-selector" aria-label="Download Monocle">
+      <a class="button download-choice" id="download-choice-top"
+         href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;">
+        Download for Windows
+      </a>
+      <p class="download-note">
+        See the <a href="https://monocle.wiki/">Monocle Wiki</a> for installation instructions.
+      </p>
     </section>
-    <figure class="download-hero-art"><img src="assets/graphics/laptop-mockup.svg" alt="Monocle Network desktop application shown on a laptop"></figure>
+
+    <figure class="download-hero-art">
+      <img src="assets/graphics/laptop-mockup.svg"
+           alt="Monocle Network desktop application shown on a laptop">
+    </figure>
+
     <p class="platform-intro">Monocle is a desktop application available for:</p>
+
     <section class="platform-grid" aria-label="Desktop platforms">
-      <article class="platform-card"><img src="assets/os/icon-os-linux.svg" alt="" loading="lazy"><h2>Download for<br>Linux</h2><div class="platform-links"><span class="button button-small is-disabled" aria-disabled="true">AppImage <span>›</span></span><span class="button button-small is-disabled" aria-disabled="true">Deb <span>›</span></span><span class="button button-small button-muted is-disabled" aria-disabled="true">Flatpak <span>›</span></span><span class="button button-small button-muted is-disabled" aria-disabled="true">RPM <span>›</span></span></div></article>
-      <article class="platform-card"><img src="assets/os/icon-os-windows.svg" alt="" loading="lazy"><h2>Download for<br>Windows</h2><div class="platform-links platform-links-single"><span class="button button-small is-disabled" aria-disabled="true">Download for Windows <span>›</span></span></div></article>
-      <article class="platform-card"><img src="assets/os/icon-os-mac.svg" alt="" loading="lazy"><h2>Download for<br>MacOS</h2><div class="platform-links platform-links-single"><span class="button button-small is-disabled" aria-disabled="true">Intel <span>›</span></span><span class="button button-small button-muted is-disabled" aria-disabled="true">Apple Silicon <span>›</span></span></div></article>
+      <article class="platform-card">
+        <img src="assets/os/icon-os-linux.svg" alt="" loading="lazy">
+        <h2>Download for<br>Linux</h2>
+        <div class="platform-links">
+          <a class="button button-small" href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;" data-download-os="Linux" data-download-format="AppImage">AppImage <span aria-hidden="true">›</span></a>
+          <a class="button button-small" href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;" data-download-os="Linux" data-download-format="Deb">Deb <span aria-hidden="true">›</span></a>
+          <a class="button button-small button-muted" href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;" data-download-os="Linux" data-download-format="Flatpak">Flatpak <span aria-hidden="true">›</span></a>
+          <a class="button button-small button-muted" href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;" data-download-os="Linux" data-download-format="RPM">RPM <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+
+      <article class="platform-card">
+        <img src="assets/os/icon-os-windows.svg" alt="" loading="lazy">
+        <h2>Download for<br>Windows</h2>
+        <div class="platform-links platform-links-single">
+          <a class="button button-small" href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;" data-download-os="Windows" data-download-format="Installer">Download for Windows <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+
+      <article class="platform-card">
+        <img src="assets/os/icon-os-mac.svg" alt="" loading="lazy">
+        <h2>Download for<br>macOS</h2>
+        <div class="platform-links platform-links-single">
+          <a class="button button-small" href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;" data-download-os="macOS" data-download-format="Intel">Intel <span aria-hidden="true">›</span></a>
+          <a class="button button-small button-muted" href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;" data-download-os="macOS" data-download-format="AppleSilicon">Apple Silicon <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
     </section>
-    <p class="verification-note">Cryptographically verify releases by following the <a href="https://monocle.wiki/">installer verification steps</a>. For macOS and Windows, see the installation instructions on the <a href="https://monocle.wiki/">Monocle Wiki</a>.</p>
-    <p class="future-note">A mobile client for Monocle may be available in the future.</p>
+
+    <p class="verification-note">
+      Cryptographically verify releases by following the
+      <a href="https://monocle.wiki/">installer verification steps</a>.
+      For macOS and Windows, see the installation instructions on the
+      <a href="https://monocle.wiki/">Monocle Wiki</a>.
+    </p>
 
     <section class="private-trading-section">
-      <h2>Trade Monero Privately Peer-to-Peer.</h2><p>Run the desktop application to start trading Monero.</p>
+      <h2>Trade Monero Privately Peer-to-Peer.</h2>
+      <p>Run the desktop application to start trading Monero.</p>
+
       <div class="privacy-feature-grid">
-        <article class="privacy-feature privacy-feature-no-email"><img src="assets/icons/icon-download-no-email.svg" alt="" loading="lazy"><h3>No email</h3><p>No email address or account is required to use Monocle.</p></article>
-        <article class="privacy-feature privacy-feature-kyc"><img src="assets/icons/icon-download-no-kyc.svg" alt="" loading="lazy"><h3>No KYC</h3><p>Trade without identity checks or identity documents.</p></article>
-        <article class="privacy-feature privacy-feature-custody"><img src="assets/icons/icon-download-self-custodial.svg" alt="" loading="lazy"><h3>Self custodial</h3><p>Maintain control of your wallet and funds throughout the trading process.</p></article>
-        <article class="privacy-feature privacy-feature-tor"><img src="assets/icons/icon-download-tor-only.svg" alt="" loading="lazy"><h3>Tor-only</h3><p>Connections are routed through Tor to help protect network privacy.</p></article>
-        <article class="privacy-feature privacy-feature-p2p"><img src="assets/icons/icon-download-peer-to-peer.svg" alt="" loading="lazy"><h3>Peer-to-Peer</h3><p>Trade directly with other peers without a centralized exchange holding your funds.</p></article>
+        <article class="privacy-feature privacy-feature-no-email">
+          <img src="assets/icons/icon-download-no-email.svg" alt="" loading="lazy">
+		  <div>
+			  <h3>No email</h3>
+			  <p>No email address or account is required to use Monocle.</p>
+		  </div>
+        </article>
+
+        <article class="privacy-feature privacy-feature-kyc">
+          <img src="assets/icons/icon-download-no-kyc.svg" alt="" loading="lazy">
+          <h3>No KYC</h3>
+          <p>Trade without identity checks or identity documents.</p>
+        </article>
+
+        <article class="privacy-feature privacy-feature-custody">
+			<h3>Self custodial</h3>
+			<p>Maintain control of your wallet and funds throughout the trading process.</p>
+			<img src="assets/icons/icon-download-self-custodial.svg" alt="" loading="lazy">
+        </article>
+
+        <article class="privacy-feature privacy-feature-tor">
+			<h3>Tor-only</h3>
+			<p>Connections are routed through Tor to help protect network privacy.</p>
+			<img src="assets/icons/icon-download-tor-only.svg" alt="" loading="lazy">
+        </article>
+
+        <article class="privacy-feature privacy-feature-p2p">
+          <img src="assets/icons/icon-download-peer-to-peer.svg" alt="" loading="lazy">
+         <div>
+			 <h3>Peer-to-Peer</h3>
+			 <p>Trade directly with other peers without a centralized exchange holding your funds.</p>
+		  </div> 
+        </article>
       </div>
     </section>
 
-    <section class="download-repeat-cta"><button class="button download-choice" type="button" disabled>Download for Windows <span aria-hidden="true">⌄</span></button></section>
-    <section class="github-promo"><img src="assets/socials/social-github.svg" alt="GitHub" loading="lazy"><h2>Check out Monocle on GitHub</h2><p>Read the release notes, view the source code, or follow the <a href="https://monocle.wiki/">guide to build from source</a>.</p><p class="github-release-note">The project and release links will be added once the official repository destinations are confirmed.</p></section>
+    <section class="download-repeat-cta">
+      <a class="button download-choice" id="download-choice-bottom"
+         href="https://dummydownloadlink&lt;OS&gt;&lt;format&gt;">
+        Download for Windows
+      </a>
+    </section>
+
+    <section class="github-promo">
+      <img src="assets/socials/social-github.svg" alt="GitHub" loading="lazy">
+      <h2>Check out Monocle on GitHub</h2>
+      <p>
+        Read the release notes, view the source code, or follow the
+        <a href="https://monocle.wiki/">guide to build from source</a>.
+      </p>
+    </section>
   </main>
+
   <div id="site-footer"></div>
 </body>
 </html>
