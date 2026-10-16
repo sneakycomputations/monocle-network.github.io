@@ -39,25 +39,51 @@
     });
   }
 
-  function wireBackToTop() {
-  const backToTop = document.querySelector('.back-to-top');
-  if (!backToTop) return;
+  function wireScrollButtons() {
+    const backToTop = document.querySelector('.back-to-top');
+    const backToBottom = document.querySelector('.back-to-bottom');
 
-  const updateBackToTop = () => {
-    backToTop.classList.toggle('is-visible', window.scrollY > 0);
-  };
+    if (!backToTop || !backToBottom) return;
 
-  window.addEventListener('scroll', updateBackToTop, { passive: true });
+    const updateScrollButtons = () => {
+      const scrollTop = window.scrollY;
+      const viewportBottom = scrollTop + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const tolerance = 2;
 
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+      backToTop.classList.toggle(
+        'is-visible',
+        scrollTop > tolerance
+      );
+
+      backToBottom.classList.toggle(
+        'is-visible',
+        viewportBottom < documentHeight - tolerance
+      );
+    };
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
 
-  updateBackToTop();
-}
+    backToBottom.addEventListener('click', () => {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+      });
+    });
+
+    window.addEventListener('scroll', updateScrollButtons, {
+      passive: true
+    });
+
+    window.addEventListener('resize', updateScrollButtons);
+
+    updateScrollButtons();
+  }
 
   Promise.all([
     include('#site-header', 'partials/header.html'),
@@ -73,6 +99,6 @@
     include('#banner-transparency', 'partials/transparency.html')
   ]).then(() => {
     wireControls();
-    wireBackToTop();
+    wireScrollButtons();
   });
 })();
