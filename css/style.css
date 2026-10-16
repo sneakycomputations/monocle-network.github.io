@@ -173,7 +173,7 @@ img {
 }
 .primary-navigation a:hover,
 .primary-navigation a[aria-current="page"] {
-  color:var(--accent-strong)
+  color:var(--accent-strong) !important
 }
 .header-tools {
   display:flex;
@@ -2684,6 +2684,12 @@ p.get-involved-button {
     border-radius:0;
     background:var(--accent);
     color:#fff
+  }
+  .menu-toggle:hover{
+    color:black;
+  }
+  .menu-toggle:hover .menu-icon i {
+    background:black;
   }
   .menu-toggle-label {
     font-size:16px;
