@@ -60,6 +60,7 @@
   --surface:#1b1a19;
   --surface-raised:#292827;
   --footer:#30302f;
+  --footer-bottom:#242424;
   --text:#f3f0eb;
   --muted:#aaa6a0;
   --accent:#f49a25;
@@ -94,6 +95,7 @@ body ::after {
   --surface:#fff;
   --surface-raised:#e9e6e0;
   --footer:#e4e1dc;
+  --footer-bottom:#cdcbc7;
   --text:#201e1b;
   --muted:#68635d;
   --accent:#e8790c;
@@ -2365,12 +2367,12 @@ p.get-involved-button {
 }
 .primary-navigation a:last-child {
   border-right:0;
-  color:var(--accent);
+  /*! color:var(--accent); */
   font-weight:600
 }
 .primary-navigation a:hover,
 .primary-navigation a[aria-current="page"] {
-  color:var(--accent-strong)
+  color:var(--accent-strong);
 }
 .theme-toggle {
   position:absolute;
@@ -2411,6 +2413,12 @@ p.get-involved-button {
   opacity:.58;
   background:grey
 }
+:root:not([data-theme="light"]) .theme-toggle:hover .theme-icon-light,
+:root[data-theme="light"] .theme-toggle:hover .theme-icon-dark {
+  opacity:1;
+  background-color: black;
+}
+
 .menu-toggle {
   display:none
 }
@@ -2420,6 +2428,10 @@ p.get-involved-button {
   padding:2.8rem 0 1.25rem;
   background:var(--footer);
   color:var(--text)
+}
+.footer-inner-bottom {
+  width:100%;
+  background-color:var(--footer-bottom);
 }
 .footer-inner {
   max-width:1080px;
@@ -2439,10 +2451,11 @@ p.get-involved-button {
 }
 .footer-main {
   display:grid;
-  grid-template-columns:minmax(200px,1.05fr) minmax(200px,1.15fr) minmax(200px,1fr) minmax(200px,.85fr);
-  gap:6rem;
+  /*! grid-template-columns:minmax(200px,1.05fr) minmax(200px,1.15fr) minmax(200px,1fr) minmax(200px,.85fr); */
+  gap:2rem;
   align-items:start;
-  padding:0 0 3.3rem
+  padding:0 0 3.3rem;
+  width: 100%;
 }
 .footer-directory {
   display:flex;
@@ -2545,9 +2558,10 @@ p.get-involved-button {
   gap:3rem;
   border-top:4px solid var(--accent);
   padding:1.5rem;
-  margin-top:0;
+  margin:0 auto;
   font-size:14px;
-  background: linear-gradient(180deg,var(--surface-raised) 0%,var(--page) 100%);
+  /*! background: linear-gradient(180deg,var(--surface-raised) 0%,var(--page) 100%); */
+  max-width: 1080px;
 }
 .footer-bottom a {
   font-size:14px;

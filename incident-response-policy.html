@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Learn how Monocle Network detects, contains, communicates, and responds to security incidents, including peer loss assessment and compensation through the Community Reserves.">
+  <title>Incident Response Policy | Monocle Network</title>
+  <link rel="icon" href="favicon/f1.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="article-page">
+  <div id="site-header"></div>
+
+  <main class="article-main container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="./">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="policies">Policies</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Incident Response Policy</span>
+    </nav>
+
+    <header class="article-heading">
+      <p class="micro-label">Policies</p>
+      <h1>Incident Response Policy</h1>
+    </header>
+
+    <article class="article-content">
+      <p>This policy defines how Monocle Network responds to security incidents, exploits, and other critical events that affect peers, infrastructure, or network operations. It establishes the process from initial detection through to post-incident review and peer compensation.</p>
+
+      <h2>1. Overview</h2>
+      <p>Monocle Network takes security seriously. While Monocle does not develop the Haveno software, it is responsible for operating the network, protecting peers, and responding to incidents that affect the community.</p>
+      <p>This policy ensures that when something goes wrong, Monocle responds promptly, transparently, and with peer protection as the top priority.</p>
+
+      <h2>2. What Constitutes an Incident</h2>
+      <p>An incident is any event that compromises or threatens the security, integrity, availability, or trustworthiness of Monocle Network. Incidents are categorized by type and severity.</p>
+
+      <h3>2.1 Incident Types</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Protocol exploit</strong></td>
+            <td>A vulnerability in the Haveno software being actively exploited</td>
+            <td>Trade deposit theft, protocol manipulation, arbitrator bypass</td>
+          </tr>
+          <tr>
+            <td><strong>Infrastructure incident</strong></td>
+            <td>Failure or compromise of Monocle-operated infrastructure</td>
+            <td>Node compromise, key exposure, DDoS causing sustained outage</td>
+          </tr>
+          <tr>
+            <td><strong>Operational incident</strong></td>
+            <td>Misconduct or failure in Monocle's operational processes</td>
+            <td>Arbitrator corruption, contributor fraud, key mismanagement</td>
+          </tr>
+          <tr>
+            <td><strong>Financial incident</strong></td>
+            <td>Anomaly or compromise affecting network fee or reserve wallets</td>
+            <td>Unauthorized transaction from reserve wallet, fee collection discrepancy</td>
+          </tr>
+          <tr>
+            <td><strong>Privacy incident</strong></td>
+            <td>Unintended exposure of peer or contributor data</td>
+            <td>Information leak, deanonymization event, log exposure</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2.2 Severity Levels</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Definition</th>
+            <th>Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Critical</strong></td>
+            <td>Active exploitation with peers losing funds or privacy compromised at scale</td>
+            <td>Immediate network pause, emergency response</td>
+          </tr>
+          <tr>
+            <td><strong>High</strong></td>
+            <td>Confirmed vulnerability with significant potential impact but limited current exploitation</td>
+            <td>Urgent response, potential partial pause</td>
+          </tr>
+          <tr>
+            <td><strong>Medium</strong></td>
+            <td>Vulnerability or incident with limited scope, requires action but no immediate peer harm</td>
+            <td>Prioritized response, continued operations</td>
+          </tr>
+          <tr>
+            <td><strong>Low</strong></td>
+            <td>Minor issue with minimal impact, does not require emergency response</td>
+            <td>Routine fix, normal cadence</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Incident Response Roles</h2>
+      <p>Monocle Network is responsible for monitoring for potential incidents, declaring incidents when warranted, and approving major decisions such as a network pause or Peer Security Reserve activation. The following roles support the response:</p>
+
+      <h3>3.1 Incident Lead</h3>
+      <p>Upon declaration of a Critical or High severity incident, an <strong>Incident Lead</strong> is designated. Responsibilities:</p>
+      <ul>
+        <li>Coordinate the overall response</li>
+        <li>Make operational decisions (pause, resume, communication timing)</li>
+        <li>Authorize Peer Security Reserve activation</li>
+        <li>Ensure this policy is followed</li>
+      </ul>
+      <p>The Incident Lead is designated by Monocle Network. If a designation cannot be made quickly, the first to declare the incident serves as Incident Lead until a designation is made.</p>
+
+      <h3>3.2 Contributors</h3>
+      <p>Contributors may be called upon to:</p>
+      <ul>
+        <li>Provide operational support during the incident (e.g., node operators, support contributors)</li>
+        <li>Assist with peer communication and support</li>
+        <li>Provide technical expertise relevant to the incident</li>
+      </ul>
+
+      <h3>3.3 Arbitrators</h3>
+      <p>Arbitrators may be involved when:</p>
+      <ul>
+        <li>A trade dispute is related to the incident</li>
+        <li>Protocol-level actions are needed to resolve trades affected by the incident</li>
+      </ul>
+
+      <h2>4. Incident Response Process</h2>
+
+      <h3>4.1 Phase 1 - Detection and Declaration</h3>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>Action</th><th>Timeline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1.1</td><td>Potential incident detected (via monitoring, peer report, responsible disclosure, or contributor observation)</td><td>—</td></tr>
+          <tr><td>1.2</td><td>Monocle Network assesses initial severity and scope</td><td>Within 2 hours</td></tr>
+          <tr><td>1.3</td><td>If Critical or High: incident declared, Incident Lead designated</td><td>Within 4 hours</td></tr>
+          <tr><td>1.4</td><td>If Medium or Low: logged and tracked, normal response process begins</td><td>Within 24 hours</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Phase 2 - Containment</h3>
+      <p>For Critical and High severity incidents:</p>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>Action</th><th>Timeline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2.1</td><td>Incident Lead determines whether to pause network operations</td><td>Immediately after declaration</td></tr>
+          <tr><td>2.2</td><td>If pause is warranted: network operations are suspended to prevent further harm</td><td>Within 1 hour of decision</td></tr>
+          <tr><td>2.3</td><td>Root cause is isolated to the extent possible</td><td>Within 12 hours</td></tr>
+          <tr><td>2.4</td><td>Scope of impact is assessed - how many peers are affected, what funds are at risk</td><td>Within 24 hours</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Network Pause Decision</h3>
+      <p>A network pause is the most significant action Monocle can take. It should be invoked when:</p>
+      <ul>
+        <li>Peers are actively losing funds and the mechanism is not yet understood</li>
+        <li>Continuing operations would expose more peers to harm</li>
+        <li>The integrity of the trade protocol cannot be assured</li>
+      </ul>
+      <p>During a pause:</p>
+      <ul>
+        <li>No new trades can be initiated</li>
+        <li>Existing in-progress trades are held in their current state</li>
+        <li>Peers are notified through all community channels</li>
+        <li>The reason for the pause is communicated honestly and promptly</li>
+      </ul>
+
+      <h3>4.3 Phase 3 - Notification</h3>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>Action</th><th>Timeline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>3.1</td><td>Community notification posted to all channels (SimpleX, Matrix, forum)</td><td>Within 6 hours of declaration</td></tr>
+          <tr><td>3.2</td><td>Detailed incident notice published on GitHub</td><td>Within 24 hours</td></tr>
+          <tr><td>3.3</td><td>Affected peers contacted directly where possible</td><td>Within 48 hours</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Communication Principles</h3>
+      <p>During an incident, Monocle Network will:</p>
+      <ul>
+        <li><strong>Communicate promptly</strong> - Even partial information is better than silence</li>
+        <li><strong>Be honest</strong> - What is known, what is unknown, and what is being investigated will be stated</li>
+        <li><strong>Avoid speculation</strong> - Causes, scope, and timelines will not be guessed at until confirmed</li>
+        <li><strong>Provide updates</strong> - Regular updates at minimum every 12 hours for Critical incidents and every 24 hours for High incidents</li>
+        <li><strong>Respect privacy</strong> - Affected peers will not be identified publicly without their consent</li>
+      </ul>
+
+      <h3>What to Communicate</h3>
+      <table>
+        <thead>
+          <tr><th>Information</th><th>Initial Notice</th><th>Subsequent Updates</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Incident type</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Severity level</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Whether operations are paused</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Scope of impact (number of peers, funds at risk)</td><td>If known</td><td>As assessment progresses</td></tr>
+          <tr><td>Recommended actions for peers</td><td>Yes</td><td>As needed</td></tr>
+          <tr><td>Estimated timeline for resolution</td><td>If known</td><td>As assessment progresses</td></tr>
+          <tr><td>Specific technical details of the vulnerability</td><td>No - until remediated</td><td>After remediation</td></tr>
+        </tbody>
+      </table>
+      <p>Technical details of the vulnerability will not be disclosed until remediation is in place, to prevent copycat exploitation.</p>
+
+      <h3>4.4 Phase 4 - Remediation</h3>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>Action</th><th>Timeline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>4.1</td><td>Develop or coordinate a fix for the vulnerability</td><td>As soon as possible</td></tr>
+          <tr><td>4.2</td><td>If the fix is in Haveno software: coordinate with Haveno contributors, fund emergency bounty if needed</td><td>As soon as possible</td></tr>
+          <tr><td>4.3</td><td>If the fix is in Monocle infrastructure: implement directly</td><td>As soon as possible</td></tr>
+          <tr><td>4.4</td><td>Test the fix and verify it addresses the root cause</td><td>Before resuming operations</td></tr>
+          <tr><td>4.5</td><td>Resume network operations once the fix is confirmed</td><td>After verification</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Resuming Operations</h3>
+      <p>The decision to resume operations requires:</p>
+      <ul>
+        <li>The root cause has been identified and remediated</li>
+        <li>The fix has been tested and verified</li>
+        <li>Those coordinating the response agree that resuming is safe (unanimous for Critical, majority for High)</li>
+        <li>A resumption notice is published to all community channels at least 2 hours before operations resume</li>
+      </ul>
+
+      <h3>4.5 Phase 5 - Loss Assessment and Public Disclosure</h3>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>Action</th><th>Timeline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>5.1</td><td>Identify all affected trades and assess total losses</td><td>Within 7 days</td></tr>
+          <tr><td>5.2</td><td>Cross-reference with trade records, arbitrator reports, and peer submissions</td><td>Within 7 days</td></tr>
+          <tr><td>5.3</td><td>Public disclosure of the total value of losses, the number of affected peers, and the number of impacted trades</td><td>Within 14 days</td></tr>
+          <tr><td>5.4</td><td>Open a window for affected peers to submit a Monero address for compensation and any supplementary proof of loss</td><td>Within 30 days following public disclosure</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Loss Assessment Methodology</h3>
+      <ul>
+        <li>Losses are assessed based on verified evidence - trade records, on-chain transactions, and arbitrator determinations</li>
+        <li>Only direct losses caused by the incident are eligible for compensation - indirect or consequential losses are not covered</li>
+        <li>The loss assessment report is published on GitHub, anonymized - no peer identifiers</li>
+        <li>If the total of verified losses exceeds the available Peer Security Reserve balance, compensation is distributed on a pro-rata basis (see Section 5)</li>
+      </ul>
+
+      <h3>4.6 Phase 6 - Compensation</h3>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>Action</th><th>Timeline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6.1</td><td>Publish a table listing each affected trade, the amount lost, and the compensation address</td><td>Within 10 days after the compensation submission deadline</td></tr>
+          <tr><td>6.2</td><td>Process compensation distributions to the addresses provided</td><td>Within 10 days after publication of the table</td></tr>
+          <tr><td>6.3</td><td>Publish all addresses, transaction IDs and secret transaction keys for independent verification</td><td>At time of distribution</td></tr>
+          <tr><td>6.4</td><td>Notify compensated peers</td><td>At time of distribution</td></tr>
+        </tbody>
+      </table>
+      <p>Fraudulent claims - where a claimant is determined to have caused or participated in the exploit - are rejected, with the reasoning published.</p>
+
+      <h2>5. Peer Security Reserve Activation</h2>
+      <p>The Peer Security Reserve is Monocle's primary mechanism for reimbursing peers affected by exploits. Activation follows the process defined in the <a href="reserve-allocation-policy">Reserve Allocation Policy</a>.</p>
+
+      <h3>5.1 Activation Triggers</h3>
+      <p>The Peer Security Reserve is activated when:</p>
+      <ul>
+        <li>A protocol exploit has resulted in verified peer losses</li>
+        <li>An infrastructure incident has caused direct financial harm to peers</li>
+      </ul>
+
+      <h3>5.2 Reserve Cascade</h3>
+      <p>If the Peer Security Reserve balance is insufficient, the balances of the <a href="haveno-network-development-grant">Haveno Network Development Grant</a> and the <a href="open-source-sustainability-grant">Open Source Sustainability Grant</a> will be redirected to peer compensation.</p>
+
+      <h3>5.3 Pro-Rata Distribution</h3>
+      <p>If total verified losses exceed total available reserve funds, each affected peer receives an equal proportion of their loss:</p>
+      <p><strong>Compensation per peer = (Available reserve funds ÷ Total verified losses) × Individual verified loss</strong></p>
+      <p>Monocle does not guarantee full reimbursement.</p>
+
+      <h3>5.4 Compensation is Not a Guarantee</h3>
+      <p>The Peer Security Reserve is funded from network fees. Its balance depends entirely on trade volume and the time since the last incident. Monocle commits to distributing all available reserve funds to affected peers but cannot guarantee that losses will be fully covered.</p>
+
+      <h2>6. Responsible Disclosure Integration</h2>
+      <p>If a security incident results from a vulnerability reported through the <a href="responsible-disclosure-policy">Responsible Disclosure Policy</a>:</p>
+      <ul>
+        <li>The reporter may be eligible for a bounty, paid from the Peer Security Reserve</li>
+        <li>Bounty payment and peer compensation are separate processes - a bounty does not reduce the funds available for peer compensation</li>
+        <li>The reporter's identity remains confidential unless they choose to disclose it</li>
+        <li>The reporter is not held responsible for any exploitation of the vulnerability by third parties, provided they adhered to the Responsible Disclosure Policy</li>
+      </ul>
+
+      <h2>7. Infrastructure Incidents</h2>
+
+      <h3>7.1 Node Failures</h3>
+      <p>If a Monocle-operated node (Monero node, price node, seed node) fails:</p>
+      <ul>
+        <li>The node operator is notified immediately</li>
+        <li>Redundancy should prevent any single node failure from affecting network operations</li>
+        <li>Node failures are not eligible for Peer Security Reserve compensation - they affect availability, not peer funds</li>
+      </ul>
+
+      <h3>7.2 Key Compromise</h3>
+      <p>If a private key for a network fee or reserve wallet is compromised:</p>
+      <ol>
+        <li>All funds are immediately transferred to a new wallet</li>
+        <li>The new wallet address and view key are published</li>
+        <li>A full incident review is conducted</li>
+        <li>Wallet management practices are reviewed and updated if necessary</li>
+      </ol>
+
+      <h3>7.3 Sustained DDoS</h3>
+      <p>If Monocle infrastructure is subject to a sustained DDoS attack:</p>
+      <ul>
+        <li>Node operators implement DDoS protection measures</li>
+        <li>If the attack prevents peers from accessing the network for more than 24 hours, Monocle Network assesses whether a temporary pause is warranted</li>
+        <li>Community notification is posted with expected recovery timeline</li>
+        <li>DDoS incidents do not trigger Peer Security Reserve activation unless they are used as cover for a concurrent exploit</li>
+      </ul>
+
+      <h2>8. Operational Incidents</h2>
+
+      <h3>8.1 Arbitrator Misconduct</h3>
+      <p>If an arbitrator is found to have acted corruptly or in bad faith:</p>
+      <ol>
+        <li>The arbitrator is suspended immediately pending investigation</li>
+        <li>All trades decided by the arbitrator during the suspect period are reviewed</li>
+        <li>Affected peers are identified and, if financially harmed, compensation is considered from the Peer Security Reserve</li>
+        <li>The arbitrator's access is revoked permanently</li>
+        <li>A post-incident review is published</li>
+      </ol>
+
+      <h3>8.2 Contributor Misconduct</h3>
+      <p>If a contributor violates the <a href="contributor-code-of-conduct">Contributor Code of Conduct</a> in a way that affects peers:</p>
+      <ol>
+        <li>The contributor is suspended from their role</li>
+        <li>The scope of impact is assessed</li>
+        <li>If peer harm is confirmed, the response follows the same process as a security incident</li>
+        <li>The <a href="contributor-code-of-conduct">Contributor Code of Conduct</a> consequences are applied</li>
+      </ol>
+
+      <h2>9. Post-Incident Review</h2>
+      <p>Every Critical and High severity incident, and any incident that results in peer compensation, requires a post-incident review.</p>
+
+      <h3>9.1 Review Contents</h3>
+      <p>The review is published on GitHub and includes:</p>
+      <table>
+        <thead>
+          <tr><th>Section</th><th>Content</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Incident summary</td><td>Type, severity, timeline of events</td></tr>
+          <tr><td>Root cause</td><td>What caused the incident and how it was exploited or triggered</td></tr>
+          <tr><td>Impact assessment</td><td>Number of affected peers, total losses, reserve funds used</td></tr>
+          <tr><td>Response timeline</td><td>Key decisions and when they were made</td></tr>
+          <tr><td>What went well</td><td>Effective aspects of the response</td></tr>
+          <tr><td>What could be improved</td><td>Gaps, delays, or failures in the response</td></tr>
+          <tr><td>Remediation</td><td>What was done to fix the vulnerability or issue</td></tr>
+          <tr><td>Policy updates</td><td>Any changes to policies resulting from the incident</td></tr>
+        </tbody>
+      </table>
+
+      <h3>9.2 Review Timeline</h3>
+      <ul>
+        <li>Draft review completed within <strong>30 days</strong> of incident resolution</li>
+        <li>Review published on GitHub within <strong>45 days</strong> of incident resolution</li>
+        <li>Community feedback on the review is welcomed for <strong>14 days</strong> after publication</li>
+      </ul>
+
+      <h3>9.3 No Blame for Reporters</h3>
+      <p>If the incident was reported through responsible disclosure, the post-incident review will not identify the reporter without their explicit consent. The review focuses on the vulnerability and the response, not on who found it.</p>
+
+      <h2>10. Incident Log</h2>
+      <p>All incidents are recorded publicly in the <a href="https://github.com/monocle-network/meta">incident log</a>, maintained in the meta repository:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Severity</th>
+            <th>Description</th>
+            <th>Resolution</th>
+            <th>Peers Affected</th>
+            <th>Compensation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>11. Relationship to Other Policies</h2>
+      <table>
+        <thead>
+          <tr><th>Policy</th><th>Relationship</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="reserve-allocation-policy">Reserve Allocation Policy</a></td>
+            <td>Defines how Peer Security Reserve funds are activated and cascaded during an incident</td>
+          </tr>
+          <tr>
+            <td><a href="responsible-disclosure-policy">Responsible Disclosure Policy</a></td>
+            <td>Covers vulnerability reporting; this policy covers the response when a vulnerability is exploited</td>
+          </tr>
+          <tr>
+            <td><a href="contributor-code-of-conduct">Contributor Code of Conduct</a></td>
+            <td>Governs contributor behaviour; misconduct that affects peers triggers this incident response policy</td>
+          </tr>
+          <tr>
+            <td><a href="dispute-resolution-policy">Dispute Resolution Policy</a></td>
+            <td>Arbitrator misconduct is handled under both policies</td>
+          </tr>
+          <tr>
+            <td><a href="peer-safety-policy">Peer Safety Policy</a></td>
+            <td>This policy is one of the layers of protection described in the Peer Safety Policy</td>
+          </tr>
+          <tr>
+            <td><a href="community-guidelines">Community Guidelines</a></td>
+            <td>Community behaviour during incidents (e.g., preventing panic, avoiding misinformation)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>12. Changes to This Policy</h2>
+      <p>This policy may be updated periodically. Changes will be announced through public community channels and documented in version history. Lessons learned from post-incident reviews may result in policy updates.</p>
+
+      <hr>
+      <blockquote>
+        <p><strong>Peer protection is the number one priority.</strong></p>
+      </blockquote>
+      <hr>
+
+      <ul>
+        <li>Last updated: November 2026</li>
+        <li>Version: 1.0</li>
+      </ul>
+
+      <hr>
+    </article>
+
+    <nav class="article-bottom-nav" aria-label="Page navigation">
+      <a href="policies">‹ Back to Policies</a>
+      <a href="sitemap">Browse sitemap ›</a>
+    </nav>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
