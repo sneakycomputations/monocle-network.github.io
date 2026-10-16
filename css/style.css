@@ -98,8 +98,8 @@ body ::after {
   --footer-bottom:#cdcbc7;
   --text:#201e1b;
   --muted:#68635d;
-  --accent:#e8790c;
-  --accent-strong:#c65d00;
+  --accent:#f49a25;
+  --accent-strong:#ffab35;
   --border:#d0cbc3
 }
 * {
@@ -594,7 +594,8 @@ p {
 .value-row img {
   width:76px;
   height:76px;
-  object-fit:contain
+  object-fit:contain;
+  margin: 0 1em;
 }
 .micro-label {
   font-family:"IBM Plex Sans",sans-serif;
@@ -660,12 +661,13 @@ p {
 }
 .reserves-band>h2 {
   font-family:"IBM Plex Serif",serif;
-  font-weight:400;
+  font-weight:bold;
   color:var(--accent);
   margin-bottom:.25rem
 }
 .reserves-lead {
-  margin:.2rem auto 3.5rem
+  margin:.8rem auto 3.5rem;
+  color: var(--text);
 }
 .reserve-cards {
   display:grid;
@@ -873,15 +875,15 @@ p.get-involved-button {
   align-items:center
 }
 .platform-card>img {
-  width:54px;
-  height:54px;
+  width:80px;
+  height:80px;
   object-fit:contain;
   margin-bottom:.5rem
 }
 .platform-card h2 {
-  font-size:1rem;
+  font-size:1.5rem;
   line-height:1.25;
-  margin:0 0 1rem;
+  margin:1em 0 1rem;
   font-weight:600
 }
 .platform-links {
@@ -1293,7 +1295,7 @@ p.get-involved-button {
   padding-bottom:4rem
 }
 .breadcrumbs {
-  display:flex;
+  display:none;
   flex-wrap:wrap;
   align-items:center;
   gap:.55rem;
@@ -1319,7 +1321,8 @@ p.get-involved-button {
   letter-spacing:.08em;
   font-size:.68rem;
   color:var(--accent-strong);
-  margin:0 0 .45rem
+  margin:0 0 .45rem;
+  display: none;
 }
 .article-heading h1 {
   font-family:"IBM Plex Serif",serif;
@@ -1432,7 +1435,7 @@ p.get-involved-button {
   accent-color:var(--accent)
 }
 .article-bottom-nav {
-  display:flex;
+  display:none;
   justify-content:space-between;
   gap:1rem;
   max-width:850px;
@@ -2619,7 +2622,7 @@ p.get-involved-button {
 @media(max-width:860px) {
   .site-header {
     width:calc(100% - 64px);
-    margin:0 auto;
+    margin:2em auto;
     padding:0;
     border:0
   }
@@ -3014,7 +3017,7 @@ p.get-involved-button {
   position: absolute;
   left: 0;
   top: 0;
-  color: #f26822;
+  color: var(--accent);
   font-size: 1.1em;
   line-height: inherit;
 }
@@ -3074,8 +3077,8 @@ p.get-involved-button {
 
 .article-content .reserve-card img {
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   object-fit: contain;
   margin-bottom: 1rem;
 }
@@ -3568,8 +3571,8 @@ p.get-involved-button {
 
 .dispute-directory-icon {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 24px;
   padding: 15px;
   box-sizing: border-box;
@@ -3858,4 +3861,18 @@ ul.transparency-address-info::before {
     right: 10px;
     bottom: 2px;
   }
+}
+
+p.about-vision {
+  font-size:130%;
+  color:var(--accent);
+  font-style: italic;
+  font-family: "IBM Plex Serif",serif;
+}
+
+p.reserves-intro {
+  font-size:150%;
+  color:var(--text);
+  font-weight: bold;
+  font-style: italic;
 }
