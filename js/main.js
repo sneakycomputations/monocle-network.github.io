@@ -39,6 +39,26 @@
     });
   }
 
+  function wireBackToTop() {
+  const backToTop = document.querySelector('.back-to-top');
+  if (!backToTop) return;
+
+  const updateBackToTop = () => {
+    backToTop.classList.toggle('is-visible', window.scrollY > 0);
+  };
+
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  updateBackToTop();
+}
+
   Promise.all([
     include('#site-header', 'partials/header.html'),
     include('#site-footer', 'partials/footer.html'),
@@ -51,5 +71,8 @@
     include('#banner-discussions', 'partials/discussions.html'),
     include('#banner-policies', 'partials/policies.html'),
     include('#banner-transparency', 'partials/transparency.html')
-  ]).then(wireControls);
+  ]).then(() => {
+    wireControls();
+    wireBackToTop();
+  });
 })();

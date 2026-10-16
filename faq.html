@@ -4,414 +4,700 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#11100f">
-  <meta name="description" content="Frequently Asked Questions FAQ  TABLE OF CONTENTS | Section | Topic | Questions | |---------|-------|-----------| | A | General Information | Q1–Q6 | | B">
+  <meta name="description" content="Frequently Asked Questions FAQ covering Monocle Network, trading, fees, payment security, dispute resolution, reserves, software, privacy, and support.">
   <title>Frequently Asked Questions (FAQ) | Monocle Network</title>
   <link rel="icon" href="favicon/f1.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
+
 <body class="article-page">
+
   <div id="site-header"></div>
+
   <main class="article-main container">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./">Home</a><span aria-hidden="true">/</span><a href="sitemap">Resources</a><span aria-hidden="true">/</span><span aria-current="page">Frequently Asked Questions (FAQ)</span></nav>
-    <header class="article-heading"><p class="micro-label">Resources</p><h1>Frequently Asked Questions (FAQ)</h1></header>
-    <article class="article-content"><h2>TABLE OF CONTENTS</h2>
-<table>
-<thead>
-<tr>
-  <th>Section</th>
-  <th>Topic</th>
-  <th>Questions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>A</td>
-  <td>General Information</td>
-  <td>Q1–Q6</td>
-</tr>
-<tr>
-  <td>B</td>
-  <td>Network Fees and Costs</td>
-  <td>Q7–Q11</td>
-</tr>
-<tr>
-  <td>C</td>
-  <td>Getting Started</td>
-  <td>Q12–Q16</td>
-</tr>
-<tr>
-  <td>D</td>
-  <td>Trading Process</td>
-  <td>Q17–Q21</td>
-</tr>
-<tr>
-  <td>E</td>
-  <td>Payment Security</td>
-  <td>Q22–Q28</td>
-</tr>
-<tr>
-  <td>F</td>
-  <td>Dispute Resolution</td>
-  <td>Q29–Q34</td>
-</tr>
-<tr>
-  <td>G</td>
-  <td>Penalties and Rules</td>
-  <td>Q35–Q38</td>
-</tr>
-<tr>
-  <td>H</td>
-  <td>Reserves</td>
-  <td>Q39–Q42</td>
-</tr>
-<tr>
-  <td>I</td>
-  <td>Software and Setup</td>
-  <td>Q43–Q48</td>
-</tr>
-<tr>
-  <td>J</td>
-  <td>Privacy and Legal</td>
-  <td>Q49–Q53</td>
-</tr>
-<tr>
-  <td>K</td>
-  <td>Support and Community</td>
-  <td>Q54–Q58</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2>SECTION A: GENERAL INFORMATION</h2>
-<p><strong>Q1: What is Monocle Network?</strong></p>
-<p>Monocle Network is a peer-to-peer network built on the Haveno protocol. It allows peers to buy and sell Monero (XMR), Bitcoin, and other cryptocurrencies without registering an account. All trades happen directly between peers using encrypted messaging and non-custodial multisig escrow.</p>
-<p><strong>Q2: How does Monocle Network differ from other peer-to-peer trading platforms?</strong></p>
-<p><strong>TRANSPARENCY:</strong> Monocle publishes view and transaction keys for all network fee addresses, reserve addresses, and contributor distributions. This allows anyone to independently verify network fee collections, transfers to the community reserves, and contributor compensation.</p>
-<p><strong>COMMUNITY-DRIVEN:</strong> Contributors are welcomed and compensated in XMR. Role requirements, reports, and awarded compensations are published.</p>
-<p><strong>PEER PROTECTION:</strong> 33% of all network fees are allocated to community reserves, including the Peer Security Reserve, which reimburses peers affected by protocol exploits.</p>
-<p><strong>SECURITY FOCUSED:</strong> Monocle takes peer safety very seriously. Monocle has a responsible disclosure process, a bug bounty program, and an incident response policy. While Monocle cannot make any security guarantees for the Haveno protocol itself, it implements security measures to benefit peers on Monocle Network.</p>
-<p><strong>OPEN-SOURCE SUPPORT:</strong> Monocle awards open-source sustainability grants to FOSS projects that benefit the Monero community.</p>
-<p><strong>LOW NETWORK FEES:</strong> 0.1% maker / 0.2% taker, and all fee-related information published.</p>
-<p><strong>RESPONSIVE SUPPORT:</strong> Active, competent, and free support across public community channels.</p>
-<p><strong>Q3: Is anyone behind this project? Are they anonymous?</strong></p>
-<p>Contributors cover roles of development, node operations, dispute resolution, and support. Monocle welcomes contributors who wish to use pseudonyms instead of real identities. Pseudonymity protects contributors from targeting by bad actors. See <a href="get-involved">Get Involved</a> for role descriptions.</p>
-<p><strong>Q4: Do you store my personal data or IP?</strong></p>
-<p>No. Monocle's application routes all traffic through Tor and maintains no logs of IP, usernames, or trade metadata.</p>
-<p>When dispute resolution is involved, arbitrator chat logs are kept for up to 12 months.</p>
-<p>Monocle relies on GitHub and web hosting services, to which you will expose your IP.</p>
-<p>See the <a href="privacy-policy">Privacy Policy</a> for more details.</p>
-<p><strong>Q5: How does Monocle Network ensure peer safety?</strong></p>
-<p>Monocle Network provides private peer-to-peer communication over Tor, helping keep personal information and transaction details secure.</p>
-<p><strong>Q6: Is there an onion address for the website?</strong></p>
-<p>Not at present, but you can access Monocle's website via Tor Browser.</p>
-<hr />
-<h2>SECTION B: NETWORK FEES AND COSTS</h2>
-<p><strong>Q7: How much are network fees?</strong></p>
-<p>Current network fees are <strong>0.3%</strong> per trade, split as follows:</p>
-<table>
-<thead>
-<tr>
-  <th>Role</th>
-  <th>Fee</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Maker</td>
-  <td>0.1%</td>
-</tr>
-<tr>
-  <td>Taker</td>
-  <td>0.2%</td>
-</tr>
-</tbody>
-</table>
-<p>Example: On a 10 XMR trade, total fees = 0.03 XMR (maker pays 0.01, taker pays 0.02). These rates apply uniformly to all payment methods (fiat or crypto pairs).</p>
-<p>See the <a href="network-fees">Network Fees</a> page for more details.</p>
-<p><strong>Q8: Will network fees ever increase?</strong></p>
-<p>Lower network fees mean more trades, which means a healthier network. Any future change will follow the Fee Adjustment Policy: a detailed proposal published on GitHub, a 30-day community discussion period, contributor review, and a 30-day notice period before implementation.</p>
-<p>See the <a href="fee-adjustment-policy">Fee Adjustment Policy</a> for more details.</p>
-<p><strong>Q9: How are fees distributed?</strong></p>
-<p><strong>33%</strong> of network fees is allocated to three community reserves:</p>
-<ul>
-<li><strong>Peer Security Reserve:</strong> Reimburses peers affected by protocol exploits</li>
-<li><strong>Haveno Network Development Grant:</strong> Bounties for Haveno features, bug fixes, and audits</li>
-<li><strong>Open Source Sustainability Grant:</strong> Support for open-source projects useful to Monocle</li>
-</ul>
-<p>The remaining <strong>67%</strong> funds network operations, including contributor compensation and infrastructure. All Monocle Network wallet balances are publicly verifiable via view keys on the <a href="transparency">Transparency</a> page and from within the Monocle desktop application.</p>
-<p><strong>Q10: Are there any hidden costs?</strong></p>
-<p>The only costs are:</p>
-<ul>
-<li>Trade fee: 0.3% combined</li>
-<li>Miner fees: required for blockchain transactions involving XMR, Bitcoin, and other cryptocurrencies</li>
-<li>Bank transfer fees: where applicable, charged by your bank</li>
-</ul>
-<p><strong>Q11: Are there minimum network fees?</strong></p>
-<p>Yes. Due to on-chain consolidation costs, the minimum fee is currently set at 0.0025 XMR per peer, and for no-deposit offers the seller (maker) covers the network fees of both roles, with a minimum fee of 0.005 XMR.</p>
-<p>See the <a href="network-fees">Network Fees</a> page for more details.</p>
-<hr />
-<h2>SECTION C: GETTING STARTED</h2>
-<p><strong>Q12: What do I need to start trading?</strong></p>
-<ul>
-<li>Monocle desktop application (download it here)</li>
-<li>Some XMR for your security deposit and network fees, unless you find someone willing to make a no-deposit offer in Monocle's SimpleX rooms</li>
-<li>~30 minutes for the initial seed phrase backup process</li>
-<li>A payment method to send or receive payments, such as a fiat payment account, Bitcoin, or another cryptocurrency</li>
-</ul>
-<p><strong>Q13: Do I need any XMR before starting?</strong></p>
-<p>It is recommended to have at least 0.1 XMR to cover security deposits and network fees. If you have none, you can coordinate with a seller for a no-deposit trade by asking in Monocle's SimpleX rooms.</p>
-<p><strong>Q14: Do I need to verify my identity?</strong></p>
-<p>No.</p>
-<p><strong>Q15: Which cryptocurrencies are supported?</strong></p>
-<ul>
-<li><strong>Monero (XMR)</strong> — the primary focus and base asset</li>
-<li><strong>Bitcoin (BTC)</strong></li>
-<li>Other cryptocurrency markets may be added as the network evolves</li>
-</ul>
-<p>Check available offers within the app to see current markets.</p>
-<p><strong>Q16: Which fiat currencies and payment methods are supported?</strong></p>
-<p>Most fiat currencies are supported using many common payment methods from all over the world:</p>
-<table>
-<thead>
-<tr>
-  <th>Category</th>
-  <th>Methods</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Bank Transfer</td>
-  <td>SEPA, SEPA Instant, SWIFT, ACH, Zelle, Interac e-Transfer, Sofort</td>
-</tr>
-<tr>
-  <td>Payment Apps</td>
-  <td>Revolut, Wise, PayPal, Cash App</td>
-</tr>
-<tr>
-  <td>Physical</td>
-  <td>Cash Deposits, Cash by Mail, Money Orders, In-Person</td>
-</tr>
-<tr>
-  <td>Digital</td>
-  <td>Gift Cards (Amazon)</td>
-</tr>
-</tbody>
-</table>
-<p>Check available offers within the application to see current liquidity.</p>
-<hr />
-<h2>SECTION D: TRADING PROCESS</h2>
-<p><strong>Q17: How long does a typical trade take?</strong></p>
-<table>
-<thead>
-<tr>
-  <th>Payment Method</th>
-  <th>Typical Time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Bank transfers</td>
-  <td>1 hour – 2 days</td>
-</tr>
-<tr>
-  <td>Gift cards</td>
-  <td>1 hour – 1 day</td>
-</tr>
-<tr>
-  <td>Crypto pairs</td>
-  <td>1 hour – 1 day</td>
-</tr>
-<tr>
-  <td>Cash by Mail</td>
-  <td>Up to 8 days</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Q18: Can I cancel a trade after starting it?</strong></p>
-<p>Technically yes, but penalties apply (see the <a href="table-of-penalties">Table of Penalties</a>). Reasons deemed &quot;valid&quot; include:</p>
-<ul>
-<li>The other peer violated the Trading Rules</li>
-<li>Mutual agreement reached via trader chat</li>
-<li>Unforeseen banking restriction discovered mid-trade</li>
-</ul>
-<p>&quot;Don't want to anymore&quot; or &quot;found cheaper offer elsewhere&quot; are NOT valid grounds and may result in a penalty.</p>
-<p><strong>Q19: What happens if the other peer stops responding?</strong></p>
-<p>Open a dispute when the trade window expires. This will start the dispute resolution process. Non-responsive peers risk losing their security deposit. Buyers who have paid will receive Monero from the multisig they created with the seller.</p>
-<p><strong>Q20: How are disputes resolved?</strong></p>
-<p>Monocle Network has an integrated dispute resolution system. If a conflict arises, an arbitrator reviews the evidence provided by both parties and resolves the dispute fairly and transparently. See the <a href="dispute-resolution-policy">Dispute Resolution Policy</a> for arbitrator standards.</p>
-<p><strong>Q21: Will I be notified of new version releases?</strong></p>
-<p>Yes. When a new release is available, a notification will prompt you to download it.</p>
-<hr />
-<h2>SECTION E: PAYMENT SECURITY</h2>
-<p><strong>Q22: Should I write anything in the payment description?</strong></p>
-<p><strong>LEAVE IT BLANK</strong> whenever possible. Some payment fields force text, in which case:</p>
-<ul>
-<li>Use your account name (&quot;John Smith&quot;)</li>
-<li>Or enter nothing descriptive (&quot;-&quot;)</li>
-</ul>
-<p><strong>NEVER</strong> mention XMR, BTC, crypto, trade IDs, or Monocle Network. Banks monitor keywords and may freeze accounts or flag suspicious activity. See the <a href="trading-rules">Trading Rules</a> for complete guidance.</p>
-<p><strong>Q23: What if my bank rejects the incoming transfer because of a suspicious reference?</strong></p>
-<p>Submit proof to the arbitrator after opening a dispute. You may request compensation from your peer's security deposit for the failed trade. See the <a href="table-of-penalties">Table of Penalties</a>.</p>
-<p><strong>Q24: Is it safe to use my personal bank account?</strong></p>
-<p>Most peers use personal accounts safely. However:</p>
-<ul>
-<li>Check your bank's Terms of Service regarding cryptocurrency transactions before committing</li>
-<li>Start with smaller trades and build experience gradually</li>
-<li>Never mention crypto-related terms in payment memos</li>
-</ul>
-<p><strong>Q25: Is it acceptable to use a business bank account?</strong></p>
-<p>Yes. It may also provide you with additional privacy.</p>
-<p><strong>Q26: What is a security deposit?</strong></p>
-<p>A security deposit is a small amount of XMR locked in multisig escrow during a trade and returned in full when the trade completes normally. If you violate the <a href="trading-rules">Trading Rules</a>, part or all of your deposit may be forfeited to compensate the affected peer. See the <a href="table-of-penalties">Table of Penalties</a>.</p>
-<p><strong>Q27: Do I need a local Monero node?</strong></p>
-<p>No. Monocle includes a built-in list of remote nodes you can connect to. However, running your own Monero node provides:</p>
-<ul>
-<li>Maximum privacy and independence, with no reliance on third-party nodes</li>
-<li>Faster initial wallet syncing</li>
-<li>Stronger Monero network decentralization and resilience</li>
-</ul>
-<p><strong>Q28: What if the software crashes during a trade?</strong></p>
-<p>A crash does not necessarily interrupt the trade. Restart the application and:</p>
-<ol>
-<li>Wait until blockchain synchronization is complete.</li>
-<li>Open the affected trade and check its escrow status.</li>
-<li>Resume operations where needed.</li>
-<li>If the trade cannot be resumed or its status is unclear, open a dispute for arbitrator assistance.</li>
-</ol>
-<hr />
-<h2>SECTION F: DISPUTE RESOLUTION</h2>
-<p><strong>Q29: When should I open a dispute?</strong></p>
-<p>Common scenarios include:</p>
-<ul>
-<li>The seller hasn't confirmed receipt within the trade window</li>
-<li>The seller confirmed receipt but the XMR has not been released</li>
-<li>The payment amount received doesn't match contract terms</li>
-<li>The payment came from an account not in the trade contract</li>
-<li>One party violated an explicit <a href="trading-rules">Trading Rule</a></li>
-</ul>
-<p><strong>Q30: Who decides disputes?</strong></p>
-<p>Arbitrators, who are experienced contributors meeting the standards set out in the <a href="dispute-resolution-policy">Dispute Resolution Policy</a>.</p>
-<p><strong>Q31: How fast will a dispute be resolved?</strong></p>
-<p>Typical timeframe:</p>
-<ul>
-<li>Arbitrator acknowledgment: within 12 hours</li>
-<li>Peer response window: 48 hours during an active dispute</li>
-<li>Resolution: varies by case complexity and payment method (banking issues where one bank is holding funds, and pending Cash by Mail shipments, often take the longest)</li>
-</ul>
-<p>Patience helps ensure accurate decisions.</p>
-<p><strong>Q32: What evidence do I need to provide?</strong></p>
-<p>Usual requirements:</p>
-<ul>
-<li>Proof of payment: PDF preferred over screenshots</li>
-<li>Bank statements: showing sender and receiver names matching the contract; unnecessary sensitive information may be redacted</li>
-<li>Tracking numbers: for Money Orders or Cash by Mail trades</li>
-</ul>
-<p><strong>Q33: Can I appeal an arbitrator's decision?</strong></p>
-<p>Yes, you can request that a different arbitrator conduct a fresh review.</p>
-<p>See the <a href="appeals-policy">Appeals Policy</a> for the complete process.</p>
-<p><strong>Q34: What if I'm unsatisfied with the appeal outcome?</strong></p>
-<p>If you remain unsatisfied, see the escalation options in the Appeals Policy. Concerns can also be raised through public community channels.</p>
-<hr />
-<h2>SECTION G: PENALTIES AND RULES</h2>
-<p><strong>Q35: What happens if I violate a rule accidentally?</strong></p>
-<p>Explain the situation to the counterparty, they might agree to complete the trade as normal. If that is not possible, open a dispute.</p>
-<p><strong>Q36: What counts as fraud or chargeback violation?</strong></p>
-<p>Definitions:</p>
-<table>
-<thead>
-<tr>
-  <th>Term</th>
-  <th>Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><strong>FRAUD</strong></td>
-  <td>Deliberate deception causing loss (fake receipts, manipulated screenshots)</td>
-</tr>
-<tr>
-  <td><strong>CHARGEBACK</strong></td>
-  <td>Reversing fiat payments AFTER receiving corresponding XMR release</td>
-</tr>
-</tbody>
-</table>
-<p>Both are categorized under the maximum penalty tier of the Table of Penalties, resulting in forfeiture of up to 100% of the security deposit (and potentially the trade amount), with forfeited funds compensating the affected peer.</p>
-<p><strong>Q37: Will I be banned after a mistake?</strong></p>
-<p>Single errors normally incur penalties proportional to the harm caused. Serious violations such as chargeback fraud, threats of violence, or repeated misconduct, result in maximum penalties.</p>
-<p><strong>Q38: What happens to security deposits when penalties are applied?</strong></p>
-<p>The penalty is calculated as a percentage of the trade amount per the <a href="table-of-penalties">Table of Penalties</a> and deducted from the offending peer's security deposit. Forfeited amounts will compensate the affected peer.</p>
-<hr />
-<h2>SECTION H: RESERVES</h2>
-<p><strong>Q39: What is the Peer Security Reserve?</strong></p>
-<p>A dedicated reserve accumulated continuously from 33% of all network fees. Its sole purpose is compensating peers affected by <strong>protocol bugs and exploits</strong>. It is not blanket insurance covering every conceivable scenario. Strict eligibility requirements are detailed on the <a href="peer-security-reserve">Peer Security Reserve</a> page.</p>
-<p><strong>Q40: What types of incidents are covered by the Peer Security Reserve?</strong></p>
-<p><strong>COVERED:</strong></p>
-<ul>
-<li>Multisig vulnerabilities compromising locked funds</li>
-<li>Protocol flaws draining escrowed funds</li>
-</ul>
-<p><strong>EXCLUDED:</strong></p>
-<ul>
-<li>User error</li>
-<li>Bank chargebacks</li>
-<li>Phishing and credential theft</li>
-<li>Hardware loss or failure</li>
-</ul>
-<p><strong>Q41: How do I verify how much money is in the reserve?</strong></p>
-<p>The reserve's address and view key are published in the <a href="transparency">Transparency</a> page, so incoming transactions can be independently verified. Monthly transparency reports summarize fee collections and reserve allocations. The information is also available from within the desktop application.</p>
-<p><strong>Q42: What if an exploit drains more than the reserve holds?</strong></p>
-<p>The safety of network peers is Monocle Network's top priority. In the event of an exploit, all XMR across the community reserves is used to compensate affected peers. If funds are insufficient, reimbursement is made pro rata, up to the total amount held across the community reserves at the time of the exploit.</p>
-<hr />
-<h2>SECTION I: SOFTWARE AND SETUP</h2>
-<p><strong>Q43: How do I install the software?</strong></p>
-<p>The <a href="download">Download</a> page lists binary releases alongside verification instructions. Contributors can further assist in community channels.</p>
-<p><strong>Q44: Is my private key stored anywhere besides my device?</strong></p>
-<p><strong>NEVER.</strong> Your seed is generated on your device, and making a backup is your own responsibility. If you lose your seed phrase, your funds are lost.</p>
-<p><strong>Q45: How do I back up and restore my wallet?</strong></p>
-<p><strong>Back up:</strong> the 25-word mnemonic can be accessed under <strong>Account → Wallet Seed</strong>. Write it down and store it securely.</p>
-<p><strong>Restore:</strong> navigate to <strong>Account → Wallet Seed → Restore Wallet Seed</strong>, enter your seed (and your restore height, if you have it), and press <strong>Restore Wallet</strong>. The seed can also be imported into any Monero wallet.</p>
-<p><strong>Q46: How do I set Tor bridges?</strong></p>
-<p>Go to <strong>[Settings] → [Network Info]</strong> and scroll to the bottom of the page to select <strong>[Open Tor settings]</strong>.</p>
-<p><strong>Q47: Can I adjust miner fees?</strong></p>
-<p>Miner fees cannot be adjusted for XMR. For Bitcoin or other cryptocurrency transactions, fee levels may be configurable depending on the wallet.</p>
-<p><strong>Q48: Why did my XMR not arrive instantly?</strong></p>
-<p>Monero transactions require 10 confirmations (typically 10–30 minutes) before they are considered settled.</p>
-<hr />
-<h2>SECTION J: PRIVACY AND LEGAL</h2>
-<p><strong>Q49: Are trades anonymous?</strong></p>
-<p><strong>RELATIVELY</strong> speaking, yes. If everything goes well, only you and the other peer know who is involved in the trade. If you open a dispute, the arbitrator will also see the trade contract.</p>
-<p><strong>Q50: Can my activity be traced?</strong></p>
-<p>Monero is designed to make blockchain-based transaction tracing difficult, but it does not make you untraceable in every circumstance. Information disclosed to other parties, network-level information, compromised devices, and other operational-security failures can potentially associate activity with you.</p>
-<p><strong>Q51: What countries are restricted?</strong></p>
-<p>None. However, local laws and regulations may restrict cryptocurrency activity in your country.</p>
-<p><strong>Q52: I live in [Country]: is trading legal?</strong></p>
-<p>Consult the laws and regulations applicable to your jurisdiction. Peers are responsible for ensuring compliance with the laws of their jurisdiction.</p>
-<p><strong>Q53: Does Monocle do KYC?</strong></p>
-<p>No.</p>
-<hr />
-<h2>SECTION K: SUPPORT AND COMMUNITY</h2>
-<p><strong>Q54: How do I contact support?</strong></p>
-<p>The primary support channel is the SimpleX Support group. Additional channels include the community forum, Matrix, GitHub, Telegram, and Reddit. See the Support page and <a href="support-policy">Support Policy</a> for details.</p>
-<p><strong>Q55: Where can I find community discussions?</strong></p>
-<p>The <a href="community-forum">community forum</a> and SimpleX groups host ongoing discussions. Join to stay informed about updates, best practices, and peer support.</p>
-<p><strong>Q56: How do I become an arbitrator?</strong></p>
-<p>Arbitrators are compensated contributors. Role requirements, compensation, and the process for becoming an arbitrator are published in <a href="get-involved">Get Involved</a>. New contributors start with a trial period, and pseudonymous contributions are welcome.</p>
-<p><strong>Q57: How do I contribute?</strong></p>
-<p>Development opportunities are posted publicly in Monocle community spaces. Contributors are compensated in XMR for completed work.</p>
-<p><strong>Q58: Do you use PGP to sign releases?</strong></p>
-<p>Yes.</p>
-<hr />
-<blockquote>
-<p>⚠️ <strong>Disclaimer:</strong> This FAQ is provided for informational purposes only and does not constitute legal advice. Peers remain responsible for complying with all applicable laws and regulations in their jurisdiction. Always verify critical information against official documentation and verify software authenticity through PGP-signed releases.</p>
-</blockquote>
 
-<div id="banner-wiki"></div>
-<div id="banner-get-involved"></div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="./">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="sitemap">Resources</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Frequently Asked Questions (FAQ)</span>
+    </nav>
 
-</article>
-    <nav class="article-bottom-nav" aria-label="Page navigation"><a href="sitemap">‹ Back to Resources</a><a href="sitemap">Browse sitemap ›</a></nav>
+    <header class="article-heading">
+      <p class="micro-label">Resources</p>
+      <h1>Frequently Asked Questions (FAQ)</h1>
+    </header>
+
+    <article class="article-content faqs">
+
+      <h2>TABLE OF CONTENTS</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Topic</th>
+            <th>Questions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td><a href="#section-a">General Information</a></td>
+            <td>Q1–Q6</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td><a href="#section-b">Network Fees and Costs</a></td>
+            <td>Q7–Q11</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td><a href="#section-c">Getting Started</a></td>
+            <td>Q12–Q16</td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td><a href="#section-d">Trading Process</a></td>
+            <td>Q17–Q21</td>
+          </tr>
+          <tr>
+            <td>E</td>
+            <td><a href="#section-e">Payment Security</a></td>
+            <td>Q22–Q28</td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td><a href="#section-f">Dispute Resolution</a></td>
+            <td>Q29–Q34</td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td><a href="#section-g">Penalties and Rules</a></td>
+            <td>Q35–Q38</td>
+          </tr>
+          <tr>
+            <td>H</td>
+            <td><a href="#section-h">Reserves</a></td>
+            <td>Q39–Q42</td>
+          </tr>
+          <tr>
+            <td>I</td>
+            <td><a href="#section-i">Software and Setup</a></td>
+            <td>Q43–Q48</td>
+          </tr>
+          <tr>
+            <td>J</td>
+            <td><a href="#section-j">Privacy and Legal</a></td>
+            <td>Q49–Q53</td>
+          </tr>
+          <tr>
+            <td>K</td>
+            <td><a href="#section-k">Support and Community</a></td>
+            <td>Q54–Q58</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h2 id="section-a">SECTION A: GENERAL INFORMATION</h2>
+
+      <h3>Q1: What is Monocle Network?</h3>
+      <p>
+        Monocle Network is a peer-to-peer network built on the Haveno protocol. It allows peers to buy and sell Monero (XMR), Bitcoin, and other cryptocurrencies without registering an account. All trades happen directly between peers using encrypted messaging and non-custodial multisig escrow.
+      </p>
+
+      <h3>Q2: How does Monocle Network differ from other peer-to-peer trading platforms?</h3>
+      <p>
+        <strong>TRANSPARENCY:</strong> Monocle publishes view and transaction keys for all network fee addresses, reserve addresses, and contributor distributions. This allows anyone to independently verify network fee collections, transfers to the community reserves, and contributor compensation.
+      </p>
+
+      <p>
+        <strong>COMMUNITY-DRIVEN:</strong> Contributors are welcomed and compensated in XMR. Role requirements, reports, and awarded compensations are published.
+      </p>
+
+      <p>
+        <strong>PEER PROTECTION:</strong> 33% of all network fees are allocated to community reserves, including the Peer Security Reserve, which reimburses peers affected by protocol exploits.
+      </p>
+
+      <p>
+        <strong>SECURITY FOCUSED:</strong> Monocle takes peer safety very seriously. Monocle has a responsible disclosure process, a bug bounty program, and an incident response policy. While Monocle cannot make any security guarantees for the Haveno protocol itself, it implements security measures to benefit peers on Monocle Network.
+      </p>
+
+      <p>
+        <strong>OPEN-SOURCE SUPPORT:</strong> Monocle awards open-source sustainability grants to FOSS projects that benefit the Monero community.
+      </p>
+
+      <p>
+        <strong>LOW NETWORK FEES:</strong> 0.1% maker / 0.2% taker, and all fee-related information published.
+      </p>
+
+      <p>
+        <strong>RESPONSIVE SUPPORT:</strong> Active, competent, and free support across public community channels.
+      </p>
+
+      <h3>Q3: Is anyone behind this project? Are they anonymous?</h3>
+      <p>
+        Contributors cover roles of development, node operations, dispute resolution, and support. Monocle welcomes contributors who wish to use pseudonyms instead of real identities. Pseudonymity protects contributors from targeting by bad actors. See <a href="get-involved">Get Involved</a> for role descriptions.
+      </p>
+
+      <h3>Q4: Do you store my personal data or IP?</h3>
+      <p>
+        No. Monocle's application routes all traffic through Tor and maintains no logs of IP, usernames, or trade metadata.
+      </p>
+
+      <p>
+        When dispute resolution is involved, arbitrator chat logs are kept for up to 12 months.
+      </p>
+
+      <p>
+        Monocle relies on GitHub and web hosting services, to which you will expose your IP.
+      </p>
+
+      <p>
+        See the <a href="privacy-policy">Privacy Policy</a> for more details.
+      </p>
+
+      <h3>Q5: How does Monocle Network ensure peer safety?</h3>
+      <p>
+        Monocle Network provides private peer-to-peer communication over Tor, helping keep personal information and transaction details secure.
+      </p>
+
+      <h3>Q6: Is there an onion address for the website?</h3>
+      <p>
+        Not at present, but you can access Monocle's website via Tor Browser.
+      </p>
+
+      <hr>
+
+      <h2 id="section-b">SECTION B: NETWORK FEES AND COSTS</h2>
+
+      <h3>Q7: How much are network fees?</h3>
+      <p>
+        Current network fees are <strong>0.3%</strong> per trade, split as follows:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maker</td>
+            <td>0.1%</td>
+          </tr>
+          <tr>
+            <td>Taker</td>
+            <td>0.2%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Example: On a 10 XMR trade, total fees = 0.03 XMR (maker pays 0.01, taker pays 0.02). These rates apply uniformly to all payment methods (fiat or crypto pairs).
+      </p>
+
+      <p>
+        See the <a href="network-fees">Network Fees</a> page for more details.
+      </p>
+
+      <h3>Q8: Will network fees ever increase?</h3>
+      <p>
+        Lower network fees mean more trades, which means a healthier network. Any future change will follow the Fee Adjustment Policy: a detailed proposal published on GitHub, a 30-day community discussion period, contributor review, and a 30-day notice period before implementation.
+      </p>
+
+      <p>
+        See the <a href="fee-adjustment-policy">Fee Adjustment Policy</a> for more details.
+      </p>
+
+      <h3>Q9: How are fees distributed?</h3>
+      <p>
+        <strong>33%</strong> of network fees is allocated to three community reserves:
+      </p>
+
+      <ul>
+        <li><strong>Peer Security Reserve:</strong> Reimburses peers affected by protocol exploits</li>
+        <li><strong>Haveno Network Development Grant:</strong> Bounties for Haveno features, bug fixes, and audits</li>
+        <li><strong>Open Source Sustainability Grant:</strong> Support for open-source projects useful to Monocle</li>
+      </ul>
+
+      <p>
+        The remaining <strong>67%</strong> funds network operations, including contributor compensation and infrastructure. All Monocle Network wallet balances are publicly verifiable via view keys on the <a href="transparency">Transparency</a> page and from within the Monocle desktop application.
+      </p>
+
+      <h3>Q10: Are there any hidden costs?</h3>
+      <p>The only costs are:</p>
+
+      <ul>
+        <li>Trade fee: 0.3% combined</li>
+        <li>Miner fees: required for blockchain transactions involving XMR, Bitcoin, and other cryptocurrencies</li>
+        <li>Bank transfer fees: where applicable, charged by your bank</li>
+      </ul>
+
+      <h3>Q11: Are there minimum network fees?</h3>
+      <p>
+        Yes. Due to on-chain consolidation costs, the minimum fee is currently set at 0.0025 XMR per peer, and for no-deposit offers the seller (maker) covers the network fees of both roles, with a minimum fee of 0.005 XMR.
+      </p>
+
+      <p>
+        See the <a href="network-fees">Network Fees</a> page for more details.
+      </p>
+
+      <hr>
+
+      <h2 id="section-c">SECTION C: GETTING STARTED</h2>
+
+      <h3>Q12: What do I need to start trading?</h3>
+
+      <ul>
+        <li>Monocle desktop application (download it here)</li>
+        <li>Some XMR for your security deposit and network fees, unless you find someone willing to make a no-deposit offer in Monocle's SimpleX rooms</li>
+        <li>~30 minutes for the initial seed phrase backup process</li>
+        <li>A payment method to send or receive payments, such as a fiat payment account, Bitcoin, or another cryptocurrency</li>
+      </ul>
+
+      <h3>Q13: Do I need any XMR before starting?</h3>
+      <p>
+        It is recommended to have at least 0.1 XMR to cover security deposits and network fees. If you have none, you can coordinate with a seller for a no-deposit trade by asking in Monocle's SimpleX rooms.
+      </p>
+
+      <h3>Q14: Do I need to verify my identity?</h3>
+      <p>No.</p>
+
+      <h3>Q15: Which cryptocurrencies are supported?</h3>
+
+      <ul>
+        <li><strong>Monero (XMR)</strong> — the primary focus and base asset</li>
+        <li><strong>Bitcoin (BTC)</strong></li>
+        <li>Other cryptocurrency markets may be added as the network evolves</li>
+      </ul>
+
+      <p>
+        Check available offers within the app to see current markets.
+      </p>
+
+      <h3>Q16: Which fiat currencies and payment methods are supported?</h3>
+      <p>
+        Most fiat currencies are supported using many common payment methods from all over the world:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Methods</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bank Transfer</td>
+            <td>SEPA, SEPA Instant, SWIFT, ACH, Zelle, Interac e-Transfer, Sofort</td>
+          </tr>
+          <tr>
+            <td>Payment Apps</td>
+            <td>Revolut, Wise, PayPal, Cash App</td>
+          </tr>
+          <tr>
+            <td>Physical</td>
+            <td>Cash Deposits, Cash by Mail, Money Orders, In-Person</td>
+          </tr>
+          <tr>
+            <td>Digital</td>
+            <td>Gift Cards (Amazon)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Check available offers within the application to see current liquidity.
+      </p>
+
+      <hr>
+
+      <h2 id="section-d">SECTION D: TRADING PROCESS</h2>
+
+      <h3>Q17: How long does a typical trade take?</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Payment Method</th>
+            <th>Typical Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bank transfers</td>
+            <td>1 hour – 2 days</td>
+          </tr>
+          <tr>
+            <td>Gift cards</td>
+            <td>1 hour – 1 day</td>
+          </tr>
+          <tr>
+            <td>Crypto pairs</td>
+            <td>1 hour – 1 day</td>
+          </tr>
+          <tr>
+            <td>Cash by Mail</td>
+            <td>Up to 8 days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Q18: Can I cancel a trade after starting it?</h3>
+      <p>
+        Technically yes, but penalties apply (see the <a href="table-of-penalties">Table of Penalties</a>). Reasons deemed &quot;valid&quot; include:
+      </p>
+
+      <ul>
+        <li>The other peer violated the Trading Rules</li>
+        <li>Mutual agreement reached via trader chat</li>
+        <li>Unforeseen banking restriction discovered mid-trade</li>
+      </ul>
+
+      <p>
+        &quot;Don't want to anymore&quot; or &quot;found cheaper offer elsewhere&quot; are NOT valid grounds and may result in a penalty.
+      </p>
+
+      <h3>Q19: What happens if the other peer stops responding?</h3>
+      <p>
+        Open a dispute when the trade window expires. This will start the dispute resolution process. Non-responsive peers risk losing their security deposit. Buyers who have paid will receive Monero from the multisig they created with the seller.
+      </p>
+
+      <h3>Q20: How are disputes resolved?</h3>
+      <p>
+        Monocle Network has an integrated dispute resolution system. If a conflict arises, an arbitrator reviews the evidence provided by both parties and resolves the dispute fairly and transparently. See the <a href="dispute-resolution-policy">Dispute Resolution Policy</a> for arbitrator standards.
+      </p>
+
+      <h3>Q21: Will I be notified of new version releases?</h3>
+      <p>
+        Yes. When a new release is available, a notification will prompt you to download it.
+      </p>
+
+      <hr>
+
+      <h2 id="section-e">SECTION E: PAYMENT SECURITY</h2>
+
+      <h3>Q22: Should I write anything in the payment description?</h3>
+      <p>
+        <strong>LEAVE IT BLANK</strong> whenever possible. Some payment fields force text, in which case:
+      </p>
+
+      <ul>
+        <li>Use your account name (&quot;John Smith&quot;)</li>
+        <li>Or enter nothing descriptive (&quot;-&quot;)</li>
+      </ul>
+
+      <p>
+        <strong>NEVER</strong> mention XMR, BTC, crypto, trade IDs, or Monocle Network. Banks monitor keywords and may freeze accounts or flag suspicious activity. See the <a href="trading-rules">Trading Rules</a> for complete guidance.
+      </p>
+
+      <h3>Q23: What if my bank rejects the incoming transfer because of a suspicious reference?</h3>
+      <p>
+        Submit proof to the arbitrator after opening a dispute. You may request compensation from your peer's security deposit for the failed trade. See the <a href="table-of-penalties">Table of Penalties</a>.
+      </p>
+
+      <h3>Q24: Is it safe to use my personal bank account?</h3>
+      <p>
+        Most peers use personal accounts safely. However:
+      </p>
+
+      <ul>
+        <li>Check your bank's Terms of Service regarding cryptocurrency transactions before committing</li>
+        <li>Start with smaller trades and build experience gradually</li>
+        <li>Never mention crypto-related terms in payment memos</li>
+      </ul>
+
+      <h3>Q25: Is it acceptable to use a business bank account?</h3>
+      <p>
+        Yes. It may also provide you with additional privacy.
+      </p>
+
+      <h3>Q26: What is a security deposit?</h3>
+      <p>
+        A security deposit is a small amount of XMR locked in multisig escrow during a trade and returned in full when the trade completes normally. If you violate the <a href="trading-rules">Trading Rules</a>, part or all of your deposit may be forfeited to compensate the affected peer. See the <a href="table-of-penalties">Table of Penalties</a>.
+      </p>
+
+      <h3>Q27: Do I need a local Monero node?</h3>
+      <p>
+        No. Monocle includes a built-in list of remote nodes you can connect to. However, running your own Monero node provides:
+      </p>
+
+      <ul>
+        <li>Maximum privacy and independence, with no reliance on third-party nodes</li>
+        <li>Faster initial wallet syncing</li>
+        <li>Stronger Monero network decentralization and resilience</li>
+      </ul>
+
+      <h3>Q28: What if the software crashes during a trade?</h3>
+      <p>
+        A crash does not necessarily interrupt the trade. Restart the application and:
+      </p>
+
+      <ol>
+        <li>Wait until blockchain synchronization is complete.</li>
+        <li>Open the affected trade and check its escrow status.</li>
+        <li>Resume operations where needed.</li>
+        <li>If the trade cannot be resumed or its status is unclear, open a dispute for arbitrator assistance.</li>
+      </ol>
+
+      <hr>
+
+      <h2 id="section-f">SECTION F: DISPUTE RESOLUTION</h2>
+
+      <h3>Q29: When should I open a dispute?</h3>
+      <p>Common scenarios include:</p>
+
+      <ul>
+        <li>The seller hasn't confirmed receipt within the trade window</li>
+        <li>The seller confirmed receipt but the XMR has not been released</li>
+        <li>The payment amount received doesn't match contract terms</li>
+        <li>The payment came from an account not in the trade contract</li>
+        <li>One party violated an explicit <a href="trading-rules">Trading Rule</a></li>
+      </ul>
+
+      <h3>Q30: Who decides disputes?</h3>
+      <p>
+        Arbitrators, who are experienced contributors meeting the standards set out in the <a href="dispute-resolution-policy">Dispute Resolution Policy</a>.
+      </p>
+
+      <h3>Q31: How fast will a dispute be resolved?</h3>
+      <p>Typical timeframe:</p>
+
+      <ul>
+        <li>Arbitrator acknowledgment: within 12 hours</li>
+        <li>Peer response window: 48 hours during an active dispute</li>
+        <li>Resolution: varies by case complexity and payment method (banking issues where one bank is holding funds, and pending Cash by Mail shipments, often take the longest)</li>
+      </ul>
+
+      <p>
+        Patience helps ensure accurate decisions.
+      </p>
+
+      <h3>Q32: What evidence do I need to provide?</h3>
+      <p>Usual requirements:</p>
+
+      <ul>
+        <li>Proof of payment: PDF preferred over screenshots</li>
+        <li>Bank statements: showing sender and receiver names matching the contract; unnecessary sensitive information may be redacted</li>
+        <li>Tracking numbers: for Money Orders or Cash by Mail trades</li>
+      </ul>
+
+      <h3>Q33: Can I appeal an arbitrator's decision?</h3>
+      <p>
+        Yes, you can request that a different arbitrator conduct a fresh review.
+      </p>
+
+      <p>
+        See the <a href="appeals-policy">Appeals Policy</a> for the complete process.
+      </p>
+
+      <h3>Q34: What if I'm unsatisfied with the appeal outcome?</h3>
+      <p>
+        If you remain unsatisfied, see the escalation options in the Appeals Policy. Concerns can also be raised through public community channels.
+      </p>
+
+      <hr>
+
+      <h2 id="section-g">SECTION G: PENALTIES AND RULES</h2>
+
+      <h3>Q35: What happens if I violate a rule accidentally?</h3>
+      <p>
+        Explain the situation to the counterparty, they might agree to complete the trade as normal. If that is not possible, open a dispute.
+      </p>
+
+      <h3>Q36: What counts as fraud or chargeback violation?</h3>
+      <p>Definitions:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FRAUD</strong></td>
+            <td>Deliberate deception causing loss (fake receipts, manipulated screenshots)</td>
+          </tr>
+          <tr>
+            <td><strong>CHARGEBACK</strong></td>
+            <td>Reversing fiat payments AFTER receiving corresponding XMR release</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Both are categorized under the maximum penalty tier of the Table of Penalties, resulting in forfeiture of up to 100% of the security deposit (and potentially the trade amount), with forfeited funds compensating the affected peer.
+      </p>
+
+      <h3>Q37: Will I be banned after a mistake?</h3>
+      <p>
+        Single errors normally incur penalties proportional to the harm caused. Serious violations such as chargeback fraud, threats of violence, or repeated misconduct, result in maximum penalties.
+      </p>
+
+      <h3>Q38: What happens to security deposits when penalties are applied?</h3>
+      <p>
+        The penalty is calculated as a percentage of the trade amount per the <a href="table-of-penalties">Table of Penalties</a> and deducted from the offending peer's security deposit. Forfeited amounts will compensate the affected peer.
+      </p>
+
+      <hr>
+
+      <h2 id="section-h">SECTION H: RESERVES</h2>
+
+      <h3>Q39: What is the Peer Security Reserve?</h3>
+      <p>
+        A dedicated reserve accumulated continuously from 33% of all network fees. Its sole purpose is compensating peers affected by <strong>protocol bugs and exploits</strong>. It is not blanket insurance covering every conceivable scenario. Strict eligibility requirements are detailed on the <a href="peer-security-reserve">Peer Security Reserve</a> page.
+      </p>
+
+      <h3>Q40: What types of incidents are covered by the Peer Security Reserve?</h3>
+      <p><strong>COVERED:</strong></p>
+
+      <ul>
+        <li>Multisig vulnerabilities compromising locked funds</li>
+        <li>Protocol flaws draining escrowed funds</li>
+      </ul>
+
+      <p><strong>EXCLUDED:</strong></p>
+
+      <ul>
+        <li>User error</li>
+        <li>Bank chargebacks</li>
+        <li>Phishing and credential theft</li>
+        <li>Hardware loss or failure</li>
+      </ul>
+
+      <h3>Q41: How do I verify how much money is in the reserve?</h3>
+      <p>
+        The reserve's address and view key are published in the <a href="transparency">Transparency</a> page, so incoming transactions can be independently verified. Monthly transparency reports summarize fee collections and reserve allocations. The information is also available from within the desktop application.
+      </p>
+
+      <h3>Q42: What if an exploit drains more than the reserve holds?</h3>
+      <p>
+        The safety of network peers is Monocle Network's top priority. In the event of an exploit, all XMR across the community reserves is used to compensate affected peers. If funds are insufficient, reimbursement is made pro rata, up to the total amount held across the community reserves at the time of the exploit.
+      </p>
+
+      <hr>
+
+      <h2 id="section-i">SECTION I: SOFTWARE AND SETUP</h2>
+
+      <h3>Q43: How do I install the software?</h3>
+      <p>
+        The <a href="download">Download</a> page lists binary releases alongside verification instructions. Contributors can further assist in community channels.
+      </p>
+
+      <h3>Q44: Is my private key stored anywhere besides my device?</h3>
+      <p>
+        <strong>NEVER.</strong> Your seed is generated on your device, and making a backup is your own responsibility. If you lose your seed phrase, your funds are lost.
+      </p>
+
+      <h3>Q45: How do I back up and restore my wallet?</h3>
+      <p>
+        <strong>Back up:</strong> the 25-word mnemonic can be accessed under <strong>Account → Wallet Seed</strong>. Write it down and store it securely.
+      </p>
+
+      <p>
+        <strong>Restore:</strong> navigate to <strong>Account → Wallet Seed → Restore Wallet Seed</strong>, enter your seed (and your restore height, if you have it), and press <strong>Restore Wallet</strong>. The seed can also be imported into any Monero wallet.
+      </p>
+
+      <h3>Q46: How do I set Tor bridges?</h3>
+      <p>
+        Go to <strong>[Settings] → [Network Info]</strong> and scroll to the bottom of the page to select <strong>[Open Tor settings]</strong>.
+      </p>
+
+      <h3>Q47: Can I adjust miner fees?</h3>
+      <p>
+        Miner fees cannot be adjusted for XMR. For Bitcoin or other cryptocurrency transactions, fee levels may be configurable depending on the wallet.
+      </p>
+
+      <h3>Q48: Why did my XMR not arrive instantly?</h3>
+      <p>
+        Monero transactions require 10 confirmations (typically 10–30 minutes) before they are considered settled.
+      </p>
+
+      <hr>
+
+      <h2 id="section-j">SECTION J: PRIVACY AND LEGAL</h2>
+
+      <h3>Q49: Are trades anonymous?</h3>
+      <p>
+        <strong>RELATIVELY</strong> speaking, yes. If everything goes well, only you and the other peer know who is involved in the trade. If you open a dispute, the arbitrator will also see the trade contract.
+      </p>
+
+      <h3>Q50: Can my activity be traced?</h3>
+      <p>
+        Monero is designed to make blockchain-based transaction tracing difficult, but it does not make you untraceable in every circumstance. Information disclosed to other parties, network-level information, compromised devices, and other operational-security failures can potentially associate activity with you.
+      </p>
+
+      <h3>Q51: What countries are restricted?</h3>
+      <p>
+        None. However, local laws and regulations may restrict cryptocurrency activity in your country.
+      </p>
+
+      <h3>Q52: I live in [Country]: is trading legal?</h3>
+      <p>
+        Consult the laws and regulations applicable to your jurisdiction. Peers are responsible for ensuring compliance with the laws of their jurisdiction.
+      </p>
+
+      <h3>Q53: Does Monocle do KYC?</h3>
+      <p>No.</p>
+
+      <hr>
+
+      <h2 id="section-k">SECTION K: SUPPORT AND COMMUNITY</h2>
+
+      <h3>Q54: How do I contact support?</h3>
+      <p>
+        The primary support channel is the SimpleX Support group. Additional channels include the community forum, Matrix, GitHub, Telegram, and Reddit. See the Support page and <a href="support-policy">Support Policy</a> for details.
+      </p>
+
+      <h3>Q55: Where can I find community discussions?</h3>
+      <p>
+        The <a href="community-forum">community forum</a> and SimpleX groups host ongoing discussions. Join to stay informed about updates, best practices, and peer support.
+      </p>
+
+      <h3>Q56: How do I become an arbitrator?</h3>
+      <p>
+        Arbitrators are compensated contributors. Role requirements, compensation, and the process for becoming an arbitrator are published in <a href="get-involved">Get Involved</a>. New contributors start with a trial period, and pseudonymous contributions are welcome.
+      </p>
+
+      <h3>Q57: How do I contribute?</h3>
+      <p>
+        Development opportunities are posted publicly in Monocle community spaces. Contributors are compensated in XMR for completed work.
+      </p>
+
+      <h3>Q58: Do you use PGP to sign releases?</h3>
+      <p>Yes.</p>
+
+      <hr>
+
+      <blockquote>
+        <p>
+          ⚠️ <strong>Disclaimer:</strong> This FAQ is provided for informational purposes only and does not constitute legal advice. Peers remain responsible for complying with all applicable laws and regulations in their jurisdiction. Always verify critical information against official documentation and verify software authenticity through PGP-signed releases.
+        </p>
+      </blockquote>
+
+      <div id="banner-wiki"></div>
+      <div id="banner-get-involved"></div>
+
+    </article>
+
+    <nav class="article-bottom-nav" aria-label="Page navigation">
+      <a href="sitemap">‹ Back to Resources</a>
+      <a href="sitemap">Browse sitemap ›</a>
+    </nav>
+
   </main>
+
   <div id="site-footer"></div>
+
 </body>
 </html>
