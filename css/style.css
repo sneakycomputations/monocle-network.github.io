@@ -3185,7 +3185,7 @@ p.get-involved-button {
 .network-fee-rates {
   display: flex;
   justify-content: center;
-  gap: 1.1rem;
+  gap: 4rem;
   margin: 2rem 0 2.1rem;
 }
 
