@@ -2311,10 +2311,11 @@ html[data-theme="light"] .brand-logo {
   z-index:5;
   width:100%;
   margin:0;
-  padding:0 0 64px;
+  padding:0 0 50px;
   background:var(--page);
   border:0;
-  margin-top:2em
+  margin-top:2em;
+  /*! padding: 0; */
 }
 .header-inner {
   position:relative;
@@ -2386,7 +2387,7 @@ html[data-theme="light"] .brand-logo {
 .theme-toggle {
   position:absolute;
   right:0;
-  top:112px;
+  top:84px;
   z-index:2;
   display:flex;
   align-items:center;
@@ -4044,6 +4045,41 @@ html[data-theme="light"] .home-page {
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.error-page .architect-message a:hover {
+  text-decoration: underline;
+}
+
+/* Architect's 404 page */
+.error-page .error-content {
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 0 4rem;
+  text-align: center;
+}
+
+.error-page .architect-404-image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+}
+
+.error-page .architect-message {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.9;
+}
+
+.error-page .architect-message a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .error-page .architect-message a:hover {
