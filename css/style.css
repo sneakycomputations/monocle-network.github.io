@@ -2315,7 +2315,7 @@ html[data-theme="light"] .brand-logo {
   background:var(--page);
   border:0;
   margin-top:2em;
-  /*! padding: 0; */
+  padding: 0;
 }
 .header-inner {
   position:relative;
