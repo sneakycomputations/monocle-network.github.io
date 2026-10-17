@@ -305,6 +305,9 @@ p {
 .footer-brand img {
   width:150px
 }
+html[data-theme="light"] .footer-brand img {
+  content: url("/assets/m-logo/m-logo-footer-light.svg");
+}
 .footer-column {
   display:flex;
   flex-direction:column;
@@ -1678,6 +1681,9 @@ p.get-involved-button {
   border-bottom:4px solid var(--accent);
   gap:0;
   min-height:var(--header-height)
+}
+html[data-theme="light"] .brand-logo {
+  content: url("/assets/m-logo/m-logo-light.svg");
 }
 .primary-navigation {
   gap:0;
