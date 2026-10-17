@@ -306,7 +306,7 @@ p {
   width:150px
 }
 html[data-theme="light"] .footer-brand img {
-  content: url("/assets/m-logo/m-logo-footer-light.svg");
+  content: url("../assets/m-logo/m-logo-footer-light.svg");
 }
 .footer-column {
   display:flex;
@@ -1281,7 +1281,7 @@ p.get-involved-button {
   width:48px;
   height:48px;
   margin-bottom:.75rem;
-  background:url(../assets/icons/tag.svg) center/100% 100% no-repeat;
+  background:url("../assets/icons/tag.svg") center/100% 100% no-repeat;
   flex:none
 }
 .feature-icon-tag img {
@@ -1683,7 +1683,7 @@ p.get-involved-button {
   min-height:var(--header-height)
 }
 html[data-theme="light"] .brand-logo {
-  content: url("/assets/m-logo/m-logo-light.svg");
+  content: url("../assets/m-logo/m-logo-light.svg");
 }
 .primary-navigation {
   gap:0;
@@ -1744,7 +1744,7 @@ html[data-theme="light"] .brand-logo {
   display:flex;
   align-items:center;
   justify-content:center;
-  background:url(../assets/icons/tag.png) center/100% 100% no-repeat;
+  background:url("../assets/icons/tag.png") center/100% 100% no-repeat;
   transform:translateY(-1px)
 }
 .feature-card .feature-icon-tag img {
@@ -3152,7 +3152,7 @@ html[data-theme="light"] .brand-logo {
   width:150px;
   height:150px;
   margin-bottom:.75rem;
-  background:url(../assets/icons/tag.svg) center/100% 100% no-repeat;
+  background:url("../assets/icons/tag.svg") center/100% 100% no-repeat;
   flex:none;
   top: -24px;
 }
@@ -3694,7 +3694,7 @@ ul.transparency-address-info::before {
     transform: translateY(-50%);
     width: 3.5em;
     height: 3.5em;
-    background-image: url("/assets/icons/icon-magnifying-glass.svg");
+    background-image: url("../assets/icons/icon-magnifying-glass.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
