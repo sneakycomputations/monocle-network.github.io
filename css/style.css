@@ -778,7 +778,7 @@ html[data-theme="light"] .footer-brand img {
   /*! margin-left: 0; */
 }
 .get-involved-band>div {
-  background:var(--surface);
+  background:var(--page);
   padding:1em;
   /*! padding-top: 0; */
 }
@@ -1024,7 +1024,7 @@ p.get-involved-button {
 .privacy-feature-p2p {
   grid-column:2;
   grid-row:4;
-  background:#080808;
+  background:var(--surface-raised);
   display: flex;
   gap: 3em;
   align-items: center;
@@ -2937,7 +2937,7 @@ html[data-theme="light"] .brand-logo {
   box-shadow:0 3px 0 var(--surface-raised)
 }
 :root[data-theme="light"] .reserve-card > a {
-  background:var(--surface-raised);
+  /*! background:var(--surface-raised); */
   color:var(--text);
   border-color:var(--border)
 }
@@ -3267,8 +3267,9 @@ html[data-theme="light"] .brand-logo {
 }
 
 .community-reserves-banner {
-  background: #050505;
-  color: #f3f0eb;
+  background: var(--page);
+  color: var(--text);
+  border: 1px solid var(--muted);
 }
 
 .community-reserves-banner h2 {
@@ -3366,7 +3367,7 @@ html[data-theme="light"] .brand-logo {
   /*! margin-top: 3rem; */
   padding: 3rem 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.035);
-  background: var(--surface, #1b1a19);
+  background: var(--page, #1b1a19);
   border: 1px solid grey;
 }
 
