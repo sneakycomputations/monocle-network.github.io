@@ -767,7 +767,7 @@ html[data-theme="light"] .footer-brand img {
   align-items:center;
   gap:2rem;
   background:#080808;
-  padding:0.7em 2em;
+  padding:2em;
   margin-bottom:5rem
 }
 .get-involved-band .mascot {
@@ -780,7 +780,7 @@ html[data-theme="light"] .footer-brand img {
 .get-involved-band>div {
   background:var(--surface);
   padding:1em;
-  padding-top: 0;
+  /*! padding-top: 0; */
 }
 .get-involved-band .micro-label {
   font-size:3rem;
@@ -4013,4 +4013,30 @@ html[data-theme="light"] .home-page {
     var(--hero-glow) 0%,
     transparent 100%
   );
+}
+
+
+/* Architect's 404 page */
+.error-page .error-content {
+  text-align: center;
+  padding-top: clamp(4rem, 12vh, 9rem);
+  padding-bottom: clamp(4rem, 12vh, 9rem);
+}
+
+.error-page .architect-message {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.9;
+}
+
+.error-page .architect-message a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.error-page .architect-message a:hover {
+  text-decoration: underline;
 }
