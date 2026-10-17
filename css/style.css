@@ -1803,12 +1803,12 @@ html[data-theme="light"] .brand-logo {
   gap:.5rem;
   margin-top:.5rem;
   padding:.35rem .65rem;
-  /*! background:#181716; */
+  background:var(--page);
   color:var(--text);
   text-decoration:none;
   font-size:.75rem;
   font-weight:600;
-  /*! border:1px solid #615b52; */
+  border:1px solid var(--muted);
   font-family: "IBM Plex Mono", mono;
   /*! position: absolute; */
   /*! bottom: 1em; */
