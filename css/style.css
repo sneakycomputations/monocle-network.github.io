@@ -63,8 +63,8 @@
   --footer-bottom:#242424;
   --text:#f3f0eb;
   --muted:#aaa6a0;
-  --accent:#f49a25;
-  --accent-strong:#ffb041;
+  --accent:#ea8723;
+  --accent-strong:#FFA640;
   --border:#45413c;
   --content:1180px;
   --header-height:76px;
@@ -98,8 +98,8 @@ body ::after {
   --footer-bottom:#cdcbc7;
   --text:#201e1b;
   --muted:#68635d;
-  --accent:#f49a25;
-  --accent-strong:#ffb041;
+  --accent:#ea8723;
+  --accent-strong:#FFA640;
   --border:#d0cbc3
 }
 * {
@@ -1803,12 +1803,12 @@ html[data-theme="light"] .brand-logo {
   gap:.5rem;
   margin-top:.5rem;
   padding:.35rem .65rem;
-  background:#181716;
+  /*! background:#181716; */
   color:var(--text);
   text-decoration:none;
   font-size:.75rem;
   font-weight:600;
-  border:1px solid #615b52;
+  /*! border:1px solid #615b52; */
   font-family: "IBM Plex Mono", mono;
   /*! position: absolute; */
   /*! bottom: 1em; */
@@ -2591,7 +2591,7 @@ html[data-theme="light"] .brand-logo {
   }
   .primary-navigation a {
     padding-inline:7px;
-    font-size:10px
+    /*! font-size:10px */
   }
   .theme-toggle {
     right:32px;
@@ -3993,8 +3993,8 @@ html[data-theme="light"] .home-page {
   position: relative;
   isolation: isolate;
   z-index: 0;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  /*! padding-top: 64px; */
+  padding: 64px 2em;
 }
 
 .home-hero::before {
