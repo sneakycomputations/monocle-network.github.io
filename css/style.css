@@ -3380,7 +3380,7 @@ html[data-theme="light"] .brand-logo {
 .network-promo-copy h2 {
   margin: 0 0 0.6rem;
   font-family: "IBM Plex Serif", serif;
-  font-size: clamp(1.5rem,2.8vw,2rem);
+  font-size: clamp(2.4em, 6vw, 5em);
   font-weight: 400;
   line-height: 1.25;
 }
@@ -3526,16 +3526,25 @@ html[data-theme="light"] .brand-logo {
   font-family: "IBM Plex Serif", serif;
   color: orange;
   /*! font-weight: bold; */
-  font-size: 2em;
+  /*! font-size: 2em; */
 }
 
 .wiki-banner-wiki {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 2em;
+  /*! font-size: 2em; */
   color: #aaa;
 }
 .wiki-banner {
   padding:1em;
+}
+.wiki-banner .network-promo-copy a {
+  text-decoration: none;
+  transition: filter 200ms ease, transform 200ms ease;
+  display: inline-block;
+}
+.wiki-banner .network-promo-copy a:hover {
+  /*! filter: brightness(1.18) saturate(1.4); */
+  transform: scale(1.01);
 }
 
 /* Dispute Resolution directory */
