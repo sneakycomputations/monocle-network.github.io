@@ -473,7 +473,7 @@ html[data-theme="light"] .footer-brand img {
   gap:2rem;
   padding-top:clamp(3.5rem,7vw,6rem);
   padding-bottom:3rem;
-  border-bottom:1px solid var(--border);
+  /*! border-bottom:1px solid var(--border); */
   position:relative;
   overflow:hidden
 }
@@ -3976,4 +3976,41 @@ p.reserves-intro {
   .back-to-bottom {
     bottom: 16px;
   }
+}
+
+
+html[data-theme="dark"] .home-page {
+  --hero-panel: #322f2d;
+  --hero-glow: #3f3f3f;
+}
+
+html[data-theme="light"] .home-page {
+  --hero-panel: #fff;
+  --hero-glow: #f0eeeb;
+}
+
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+
+  background-color: var(--hero-panel);
+  background-image: radial-gradient(
+    ellipse 70% 65% at 50% 33%,
+    var(--hero-glow) 0%,
+    transparent 100%
+  );
 }
