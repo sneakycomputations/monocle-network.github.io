@@ -67,7 +67,7 @@
   --accent-strong:#FFA640;
   --border:#45413c;
   --content:1180px;
-  --header-height:76px;
+  --header-height:66px;
   font-family:"IBM Plex Sans",sans-serif;
   font-synthesis:none;
   text-rendering:optimizeLegibility;
@@ -415,6 +415,42 @@ html[data-theme="light"] .footer-brand img {
   .primary-navigation.is-open {
     display:flex
   }
+    .primary-navigation.is-open {
+    animation: mobile-nav-enter 280ms ease-out both;
+  }
+  .menu-chevron {
+    /* Keep your existing layout, width and border rules */
+    transition: none;
+  }
+
+  .menu-chevron > span {
+    display: inline-block;
+    transition: transform 250ms ease-out;
+  }
+
+  .header-inner:has(#primary-navigation.is-open)
+  .menu-toggle .menu-chevron > span {
+    transform: rotate(90deg);
+  }   
+  @keyframes mobile-nav-enter {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .menu-chevron {
+  display: inline-block;
+  transition: transform 250ms ease-out;
+}
+
+#header-inner:has(.primary-navigation.is-open) .menu-chevron {
+  transform: rotate(90deg);
+}
   .primary-navigation a {
     font-size:.95rem;
     padding:.65rem .2rem;
@@ -426,6 +462,7 @@ html[data-theme="light"] .footer-brand img {
   .footer-brand {
     grid-column:1/-1
   }
+
 }
 @media(max-width:520px) {
   body {
@@ -1044,6 +1081,9 @@ p.get-involved-button {
   object-fit:contain;
   filter:var(--github-icon-filter,none)
 }
+:root[data-theme="light"] .github-promo>img {
+  filter:invert(1)
+}
 .github-promo h2 {
   font-family:"IBM Plex Serif",serif;
   font-weight:400;
@@ -1526,7 +1566,7 @@ p.get-involved-button {
 }
 :root {
   --content:1080px;
-  --header-height:76px
+  --header-height:66px
 }
 .site-header {
   width:min(var(--content),calc(100% - 48px));
@@ -2314,7 +2354,7 @@ html[data-theme="light"] .brand-logo {
   padding:0 0 50px;
   background:var(--page);
   border:0;
-  margin-top:2em;
+  margin-top:4em;
   padding: 0;
 }
 .header-inner {
@@ -2322,7 +2362,7 @@ html[data-theme="light"] .brand-logo {
   display:flex;
   align-items:stretch;
   max-width:1080px;
-  height:60px;
+  height:66px;
   margin:0 auto;
   padding:0;
   border:1px solid var(--border);
@@ -2338,8 +2378,8 @@ html[data-theme="light"] .brand-logo {
   padding:0 24px;
   color:var(--text);
   text-decoration:none;
-  overflow:hidden;
-  margin-top:-10px
+  /*! overflow:hidden; */
+  margin-top:-13px;
 }
 .brand-logo {
   display:block;
@@ -2377,7 +2417,7 @@ html[data-theme="light"] .brand-logo {
 }
 .primary-navigation a:last-child {
   border-right:0;
-  /*! color:var(--accent); */
+  color:var(--accent);
   font-weight:600
 }
 .primary-navigation a:hover,
@@ -2454,7 +2494,7 @@ html[data-theme="light"] .brand-logo {
 }
 .footer-brand img {
   display:block;
-  width:clamp(250px,30vw,340px);
+  max-width:250px;
   max-height:120px;
   object-fit:contain;
   object-position:left center
@@ -2580,15 +2620,15 @@ html[data-theme="light"] .brand-logo {
 @media(max-width:1250px) and (min-width:861px) {
   .header-inner {
     width:calc(100% - 64px);
-    height:82px
+    height:66px;
   }
   .brand {
-    height:78px;
+    /*! height:78px; */
     flex-basis:20%;
     padding-inline:14px
   }
   .brand-logo {
-    height:66px
+    height:56px;
   }
   .primary-navigation a {
     padding-inline:7px;
@@ -2602,7 +2642,7 @@ html[data-theme="light"] .brand-logo {
     width:calc(100% - 64px)
   }
   .footer-main {
-    grid-template-columns:minmax(170px,1fr) minmax(190px,1.1fr) minmax(170px,1fr) minmax(160px,.9fr);
+    grid-template-columns:minmax(170px,1fr) minmax(190px,1fr) minmax(170px,1fr) minmax(160px,1fr);
     gap:22px
   }
   .footer-column a,
@@ -2629,7 +2669,7 @@ html[data-theme="light"] .brand-logo {
 @media(max-width:860px) {
   .site-header {
     width:calc(100% - 64px);
-    margin:2em auto;
+    margin:4em auto;
     padding:0;
     border:0
   }
@@ -2656,7 +2696,7 @@ html[data-theme="light"] .brand-logo {
   }
   .brand-logo {
     width:min(100%,320px);
-    height:82px;
+    height:61px;
     max-width:320px;
     object-position:left center
   }
@@ -2685,7 +2725,7 @@ html[data-theme="light"] .brand-logo {
     width:calc(100% + 40px);
     min-height:66px;
     margin:0 -20px;
-    padding:0 16px;
+    padding-right:0;
     border:0;
     border-top:1px solid #ffffff28;
     border-radius:0;
@@ -2745,7 +2785,7 @@ html[data-theme="light"] .brand-logo {
     min-height:62px;
     padding:0 22px;
     border:0;
-    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
     font:400 16px/1.3 "IBM Plex Mono",monospace;
     letter-spacing:0;
     text-transform:none;
@@ -2879,7 +2919,7 @@ html[data-theme="light"] .brand-logo {
     min-height:60px
   }
   .menu-chevron {
-    width:56px
+    width:66px;
   }
   .primary-navigation {
     margin-inline:-14px
