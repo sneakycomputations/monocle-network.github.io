@@ -135,7 +135,7 @@ body {
 }
 a {
   color:var(--accent-strong);
-  text-underline-offset:.2em;
+  /*! text-underline-offset:.2em; */
 }
 a:hover {
   color:var(--accent-strong);
@@ -736,6 +736,10 @@ html[data-theme="light"] .footer-brand img {
   text-align:left;
   position:relative
 }
+.reserve-cards>a:hover {
+  transform:scale(1.02);
+}
+
 .reserve-cards:before {
   content:"";
   position:absolute;
@@ -1818,7 +1822,7 @@ html[data-theme="light"] .brand-logo {
   width:clamp(100px,11vw,148px)
 }
 .feature-grid {
-  max-width:900px;
+  /*! max-width:900px; */
   margin-inline:auto;
   column-gap:4.1rem;
   row-gap:4.1rem;
@@ -1881,10 +1885,11 @@ html[data-theme="light"] .brand-logo {
 }
 .reserve-card h3 {
   font-family:"IBM Plex Serif",serif;
-  font-size:1.15rem;
+  font-size:1.4rem;
   color:var(--accent);
   font-weight:400;
-  line-height:1.25
+  line-height:1.25;
+  text-decoration: underline;
 }
 .reserve-card p {
   font-size:.82rem;
@@ -1895,9 +1900,9 @@ html[data-theme="light"] .brand-logo {
   align-items:center;
   gap:.5rem;
   margin-top:.5rem;
-  padding:.35rem .65rem;
-  /*! background:var(--page); */
-  color:var(--text);
+  padding-left:0.5rem;
+  background:var(--footer);
+  color:var(--contrast);
   text-decoration:none;
   font-size:.75rem;
   font-weight:600;
@@ -1905,15 +1910,17 @@ html[data-theme="light"] .brand-logo {
   font-family: "IBM Plex Mono", mono;
   /*! position: absolute; */
   /*! bottom: 1em; */
+  border: 1px solid var(--max);
+  height: 2rem;
 }
 .reserve-card>a span {
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  background:var(--accent);
-  color:#17120c;
-  width:22px;
-  height:22px;
+  background:var(--max);
+  color:var(--accent);
+  width:2rem;
+  height:2rem;
   margin:-.2rem -.35rem -.2rem .1rem;
   font-size:1.1rem
 }
