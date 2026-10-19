@@ -878,7 +878,7 @@ html[data-theme="light"] .footer-brand img {
   font-size:.9rem
 }
 p.get-involved-button {
-  text-align: right;
+  /*! text-align: right; */
 }
 :root[data-theme="light"] .download-promo {
   background:radial-gradient(ellipse at 50% 0%,#f6d5ad 0%,#f9e5ce 42%,#f7f0e6 78%,var(--surface) 100%)
@@ -3519,6 +3519,23 @@ html[data-theme="light"] .brand-logo {
 .network-promo-button:hover .network-promo-arrow,
 .network-promo-button:focus-visible .network-promo-arrow {
   transform: translateX(2px);
+}
+
+.get-involved-button .network-promo-button {
+  font-weight: bold;
+  background:var(--accent);
+}
+.get-involved-button .network-promo-button .network-promo-arrow{
+  background:var(--page);
+  color:var(--accent);
+}
+.get-involved-button .network-promo-button:hover {
+  text-decoration: none;
+  color:black;
+  background:var(--accent-strong);
+}
+.get-involved-button .network-promo-button .network-promo-arrow:hover {
+  color:var(--accent-strong);
 }
 
 
