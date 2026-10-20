@@ -3451,7 +3451,7 @@ p.network-fee-allocation {
 
 .network-banner {
   box-sizing: border-box;
-  margin-top: 3.5rem;
+  /*! margin-top: 3.5rem; */
   padding: 2.4rem 2rem;
   text-align: center;
 }
