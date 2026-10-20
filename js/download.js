@@ -38,12 +38,31 @@
     return "Unknown";
   }
 
-  function setDownloadLink(element, os, url) {
-    if (!element) return;
-    element.href = url;
+function setDownloadLink(element, os, url) {
+  if (!element) return;
+
+  const icons = {
+    Windows: "assets/os/icon-os-windows.svg",
+    Linux: "assets/os/icon-os-linux.svg",
+    macOS: "assets/os/icon-os-mac.svg"
+  };
+
+  const icon = element.querySelector(".download-choice-icon");
+  const label = element.querySelector("span");
+
+  if (icon) {
+    icon.src = icons[os] || icons.Windows;
+  }
+
+  if (label) {
+    label.textContent = `Download for ${os}`;
+  } else {
+    // Fallback if the button hasn't yet been updated with the icon markup.
     element.textContent = `Download for ${os}`;
   }
 
+  element.href = url;
+}
   function setLinkWithArrow(element, text) {
     if (!element) return;
     element.replaceChildren(document.createTextNode(text + " "));
@@ -67,11 +86,9 @@
       }
     }
 
-    for (const id of ["download-choice-top", "download-choice-bottom"]) {
-      const link = document.getElementById(id);
+    document.querySelectorAll(".download-choice").forEach(link => {
       setDownloadLink(link, os, defaultURL);
-    }
-
+    });
     // Keep individual package links active and provide a consistent,
     // searchable placeholder URL for every format.
     document.querySelectorAll("[data-download-os][data-download-format]").forEach(link => {
