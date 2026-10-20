@@ -857,7 +857,9 @@ html[data-theme="light"] .footer-brand img {
     display: none;
   }
 }
-
+#banner-download a {
+  text-decoration: none;
+}
 .download-promo {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -3774,12 +3776,14 @@ p.network-fee-allocation {
   background-color: var(--footer);
   border-color: var(--border);
 }
-a.wiki-banner-link {
+a.wiki-banner-link,
+#banner-download a {
   text-decoration: none;
   transition: filter 200ms ease, transform 200ms ease;
   display: block;
 }
-a.wiki-banner-link:hover {
+a.wiki-banner-link:hover,
+#banner-download a:hover {
   /*! filter: brightness(1.18) saturate(1.4); */
   transform: scale(1.01);
 }
@@ -3815,9 +3819,6 @@ a.wiki-banner-link:hover {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 4em;
-}
-a.dispute-resolution-card-wrapper-link{
-  display:block;
 }
 .dispute-directory-card {
   display: flex;
@@ -3968,6 +3969,7 @@ ul.transparency-address-info::before {
   gap: 3em;
   margin-top: 44px;
 }
+
 .policy-card-wrapper-link,
 .dispute-resolution-card-wrapper-link {
   text-decoration: none;
@@ -3988,6 +3990,15 @@ ul.transparency-address-info::before {
   outline-offset: 4px;
   border-radius: 4px;
 }
+
+
+@media (prefers-reduced-motion: reduce) {
+  .policy-card-wrapper-link::after,
+  .dispute-resolution-card-wrapper-link::after {
+    transition: none;
+  }
+}
+
 .policies-directory-card {
   display: flex;
   flex-direction: column;
