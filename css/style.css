@@ -1930,7 +1930,7 @@ html[data-theme="light"] .brand-logo {
 }
 .reserve-card {
   padding:1.1rem;
-  background:#3b3a39;
+  background:var(--footer-bottom);
   border:1px solid #57534d;
   box-shadow:0 3px 0 #222;
   min-width:0;
