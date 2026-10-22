@@ -140,6 +140,24 @@ a {
 a:hover {
   color:var(--accent-strong);
 }
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  z-index: 10000;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: #11100f;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 6px 6px;
+  transform: translateY(-150%);
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
 button {
   font:inherit
 }
@@ -313,10 +331,27 @@ p {
   background:var(--surface);
   color:var(--text)
 }
+.article-content a[href^="https://"]::after {
+  content: "↗";
+  display: inline-block;
+  font-size: 0.8em;
+  text-decoration: none;
+  /*! opacity: 0.7; */
+  /*! transition: opacity 180ms ease; */
+  margin-left: 0.2em;
+  vertical-align: top;
+}
+
+.article-content a[href^="https://"]:hover::after {
+  opacity: 1;
+}
 .site-footer {
   background:var(--footer);
   /*! padding:3rem; */
   margin-top:3rem
+}
+.site-footer a:hover {
+  color:var(--accent);
 }
 .footer-main {
   display:grid;
@@ -352,7 +387,7 @@ html[data-theme="light"] .footer-brand img {
 }
 .footer-column a:hover,
 .footer-bottom a:hover {
-  color:var(--text)
+  /*color:var(--text)*/
 }
 .footer-bottom {
   border-top:1px solid var(--border);
@@ -732,6 +767,13 @@ html[data-theme="light"] .footer-brand img {
   color:var(--accent);
   margin-bottom:.25rem
 }
+.reserves-band>h2>a {
+  text-decoration: none;
+}
+.reserves-band>h2>a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 .reserves-lead {
   margin:.8rem auto 3.5rem;
   color: var(--text);
@@ -743,8 +785,11 @@ html[data-theme="light"] .footer-brand img {
   text-align:left;
   position:relative
 }
+.reserve-cards>a {
+  transition: transform 220ms ease;
+}
 .reserve-cards>a:hover {
-  transform:scale(1.02);
+  transform:scale(1.04);
 }
 
 .reserve-cards:before {
@@ -784,8 +829,15 @@ html[data-theme="light"] .footer-brand img {
   font-family:"IBM Plex Serif",serif;
   font-weight:400;
   color:var(--accent);
-  font-size:1.15rem
+  font-size:1.15rem;
 }
+
+.reserves-band .reserve-card h3::after {
+  content: " ›";
+  color: var(--accent);
+
+}
+
 .reserve-card p {
   /*! font-size:.86rem */
   align-self: end;
@@ -1538,7 +1590,7 @@ p.get-involved-button {
   margin:2rem 0 .5rem;
   font-family: "IBM Plex Serif", serif;
   font-weight: normal;
-  color: var(--accent);
+  /*! color: var(--accent); */
 }
 .article-content h4 {
   font-size:1rem;
@@ -2193,7 +2245,6 @@ html[data-theme="light"] .brand-logo {
 .footer-directory a {
   font-size:.8rem;
   line-height:1.45;
-  color:var(--muted);
   text-decoration:none;
   padding:.38rem .5rem;
   border:1px solid color-mix(in srgb,var(--border) 70%,transparent);
@@ -2204,8 +2255,7 @@ html[data-theme="light"] .brand-logo {
 }
 .footer-directory a:hover,
 .footer-column a:hover {
-  color:var(--text);
-  background:color-mix(in srgb,var(--surface) 40%,transparent)
+  /*! background:color-mix(in srgb,var(--surface) 40%,transparent) */
 }
 .footer-column {
   display:flex;
@@ -2673,15 +2723,14 @@ html[data-theme="light"] .brand-logo {
   text-decoration:none
 }
 .footer-directory a:first-child {
-  color:var(--accent)
+  /*! color:var(--accent) */
 }
 .footer-directory a:last-child {
   border-bottom:1px solid color-mix(in srgb,var(--border) 80%,transparent)
 }
 .footer-directory a:hover,
 .footer-column a:hover {
-  color:var(--text);
-  background:color-mix(in srgb,var(--surface) 40%,transparent)
+  /*! background:color-mix(in srgb,var(--surface) 40%,transparent) */
 }
 .footer-column {
   display:flex;
@@ -3210,7 +3259,7 @@ html[data-theme="light"] .brand-logo {
 
 .article-content ul.aims-list li {
   position: relative;
-  padding-left: 1.6rem;
+  padding-left: 2rem;
   margin-bottom: 0.8rem;
   font-size: 1.2em;
 }
@@ -3242,6 +3291,15 @@ html[data-theme="light"] .brand-logo {
 
 .brings-item h3 {
   margin-top: 0;
+}
+
+.brings-item h3>a {
+  text-decoration: none;
+}
+
+.brings-item h3>a:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
 }
 
 .brings-item p {
@@ -3276,6 +3334,7 @@ html[data-theme="light"] .brand-logo {
   padding: 1.75rem 1.25rem;
   text-align: center;
   min-width: 0;
+  background-color: var(--footer-bottom);
 }
 
 .article-content .reserve-card img {

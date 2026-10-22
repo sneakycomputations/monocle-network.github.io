@@ -1,41 +1,82 @@
 (() => {
   const root = document.documentElement;
-  const savedTheme = (() => { try { return localStorage.getItem('monocle-theme'); } catch { return null; } })();
-  if (savedTheme === 'light' || savedTheme === 'dark') root.dataset.theme = savedTheme;
+  const savedTheme = (() => {
+    try {
+      return localStorage.getItem('monocle-theme');
+    } catch {
+      return null;
+    }
+  })();
+
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    root.dataset.theme = savedTheme;
+  }
 
   async function include(selector, url) {
     const target = document.querySelector(selector);
     if (!target) return;
+
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
       target.innerHTML = await response.text();
-      target.dispatchEvent(new CustomEvent('partial:loaded', { bubbles: true }));
+      target.dispatchEvent(new CustomEvent('partial:loaded', {
+        bubbles: true
+      }));
     } catch (error) {
       console.error(`Could not load ${url}:`, error);
       target.setAttribute('data-include-error', 'true');
     }
   }
 
+  function setupSkipLink() {
+    const main = document.querySelector('main');
+
+    if (main && !main.id) {
+      main.id = 'main-content';
+    }
+
+    if (main) {
+      main.setAttribute('tabindex', '-1');
+    }
+  }
+
   function wireControls() {
     const menu = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.primary-navigation');
-    if (menu && nav) menu.addEventListener('click', () => {
-      const expanded = menu.getAttribute('aria-expanded') === 'true';
-      menu.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('is-open', !expanded);
-    });
+
+    if (menu && nav) {
+      menu.addEventListener('click', () => {
+        const expanded = menu.getAttribute('aria-expanded') === 'true';
+
+        menu.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('is-open', !expanded);
+      });
+    }
 
     const themeButton = document.querySelector('.theme-toggle');
-    if (themeButton) themeButton.addEventListener('click', () => {
-      const next = root.dataset.theme === 'light' ? 'dark' : 'light';
-      root.dataset.theme = next;
-      try { localStorage.setItem('monocle-theme', next); } catch { /* Theme still works for this page. */ }
-    });
+
+    if (themeButton) {
+      themeButton.addEventListener('click', () => {
+        const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+
+        root.dataset.theme = next;
+
+        try {
+          localStorage.setItem('monocle-theme', next);
+        } catch {
+          /* Theme still works for this page. */
+        }
+      });
+    }
 
     const current = location.pathname.split('/').pop() || 'index.html';
+
     document.querySelectorAll('.primary-navigation a, .footer-column a').forEach(link => {
-      if (link.getAttribute('href') === current) link.setAttribute('aria-current', 'page');
+      if (link.getAttribute('href') === current) {
+        link.setAttribute('aria-current', 'page');
+      }
     });
   }
 
@@ -98,6 +139,7 @@
     include('#banner-policies', 'partials/policies.html'),
     include('#banner-transparency', 'partials/transparency.html')
   ]).then(() => {
+    setupSkipLink();
     wireControls();
     wireScrollButtons();
   });
