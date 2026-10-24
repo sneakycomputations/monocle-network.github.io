@@ -2732,7 +2732,7 @@ html[data-theme="light"] .brand-logo {
 }
 .footer-directory a {
   padding:9px 16px;
-  border:1px solid color-mix(in srgb,var(--border) 80%,transparent);
+  border:1px solid var(--hero-glow);
   border-bottom:0;
   font-size:14px;
   line-height:1.35;
@@ -2744,11 +2744,11 @@ html[data-theme="light"] .brand-logo {
   /*! color:var(--accent) */
 }
 .footer-directory a:last-child {
-  border-bottom:1px solid color-mix(in srgb,var(--border) 80%,transparent)
+  border-bottom:1px solid var(--footer-bottom);
 }
 .footer-directory a:hover,
 .footer-column a:hover {
-  /*! background:color-mix(in srgb,var(--surface) 40%,transparent) */
+  background:color-mix(in srgb,var(--surface) 40%,transparent);
 }
 .footer-column {
   display:flex;
