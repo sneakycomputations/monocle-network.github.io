@@ -947,7 +947,10 @@ html[data-theme="light"] .footer-brand img {
 .download-promo-copy h2 {
   font-family:"IBM Plex Serif",serif;
   font-size:clamp(1.4rem,2.5vw,2rem);
-  font-weight:400
+  font-weight:400;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  color: var(--accent);
 }
 .download-promo-copy p {
   /*! font-size:.9rem; */
@@ -1002,7 +1005,7 @@ html[data-theme="light"] .footer-brand img {
   height: 0;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
-  border-right: 35px solid var(--page);
+  border-right: 36px solid var(--page);
 }
 .get-involved-band .micro-label {
   font-size:3rem;
@@ -4118,6 +4121,9 @@ ul.transparency-address-info::before {
   font-weight: 400;
   line-height: 1.35;
   max-width: 200px;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  color: var(--accent);
 }
 
 .policies-directory-card h2 a {
