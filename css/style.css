@@ -135,7 +135,7 @@ body {
 }
 a {
   color:var(--accent-strong);
-  /*! text-underline-offset:.2em; */
+  text-underline-offset:.2em;
 }
 a:hover {
   color:var(--accent-strong);
