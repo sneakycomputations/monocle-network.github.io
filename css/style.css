@@ -342,9 +342,6 @@ p {
   vertical-align: top;
 }
 
-.article-content a[href^="https://"]:hover::after {
-  opacity: 1;
-}
 .site-footer {
   background:var(--footer);
   /*! padding:3rem; */
