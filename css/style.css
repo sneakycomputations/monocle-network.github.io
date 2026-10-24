@@ -4358,7 +4358,7 @@ p.reserves-intro {
 }
 
 
-html[data-theme="dark"] .home-page {
+.home-page {
   --hero-panel: #322f2d;
   --hero-glow: #3f3f3f;
 }
