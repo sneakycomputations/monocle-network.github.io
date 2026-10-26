@@ -1598,7 +1598,7 @@ p.get-involved-button {
   max-width:1080px;
   margin:0 auto;
   color:var(--text);
-  font-size:1.2rem;
+  font-size:1rem;
   line-height:1.8;
   overflow-wrap:anywhere;
 }
