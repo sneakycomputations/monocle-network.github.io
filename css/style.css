@@ -1042,11 +1042,6 @@ p.get-involved-button {
   text-align:center;
   margin:0 auto 2rem
 }
-.download-choice {
-  border:0;
-  gap:1.5rem;
-  /*! cursor:not-allowed */
-}
 .download-choice:disabled {
   opacity:1
 }
@@ -1056,11 +1051,23 @@ p.get-involved-button {
   /*! padding-left:.8rem; */
 }
 .download-choice {
+  border:0;
+  gap:1.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
   padding-left: 0.5em;
+  position:relative;
+}
+
+.download-choice::after {
+  content: "⌄";
+  align-self: stretch;
+  /*! flex: 0 0 2.8rem; */
+  margin: 0 0.5rem 0 1rem;
+  /*! border-left: 1px solid rgb(255 255 255 / 35%); */
+  /*! transition: background-color 200ms ease; */
 }
 
 .download-choice-icon {
@@ -1074,6 +1081,12 @@ p.get-involved-button {
 }
 .download-choice:hover .download-choice-icon {
   filter: brightness(0);
+}
+
+.smalldownload::after {
+  content: "⌄";
+  align-self: stretch;
+  margin: -0.3em 0.5rem 0 1rem;
 }
 .download-note,
 .verification-note,
