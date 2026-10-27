@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="https://github.com/monocle-network/monocle-network.github.io/blob/main/assets/monocle-banner.jpg?raw=true" alt="Monocle logo">
+</div>
+
+<br>
+
 # Monocle Network Website
 
 Source code for the [Monocle Network website](https://monoclenetwork.org), hosted through GitHub Pages.
