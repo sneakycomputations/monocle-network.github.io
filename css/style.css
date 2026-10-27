@@ -140,6 +140,11 @@ a {
 a:hover {
   color:var(--accent-strong);
 }
+.fake-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
 .skip-link {
   position: absolute;
   top: 0;
@@ -842,16 +847,9 @@ html[data-theme="light"] .footer-brand img {
 .reserve-card h3 {
   font-family:"IBM Plex Serif",serif;
   font-weight:400;
-  color:var(--accent);
   font-size:1.15rem;
 }
-/*
-.reserves-band .reserve-card h3::after {
-  content: " ›";
-  color: var(--accent);
 
-}
-*/
 .reserve-card p {
   /*! font-size:.86rem */
   align-self: end;
@@ -896,7 +894,7 @@ html[data-theme="light"] .footer-brand img {
   }
 
   /* Vertical spine beside the cards */
-  .reserve-cards::after {
+  .reserves-band .reserve-cards::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1340,15 +1338,24 @@ p.get-involved-button {
     margin-top:2.5rem
   }
   .feature-grid {
-    grid-template-columns:repeat(2,minmax(0,1fr))
+    grid-template-columns: minmax(0, 1fr);
   }
-  .feature-card,
-  .feature-card:nth-child(4),
-  .feature-card:nth-child(5) {
-    grid-column:auto
+
+  .feature-grid > .makes-different-wrapper-link {
+    grid-column: 1 / -1;
+    display: flex;
+    min-width: 0;
   }
-  .feature-card:last-child {
-    grid-column:1/-1
+
+  .feature-grid > .makes-different-wrapper-link > .feature-card {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .feature-grid > .makes-different-wrapper-link:nth-child(4),
+  .feature-grid > .makes-different-wrapper-link:nth-child(5) {
+    grid-column: 1 / -1;
   }
   .reserve-cards {
     grid-template-columns:1fr
@@ -1413,8 +1420,8 @@ p.get-involved-button {
   .feature-grid {
     grid-template-columns:1fr
   }
-  .feature-card,
-  .feature-card:last-child {
+  .makes-different-wrapper-link,
+  .makes-different-wrapper-link:last-child {
     grid-column:auto;
     min-height:0
   }
@@ -2050,11 +2057,9 @@ html[data-theme="light"] .brand-logo {
 .reserve-card h3 {
   font-family:"IBM Plex Serif",serif;
   font-size:1.4rem;
-  color:var(--accent);
   font-weight:400;
   line-height:1.25;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+
 }
 .reserve-card p {
   /*! font-size:.82rem; */
@@ -4188,6 +4193,7 @@ ul.transparency-address-info::before {
   .policies-directory-grid {
     grid-template-columns: 1fr;
     gap: 22px;
+    justify-items: center;
   }
 
   .policies-directory-card {
