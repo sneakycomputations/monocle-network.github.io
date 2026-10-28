@@ -885,6 +885,8 @@ html[data-theme="light"] .footer-brand img {
   .reserve-cards {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .reserves-band .reserve-cards {
     padding-left: 1.5rem;
   }
 
@@ -1017,6 +1019,21 @@ html[data-theme="light"] .footer-brand img {
 .get-involved-band p:not(.micro-label) {
   font-size:.9rem
 }
+
+@media (max-width: 560px) {
+  .get-involved-band .micro-label {
+    font-size:2rem;
+    color:var(--text);
+    font-weight:700;
+    line-height: 0.7em;
+  }
+
+  .transparency-banner-text .button {
+    justify-self: start;
+  }
+}
+
+
 p.get-involved-button {
   /*! text-align: right; */
 }
@@ -1750,7 +1767,7 @@ p.get-involved-button {
     max-height:370px
   }
   .article-main {
-    width:calc(100% - 40px)
+    width:100%;
   }
   .directory-page .article-content>ul {
     grid-template-columns:1fr
@@ -1770,8 +1787,8 @@ p.get-involved-button {
     height:46px
   }
   .article-main {
-    width:calc(100% - 36px);
-    padding-top:.8rem
+    width:100%;
+    /*! padding-top:.8rem */
   }
   .breadcrumbs {
     margin-bottom:1.5rem
@@ -2762,7 +2779,7 @@ html[data-theme="light"] .brand-logo {
   /*! color:var(--accent) */
 }
 .footer-directory a:last-child {
-  border-bottom:1px solid var(--footer-bottom);
+  border-bottom:1px solid var(--hero-glow);
 }
 .footer-directory a:hover,
 .footer-column a:hover {
@@ -2917,7 +2934,8 @@ html[data-theme="light"] .brand-logo {
     /*! padding:0 20px; */
     /*! border:1px solid var(--border); */
     border:0;
-    background:linear-gradient(180deg,var(--surface) 0%,var(--page) 100%)
+    background:linear-gradient(180deg,var(--surface) 0%,var(--page) 100%);
+    padding-inline: 14px;
   }
   .brand {
     grid-column:1;
@@ -2964,7 +2982,9 @@ html[data-theme="light"] .brand-logo {
     border-top:1px solid #ffffff28;
     border-radius:0;
     background:var(--accent);
-    color:#fff
+    color:#fff;
+    width: calc(100% + 28px);
+    margin-inline: -14px;
   }
   .menu-toggle:hover{
     color:black;
@@ -3111,7 +3131,7 @@ html[data-theme="light"] .brand-logo {
   }
   .footer-bottom {
     margin-top:0;
-    padding-top:20px;
+    padding:16px 1em;
     gap:48px;
     border-top-width:4px;
     font-size:14px
@@ -3330,7 +3350,7 @@ html[data-theme="light"] .brand-logo {
 }
 
 .brings-item h3>a {
-  text-decoration: none;
+  /*! text-decoration: none; */
 }
 
 .brings-item h3>a:hover {
@@ -3500,6 +3520,7 @@ html[data-theme="light"] .brand-logo {
   justify-content: center;
   text-align: center;
   color: #fff;
+  aspect-ratio: 1/1;
 }
 
 .network-fee-rate--maker {
@@ -3802,6 +3823,22 @@ p.network-fee-allocation {
     top: 13px;
   }
 
+}
+
+@media (max-width: 560px) {
+  /*
+  .network-fee-rate {
+    min-height: 105px;
+    padding: 1rem 0.6rem;
+  }
+
+  .network-fee-role {
+    font-size: 0.8rem;
+  }
+*/
+  .network-fee-rate strong {
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 420px) {
@@ -4377,12 +4414,12 @@ p.reserves-intro {
 }
 
 
-.home-page {
+:root {
   --hero-panel: #322f2d;
   --hero-glow: #3f3f3f;
 }
 
-html[data-theme="light"] .home-page {
+html[data-theme="light"] :root {
   --hero-panel: #fff;
   --hero-glow: #f0eeeb;
 }
