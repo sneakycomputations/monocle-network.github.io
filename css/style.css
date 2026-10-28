@@ -84,11 +84,14 @@
   --border:#303030;
   --content:1180px;
   --header-height:66px;
+  --hero-panel: #322f2d;
+  --hero-glow: #3f3f3f;
   font-family:"IBM Plex Sans",sans-serif;
   font-synthesis:none;
   text-rendering:optimizeLegibility;
   color-scheme:light dark
 }
+
 html,
 body,
 body *,
@@ -118,7 +121,9 @@ body ::after {
   --muted:#68635d;
   --accent:#ea8723;
   --accent-strong:#FFA640;
-  --border:#d0cbc3
+  --border:#d0cbc3;
+  --hero-panel: #fff;
+  --hero-glow: #f0eeeb;
 }
 * {
   box-sizing:border-box
@@ -2044,7 +2049,8 @@ html[data-theme="light"] .brand-logo {
   display:flex;
   align-items:center;
   font-size:1rem;
-  line-height:1.35
+  line-height:1.35;
+  text-decoration: underline;
 }
 .feature-card p {
   /*! font-size:0.9rem; */
@@ -3374,7 +3380,7 @@ html[data-theme="light"] .brand-logo {
 .article-content .reserve-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 7rem;
+  gap: clamp(1rem, 6vw, 8rem);
   margin: 2rem 0;
 }
 
@@ -3391,6 +3397,7 @@ html[data-theme="light"] .brand-logo {
   text-align: center;
   min-width: 0;
   background-color: var(--footer-bottom);
+  height: 100%;
 }
 
 .article-content .reserve-card img {
