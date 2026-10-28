@@ -1,36 +1,23 @@
-# Monocle Network website
+<div align="center">
+  <img src="https://github.com/monocle-network/monocle-network.github.io/blob/main/assets/monocle-banner.jpg?raw=true" alt="Monocle logo">
+</div>
 
-Static website reconstruction based on the supplied design mockups, local assets, and Markdown copy. The intended host is GitHub Pages.
+<br>
 
-## Local preview
+# Monocle Network Website
 
-Run a local HTTP server from this directory; do not open `index.html` using `file://`, because the shared header and footer are loaded with `fetch()`.
+Source code for the [Monocle Network website](https://monoclenetwork.org), hosted through GitHub Pages.
 
-For example, with Python installed:
+## License
 
-```sh
-python3 -m http.server 8000
-```
+The website's source code is licensed under the [GNU Affero General Public License v3.0](LICENSE), subject to the scope and terms specified in the license file.
 
-Then open `http://localhost:8000/` in a browser.
+## Contributing
 
-## Project structure
+Contributions to the website are welcome. To report a typo, suggest an improvement, or propose a new page, open an issue in the [website repository](https://github.com/monocle-network/monocle-network.github.io/issues).
 
-- `index.html` — first-pass homepage implementation based on `web pages - desktop/Home.jpg`.
-- `download.html` — first-pass Download page based on `web pages - desktop/Download.jpg`; download controls remain disabled pending official release URLs.
-- `partials/` — shared header and footer markup.
-- `css/style.css` — local fonts, theme variables, responsive layouts, and shared styles.
-- `js/main.js` — partial loading, mobile navigation and theme control.
-- `assets/` — supplied graphics and icons.
-- `fonts/` — supplied IBM Plex font files.
-- `copy/` — original Markdown page copy, retained as the source of truth.
-- `web pages - desktop/` and `web pages - mobile/` — authoritative visual references.
-- `PROJECT_STATE.md` — phase record, decisions, caveats and next steps.
+## Authors
 
-## Current status
+The website is maintained by Monocle contributors.
 
-The homepage and Download page are the first implemented page batch. Other page destinations are still being built, so some navigation links will not resolve yet. Do not enable download controls until the official release and verification URLs are confirmed.
-
-## GitHub Pages
-
-The site is designed as static files and requires no framework or package installation. Publishing from a branch and folder is supported by GitHub Pages; confirm the repository's current Pages settings before deployment. Official guide: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+For support and contact information, see the [Support page](https://monoclenetwork.org/support).
